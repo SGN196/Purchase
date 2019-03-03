@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.caiqian.mapper.QuoteInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.caiqian.Bean.QuoteInfo" >
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="quote_id" property="quoteId" jdbcType="INTEGER" />
+    <result column="material_id" property="materialId" jdbcType="INTEGER" />
+    <result column="quote_name" property="quoteName" jdbcType="VARCHAR" />
+    <result column="quote_quantity" property="quoteQuantity" jdbcType="INTEGER" />
+    <result column="quote_status" property="quoteStatus" jdbcType="INTEGER" />
+    <result column="quote_desc" property="quoteDesc" jdbcType="VARCHAR" />
+    <result column="quote_endtime" property="quoteEndtime" jdbcType="TIMESTAMP" />
+    <result column="create_by" property="createBy" jdbcType="INTEGER" />
+    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="modify_by" property="modifyBy" jdbcType="INTEGER" />
+    <result column="modify_date" property="modifyDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <insert id="insert" parameterType="com.caiqian.Bean.QuoteInfo" >
+    insert into quote_info (id, quote_id, material_id, 
+      quote_name, quote_quantity, quote_status, 
+      quote_desc, quote_endtime, create_by, 
+      create_date, modify_by, modify_date
+      )
+    values (#{id,jdbcType=INTEGER}, #{quoteId,jdbcType=INTEGER}, #{materialId,jdbcType=INTEGER}, 
+      #{quoteName,jdbcType=VARCHAR}, #{quoteQuantity,jdbcType=INTEGER}, #{quoteStatus,jdbcType=INTEGER}, 
+      #{quoteDesc,jdbcType=VARCHAR}, #{quoteEndtime,jdbcType=TIMESTAMP}, #{createBy,jdbcType=INTEGER}, 
+      #{createDate,jdbcType=TIMESTAMP}, #{modifyBy,jdbcType=INTEGER}, #{modifyDate,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.caiqian.Bean.QuoteInfo" >
+    insert into quote_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="quoteId != null" >
+        quote_id,
+      </if>
+      <if test="materialId != null" >
+        material_id,
+      </if>
+      <if test="quoteName != null" >
+        quote_name,
+      </if>
+      <if test="quoteQuantity != null" >
+        quote_quantity,
+      </if>
+      <if test="quoteStatus != null" >
+        quote_status,
+      </if>
+      <if test="quoteDesc != null" >
+        quote_desc,
+      </if>
+      <if test="quoteEndtime != null" >
+        quote_endtime,
+      </if>
+      <if test="createBy != null" >
+        create_by,
+      </if>
+      <if test="createDate != null" >
+        create_date,
+      </if>
+      <if test="modifyBy != null" >
+        modify_by,
+      </if>
+      <if test="modifyDate != null" >
+        modify_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="quoteId != null" >
+        #{quoteId,jdbcType=INTEGER},
+      </if>
+      <if test="materialId != null" >
+        #{materialId,jdbcType=INTEGER},
+      </if>
+      <if test="quoteName != null" >
+        #{quoteName,jdbcType=VARCHAR},
+      </if>
+      <if test="quoteQuantity != null" >
+        #{quoteQuantity,jdbcType=INTEGER},
+      </if>
+      <if test="quoteStatus != null" >
+        #{quoteStatus,jdbcType=INTEGER},
+      </if>
+      <if test="quoteDesc != null" >
+        #{quoteDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="quoteEndtime != null" >
+        #{quoteEndtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createBy != null" >
+        #{createBy,jdbcType=INTEGER},
+      </if>
+      <if test="createDate != null" >
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyBy != null" >
+        #{modifyBy,jdbcType=INTEGER},
+      </if>
+      <if test="modifyDate != null" >
+        #{modifyDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+</mapper>

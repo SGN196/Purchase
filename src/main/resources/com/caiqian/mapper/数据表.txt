@@ -1,0 +1,133 @@
+-- 公司内部员工信息
+create table user_info(
+
+    id int,
+    user_code varchar(20),       -- 登录账号
+    user_name varchar(20),
+      -- 用户昵称
+    password varchar(20),
+
+    user_email varchar(50),
+    user_tel varchar(20),
+    dept_id int,                         -- 所在部门（用户权限，根据数据字典确定，符合权限才能创建采购需求）
+    is_use  int,                          -- 1：使用 。0不使用
+    create_by int,
+    create_date datetime,
+    modify_by int,
+    modify_date datetime
+);
+
+-- 供应商账户
+create table customer_info(
+    id int(11),
+    customer_code varchar(20),
+    customer_name varchar(20),
+
+    password varchar(20),
+
+    customer_addr varchar(100),
+    customer_email varchar(50),
+    customer_tel varchar(20),
+    customer_desc varchar(500),
+    create_by int,
+    create_date datetime,
+    modify_by int,
+    modify_date datetime
+);
+
+
+-- 采购需求表
+create table quote_info(
+
+    id int(11),
+    quote_id int,                       -- 采购需求的订单号
+    material_id int,                   -- 用于竞标企业的访问，依赖于物品表的id
+    quote_name varchar(50)
+,   -- 采购内容
+    quote_quantity int,              -- 采购数量
+    quote_status int,                -- 采购清单状态  0：未采购，3：双方确认(已采购）
+    quote_desc varchar(500),   -- 本次采购细节描述
+    quote_endtime datetime,     -- 采购截止时间
+    create_by int,
+    create_date datetime,
+    modify_by int,
+    modify_date datetime
+);
+
+
+-- 竞标（报价）表
+create table bid_info(
+
+    id int(11),
+    quote_id int,                       -- 用于竞标企业的访问（采购需求表中的订单号），依赖于采购需求表的订单号
+    customer_id int,                  -- 供应商ID，依赖于供应商账户id
+    bid_total_price double,                   -- 竞价方总报价
+    bid_status int,                     -- 竞价方确定订单？   1：供应方未确认   2：供应方确认
+    time_purchase datetime,    -- 订货时间
+    time_deliver datetime,        -- 交货时间
+    create_by int,
+    create_date datetime,
+    modify_by int,
+    modify_date datetime
+);
+
+-- 订单表
+create table order_form(
+
+    quote_id int,                        -- 对应企业的采购清单
+    bid_id int,                            -- 对应竞标单
+    customer_id int,                  -- 供应商ID，依赖于供应商账户id
+    bid_total_price double,                   -- 成交价格
+    order_status int,                  -- 订单成功？ 2：供应方确认 3：双方确认(已采购）
+    time_purchase datetime,    -- 订货时间
+    time_deliver datetime,        -- 交货时间
+
+    create_by int,
+    create_date datetime,
+    modify_by int,                -- 竞价方ID
+    modify_date datetime
+);
+
+
+
+
+
+-- 数据字典
+create table data_dictionary(
+    id bigint,
+    type_code varchar(50),
+    type_name varchar(50),
+    value_id int,
+    value_name varchar(50),
+    create_by int,
+    create_date datetime,
+    modify_by int,
+    modify_date datetime
+);
+
+-- 物品表
+create table material_info(
+    id int,
+    material_name varchar(20),          -- 物品名称
+    material_quantity int,                    -- 库存数量
+    material_info varchar(200),                                -- 物品的具体描述
+    category_level1 int,                       -- 物品分类
+    category_level2 int,
+    category_level3 int,
+    create_by int,
+    create_date datetime,
+    modify_by int,
+    modify_date datetime
+);
+
+-- 物品分类信息表
+create table material_category(
+    id int,
+    category_code varchar(20),
+    category_name varchar(20),
+    parent_id int,
+    create_by int,
+    create_date datetime,
+    modify_by int,
+    modify_date datetime
+);

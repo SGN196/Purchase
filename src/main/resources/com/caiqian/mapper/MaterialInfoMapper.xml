@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.caiqian.mapper.MaterialInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.caiqian.Bean.MaterialInfo" >
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="material_name" property="materialName" jdbcType="VARCHAR" />
+    <result column="material_quantity" property="materialQuantity" jdbcType="INTEGER" />
+    <result column="material_info" property="materialInfo" jdbcType="VARCHAR" />
+    <result column="category_level1" property="categoryLevel1" jdbcType="INTEGER" />
+    <result column="category_level2" property="categoryLevel2" jdbcType="INTEGER" />
+    <result column="category_level3" property="categoryLevel3" jdbcType="INTEGER" />
+    <result column="create_by" property="createBy" jdbcType="INTEGER" />
+    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="modify_by" property="modifyBy" jdbcType="INTEGER" />
+    <result column="modify_date" property="modifyDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <insert id="insert" parameterType="com.caiqian.Bean.MaterialInfo" >
+    insert into material_info (id, material_name, material_quantity, 
+      material_info, category_level1, category_level2, 
+      category_level3, create_by, create_date, 
+      modify_by, modify_date)
+    values (#{id,jdbcType=INTEGER}, #{materialName,jdbcType=VARCHAR}, #{materialQuantity,jdbcType=INTEGER}, 
+      #{materialInfo,jdbcType=VARCHAR}, #{categoryLevel1,jdbcType=INTEGER}, #{categoryLevel2,jdbcType=INTEGER}, 
+      #{categoryLevel3,jdbcType=INTEGER}, #{createBy,jdbcType=INTEGER}, #{createDate,jdbcType=TIMESTAMP}, 
+      #{modifyBy,jdbcType=INTEGER}, #{modifyDate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.caiqian.Bean.MaterialInfo" >
+    insert into material_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="materialName != null" >
+        material_name,
+      </if>
+      <if test="materialQuantity != null" >
+        material_quantity,
+      </if>
+      <if test="materialInfo != null" >
+        material_info,
+      </if>
+      <if test="categoryLevel1 != null" >
+        category_level1,
+      </if>
+      <if test="categoryLevel2 != null" >
+        category_level2,
+      </if>
+      <if test="categoryLevel3 != null" >
+        category_level3,
+      </if>
+      <if test="createBy != null" >
+        create_by,
+      </if>
+      <if test="createDate != null" >
+        create_date,
+      </if>
+      <if test="modifyBy != null" >
+        modify_by,
+      </if>
+      <if test="modifyDate != null" >
+        modify_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="materialName != null" >
+        #{materialName,jdbcType=VARCHAR},
+      </if>
+      <if test="materialQuantity != null" >
+        #{materialQuantity,jdbcType=INTEGER},
+      </if>
+      <if test="materialInfo != null" >
+        #{materialInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryLevel1 != null" >
+        #{categoryLevel1,jdbcType=INTEGER},
+      </if>
+      <if test="categoryLevel2 != null" >
+        #{categoryLevel2,jdbcType=INTEGER},
+      </if>
+      <if test="categoryLevel3 != null" >
+        #{categoryLevel3,jdbcType=INTEGER},
+      </if>
+      <if test="createBy != null" >
+        #{createBy,jdbcType=INTEGER},
+      </if>
+      <if test="createDate != null" >
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyBy != null" >
+        #{modifyBy,jdbcType=INTEGER},
+      </if>
+      <if test="modifyDate != null" >
+        #{modifyDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+</mapper>
