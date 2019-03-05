@@ -1,86 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.caiqian.mapper.DataDictionaryMapper" >
-  <resultMap id="BaseResultMap" type="com.caiqian.Bean.DataDictionary" >
-    <result column="id" property="id" jdbcType="BIGINT" />
-    <result column="type_code" property="typeCode" jdbcType="VARCHAR" />
-    <result column="type_name" property="typeName" jdbcType="VARCHAR" />
-    <result column="value_id" property="valueId" jdbcType="INTEGER" />
-    <result column="value_name" property="valueName" jdbcType="VARCHAR" />
-    <result column="create_by" property="createBy" jdbcType="INTEGER" />
-    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
-    <result column="modify_by" property="modifyBy" jdbcType="INTEGER" />
-    <result column="modify_date" property="modifyDate" jdbcType="TIMESTAMP" />
-  </resultMap>
-  <insert id="insert" parameterType="com.caiqian.Bean.DataDictionary" >
-    insert into data_dictionary (id, type_code, type_name, 
-      value_id, value_name, create_by, 
-      create_date, modify_by, modify_date
-      )
-    values (#{id,jdbcType=BIGINT}, #{typeCode,jdbcType=VARCHAR}, #{typeName,jdbcType=VARCHAR}, 
-      #{valueId,jdbcType=INTEGER}, #{valueName,jdbcType=VARCHAR}, #{createBy,jdbcType=INTEGER}, 
-      #{createDate,jdbcType=TIMESTAMP}, #{modifyBy,jdbcType=INTEGER}, #{modifyDate,jdbcType=TIMESTAMP}
-      )
-  </insert>
-  <insert id="insertSelective" parameterType="com.caiqian.Bean.DataDictionary" >
-    insert into data_dictionary
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        id,
-      </if>
-      <if test="typeCode != null" >
-        type_code,
-      </if>
-      <if test="typeName != null" >
-        type_name,
-      </if>
-      <if test="valueId != null" >
-        value_id,
-      </if>
-      <if test="valueName != null" >
-        value_name,
-      </if>
-      <if test="createBy != null" >
-        create_by,
-      </if>
-      <if test="createDate != null" >
-        create_date,
-      </if>
-      <if test="modifyBy != null" >
-        modify_by,
-      </if>
-      <if test="modifyDate != null" >
-        modify_date,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        #{id,jdbcType=BIGINT},
-      </if>
-      <if test="typeCode != null" >
-        #{typeCode,jdbcType=VARCHAR},
-      </if>
-      <if test="typeName != null" >
-        #{typeName,jdbcType=VARCHAR},
-      </if>
-      <if test="valueId != null" >
-        #{valueId,jdbcType=INTEGER},
-      </if>
-      <if test="valueName != null" >
-        #{valueName,jdbcType=VARCHAR},
-      </if>
-      <if test="createBy != null" >
-        #{createBy,jdbcType=INTEGER},
-      </if>
-      <if test="createDate != null" >
-        #{createDate,jdbcType=TIMESTAMP},
-      </if>
-      <if test="modifyBy != null" >
-        #{modifyBy,jdbcType=INTEGER},
-      </if>
-      <if test="modifyDate != null" >
-        #{modifyDate,jdbcType=TIMESTAMP},
-      </if>
-    </trim>
-  </insert>
+  <select id="isAccessAuthorityRepertoryListOfEmployee" resultType="java.lang.Integer">
+      select value_id
+      FROM data_dictionary
+      <where>
+            type_code="DEPARTMENT" AND
+           value_name in ("超级管理员","总经理办公室","生产技术部")
+      </where>
+
+  </select>
 </mapper>

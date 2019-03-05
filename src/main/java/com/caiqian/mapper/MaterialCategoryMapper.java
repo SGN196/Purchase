@@ -2,8 +2,11 @@ package com.caiqian.mapper;
 
 import com.caiqian.Bean.MaterialCategory;
 
-public interface MaterialCategoryMapper {
-    int insert(MaterialCategory record);
+import java.util.List;
 
-    int insertSelective(MaterialCategory record);
+public interface MaterialCategoryMapper {
+
+    List<MaterialCategory> queryLevelTwoByLevelOne(Integer id);
+
+    List<MaterialCategory> queryLevelOne();
 }

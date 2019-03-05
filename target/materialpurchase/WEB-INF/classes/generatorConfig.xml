@@ -53,10 +53,12 @@
         <!--<table  tableName="material_info" domainObjectName="MaterialInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
                 <!--enableSelectByExample="false" selectByExampleQueryId="false" >-->
         <!--</table>-->
-        <!--<table  tableName="material_category" domainObjectName="MaterialCategory" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
+        <!--<table  tableName="customer_info" domainObjectName="CustomerInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
                 <!--enableSelectByExample="false" selectByExampleQueryId="false" >-->
         <!--</table>-->
-
+        <!--<table  tableName="material_category" domainObjectName="MaterialCategory" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
+              <!--enableSelectByExample="false" selectByExampleQueryId="false" >-->
+        <!--</table>-->
 
 
     </context>

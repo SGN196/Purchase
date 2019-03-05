@@ -1,100 +1,223 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.caiqian.mapper.MaterialInfoMapper" >
-  <resultMap id="BaseResultMap" type="com.caiqian.Bean.MaterialInfo" >
-    <result column="id" property="id" jdbcType="INTEGER" />
-    <result column="material_name" property="materialName" jdbcType="VARCHAR" />
-    <result column="material_quantity" property="materialQuantity" jdbcType="INTEGER" />
-    <result column="material_info" property="materialInfo" jdbcType="VARCHAR" />
-    <result column="category_level1" property="categoryLevel1" jdbcType="INTEGER" />
-    <result column="category_level2" property="categoryLevel2" jdbcType="INTEGER" />
-    <result column="category_level3" property="categoryLevel3" jdbcType="INTEGER" />
-    <result column="create_by" property="createBy" jdbcType="INTEGER" />
-    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
-    <result column="modify_by" property="modifyBy" jdbcType="INTEGER" />
-    <result column="modify_date" property="modifyDate" jdbcType="TIMESTAMP" />
-  </resultMap>
-  <insert id="insert" parameterType="com.caiqian.Bean.MaterialInfo" >
-    insert into material_info (id, material_name, material_quantity, 
-      material_info, category_level1, category_level2, 
-      category_level3, create_by, create_date, 
-      modify_by, modify_date)
-    values (#{id,jdbcType=INTEGER}, #{materialName,jdbcType=VARCHAR}, #{materialQuantity,jdbcType=INTEGER}, 
-      #{materialInfo,jdbcType=VARCHAR}, #{categoryLevel1,jdbcType=INTEGER}, #{categoryLevel2,jdbcType=INTEGER}, 
-      #{categoryLevel3,jdbcType=INTEGER}, #{createBy,jdbcType=INTEGER}, #{createDate,jdbcType=TIMESTAMP}, 
-      #{modifyBy,jdbcType=INTEGER}, #{modifyDate,jdbcType=TIMESTAMP})
-  </insert>
-  <insert id="insertSelective" parameterType="com.caiqian.Bean.MaterialInfo" >
-    insert into material_info
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        id,
-      </if>
-      <if test="materialName != null" >
-        material_name,
-      </if>
-      <if test="materialQuantity != null" >
-        material_quantity,
-      </if>
-      <if test="materialInfo != null" >
-        material_info,
-      </if>
-      <if test="categoryLevel1 != null" >
-        category_level1,
-      </if>
-      <if test="categoryLevel2 != null" >
-        category_level2,
-      </if>
-      <if test="categoryLevel3 != null" >
-        category_level3,
-      </if>
-      <if test="createBy != null" >
-        create_by,
-      </if>
-      <if test="createDate != null" >
-        create_date,
-      </if>
-      <if test="modifyBy != null" >
-        modify_by,
-      </if>
-      <if test="modifyDate != null" >
-        modify_date,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        #{id,jdbcType=INTEGER},
-      </if>
-      <if test="materialName != null" >
-        #{materialName,jdbcType=VARCHAR},
-      </if>
-      <if test="materialQuantity != null" >
-        #{materialQuantity,jdbcType=INTEGER},
-      </if>
-      <if test="materialInfo != null" >
-        #{materialInfo,jdbcType=VARCHAR},
-      </if>
-      <if test="categoryLevel1 != null" >
-        #{categoryLevel1,jdbcType=INTEGER},
-      </if>
-      <if test="categoryLevel2 != null" >
-        #{categoryLevel2,jdbcType=INTEGER},
-      </if>
-      <if test="categoryLevel3 != null" >
-        #{categoryLevel3,jdbcType=INTEGER},
-      </if>
-      <if test="createBy != null" >
-        #{createBy,jdbcType=INTEGER},
-      </if>
-      <if test="createDate != null" >
-        #{createDate,jdbcType=TIMESTAMP},
-      </if>
-      <if test="modifyBy != null" >
-        #{modifyBy,jdbcType=INTEGER},
-      </if>
-      <if test="modifyDate != null" >
-        #{modifyDate,jdbcType=TIMESTAMP},
-      </if>
-    </trim>
-  </insert>
+
+    <resultMap id="materialDetail" type="com.caiqian.Bean.MaterialInfo">
+        <id property="id" column="id"></id>
+        <result property="materialName" column="material_name"></result>
+        <result property="materialQuantity" column="material_quantity"></result>
+        <result property="materialUnit" column="material_unit"></result>
+        <result property="materialInfo" column="material_info"></result>
+        <association property="categoryLevel1" javaType="com.caiqian.Bean.MaterialCategory">
+            <result property="categoryName" column="category_level_one_name"/>
+        </association>
+        <association property="categoryLevel2" javaType="com.caiqian.Bean.MaterialCategory">
+            <result property="categoryName" column="category_level_two_name"/>
+        </association>
+    </resultMap>
+    <select id="queryAll" resultMap="materialDetail">
+        select
+        m1.id,
+        m1.material_name,
+        m1.material_quantity,
+        m1.material_info,
+        m1.material_unit,
+        m2.category_name as category_level_one_name,
+        m3.category_name as category_level_two_name
+
+        from material_info m1
+        left join material_category m2 on m1.category_level1 = m2.id
+        left join material_category m3 on m1.category_level2 = m3.id
+        <where>
+            <if test="id != null">
+                and m1.id = #{id}
+            </if>
+            <if test="materialName != null and materialName != ''">
+                and m1.material_name like concat('%',#{materialName},'%')
+            </if>
+            <if test="levelOne != null">
+                and m1.category_level1 = #{levelOne}
+            </if>
+            <if test="levelTwo != null">
+                and m1.category_level2 = #{levelTwo}
+            </if>
+
+        </where>
+
+    </select>
 </mapper>
+
+
+        <!--<resultMap id="BaseResultMap" type="com.caiqian.Bean.MaterialInfo" >-->
+        <!--<id column="id" property="id" jdbcType="INTEGER" />-->
+        <!--<result column="material_name" property="materialName" jdbcType="VARCHAR" />-->
+        <!--<result column="material_quantity" property="materialQuantity" jdbcType="INTEGER" />-->
+        <!--<result column="material_unit" property="materialUnit" jdbcType="VARCHAR" />-->
+        <!--<result column="material_info" property="materialInfo" jdbcType="VARCHAR" />-->
+        <!--<result column="category_level1" property="categoryLevel1" jdbcType="INTEGER" />-->
+        <!--<result column="category_level2" property="categoryLevel2" jdbcType="INTEGER" />-->
+        <!--<result column="category_level3" property="categoryLevel3" jdbcType="INTEGER" />-->
+        <!--<result column="create_by" property="createBy" jdbcType="INTEGER" />-->
+        <!--<result column="create_date" property="createDate" jdbcType="TIMESTAMP" />-->
+        <!--<result column="modify_by" property="modifyBy" jdbcType="INTEGER" />-->
+        <!--<result column="modify_date" property="modifyDate" jdbcType="TIMESTAMP" />-->
+        <!--</resultMap>-->
+        <!--<sql id="Base_Column_List" >-->
+        <!--id, material_name, material_quantity, material_unit, material_info, category_level1, -->
+        <!--category_level2, category_level3, create_by, create_date, modify_by, modify_date-->
+        <!--</sql>-->
+        <!--<select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >-->
+        <!--select -->
+        <!--<include refid="Base_Column_List" />-->
+        <!--from material_info-->
+        <!--where id = #{id,jdbcType=INTEGER}-->
+        <!--</select>-->
+        <!--<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >-->
+        <!--delete from material_info-->
+        <!--where id = #{id,jdbcType=INTEGER}-->
+        <!--</delete>-->
+        <!--<insert id="insert" parameterType="com.caiqian.Bean.MaterialInfo" >-->
+        <!--insert into material_info (id, material_name, material_quantity, -->
+        <!--material_unit, material_info, category_level1, -->
+        <!--category_level2, category_level3, create_by, -->
+        <!--create_date, modify_by, modify_date-->
+        <!--)-->
+        <!--values (#{id,jdbcType=INTEGER}, #{materialName,jdbcType=VARCHAR}, #{materialQuantity,jdbcType=INTEGER}, -->
+        <!--#{materialUnit,jdbcType=VARCHAR}, #{materialInfo,jdbcType=VARCHAR}, #{categoryLevel1,jdbcType=INTEGER}, -->
+        <!--#{categoryLevel2,jdbcType=INTEGER}, #{categoryLevel3,jdbcType=INTEGER}, #{createBy,jdbcType=INTEGER}, -->
+        <!--#{createDate,jdbcType=TIMESTAMP}, #{modifyBy,jdbcType=INTEGER}, #{modifyDate,jdbcType=TIMESTAMP}-->
+        <!--)-->
+        <!--</insert>-->
+        <!--<insert id="insertSelective" parameterType="com.caiqian.Bean.MaterialInfo" >-->
+        <!--insert into material_info-->
+        <!--<trim prefix="(" suffix=")" suffixOverrides="," >-->
+        <!--<if test="id != null" >-->
+        <!--id,-->
+        <!--</if>-->
+        <!--<if test="materialName != null" >-->
+        <!--material_name,-->
+        <!--</if>-->
+        <!--<if test="materialQuantity != null" >-->
+        <!--material_quantity,-->
+        <!--</if>-->
+        <!--<if test="materialUnit != null" >-->
+        <!--material_unit,-->
+        <!--</if>-->
+        <!--<if test="materialInfo != null" >-->
+        <!--material_info,-->
+        <!--</if>-->
+        <!--<if test="categoryLevel1 != null" >-->
+        <!--category_level1,-->
+        <!--</if>-->
+        <!--<if test="categoryLevel2 != null" >-->
+        <!--category_level2,-->
+        <!--</if>-->
+        <!--<if test="categoryLevel3 != null" >-->
+        <!--category_level3,-->
+        <!--</if>-->
+        <!--<if test="createBy != null" >-->
+        <!--create_by,-->
+        <!--</if>-->
+        <!--<if test="createDate != null" >-->
+        <!--create_date,-->
+        <!--</if>-->
+        <!--<if test="modifyBy != null" >-->
+        <!--modify_by,-->
+        <!--</if>-->
+        <!--<if test="modifyDate != null" >-->
+        <!--modify_date,-->
+        <!--</if>-->
+        <!--</trim>-->
+        <!--<trim prefix="values (" suffix=")" suffixOverrides="," >-->
+        <!--<if test="id != null" >-->
+        <!--#{id,jdbcType=INTEGER},-->
+        <!--</if>-->
+        <!--<if test="materialName != null" >-->
+        <!--#{materialName,jdbcType=VARCHAR},-->
+        <!--</if>-->
+        <!--<if test="materialQuantity != null" >-->
+        <!--#{materialQuantity,jdbcType=INTEGER},-->
+        <!--</if>-->
+        <!--<if test="materialUnit != null" >-->
+        <!--#{materialUnit,jdbcType=VARCHAR},-->
+        <!--</if>-->
+        <!--<if test="materialInfo != null" >-->
+        <!--#{materialInfo,jdbcType=VARCHAR},-->
+        <!--</if>-->
+        <!--<if test="categoryLevel1 != null" >-->
+        <!--#{categoryLevel1,jdbcType=INTEGER},-->
+        <!--</if>-->
+        <!--<if test="categoryLevel2 != null" >-->
+        <!--#{categoryLevel2,jdbcType=INTEGER},-->
+        <!--</if>-->
+        <!--<if test="categoryLevel3 != null" >-->
+        <!--#{categoryLevel3,jdbcType=INTEGER},-->
+        <!--</if>-->
+        <!--<if test="createBy != null" >-->
+        <!--#{createBy,jdbcType=INTEGER},-->
+        <!--</if>-->
+        <!--<if test="createDate != null" >-->
+        <!--#{createDate,jdbcType=TIMESTAMP},-->
+        <!--</if>-->
+        <!--<if test="modifyBy != null" >-->
+        <!--#{modifyBy,jdbcType=INTEGER},-->
+        <!--</if>-->
+        <!--<if test="modifyDate != null" >-->
+        <!--#{modifyDate,jdbcType=TIMESTAMP},-->
+        <!--</if>-->
+        <!--</trim>-->
+        <!--</insert>-->
+        <!--<update id="updateByPrimaryKeySelective" parameterType="com.caiqian.Bean.MaterialInfo" >-->
+        <!--update material_info-->
+        <!--<set >-->
+        <!--<if test="materialName != null" >-->
+        <!--material_name = #{materialName,jdbcType=VARCHAR},-->
+        <!--</if>-->
+        <!--<if test="materialQuantity != null" >-->
+        <!--material_quantity = #{materialQuantity,jdbcType=INTEGER},-->
+        <!--</if>-->
+        <!--<if test="materialUnit != null" >-->
+        <!--material_unit = #{materialUnit,jdbcType=VARCHAR},-->
+        <!--</if>-->
+        <!--<if test="materialInfo != null" >-->
+        <!--material_info = #{materialInfo,jdbcType=VARCHAR},-->
+        <!--</if>-->
+        <!--<if test="categoryLevel1 != null" >-->
+        <!--category_level1 = #{categoryLevel1,jdbcType=INTEGER},-->
+        <!--</if>-->
+        <!--<if test="categoryLevel2 != null" >-->
+        <!--category_level2 = #{categoryLevel2,jdbcType=INTEGER},-->
+        <!--</if>-->
+        <!--<if test="categoryLevel3 != null" >-->
+        <!--category_level3 = #{categoryLevel3,jdbcType=INTEGER},-->
+        <!--</if>-->
+        <!--<if test="createBy != null" >-->
+        <!--create_by = #{createBy,jdbcType=INTEGER},-->
+        <!--</if>-->
+        <!--<if test="createDate != null" >-->
+        <!--create_date = #{createDate,jdbcType=TIMESTAMP},-->
+        <!--</if>-->
+        <!--<if test="modifyBy != null" >-->
+        <!--modify_by = #{modifyBy,jdbcType=INTEGER},-->
+        <!--</if>-->
+        <!--<if test="modifyDate != null" >-->
+        <!--modify_date = #{modifyDate,jdbcType=TIMESTAMP},-->
+        <!--</if>-->
+        <!--</set>-->
+        <!--where id = #{id,jdbcType=INTEGER}-->
+        <!--</update>-->
+        <!--<update id="updateByPrimaryKey" parameterType="com.caiqian.Bean.MaterialInfo" >-->
+        <!--update material_info-->
+        <!--set material_name = #{materialName,jdbcType=VARCHAR},-->
+        <!--material_quantity = #{materialQuantity,jdbcType=INTEGER},-->
+        <!--material_unit = #{materialUnit,jdbcType=VARCHAR},-->
+        <!--material_info = #{materialInfo,jdbcType=VARCHAR},-->
+        <!--category_level1 = #{categoryLevel1,jdbcType=INTEGER},-->
+        <!--category_level2 = #{categoryLevel2,jdbcType=INTEGER},-->
+        <!--category_level3 = #{categoryLevel3,jdbcType=INTEGER},-->
+        <!--create_by = #{createBy,jdbcType=INTEGER},-->
+        <!--create_date = #{createDate,jdbcType=TIMESTAMP},-->
+        <!--modify_by = #{modifyBy,jdbcType=INTEGER},-->
+        <!--modify_date = #{modifyDate,jdbcType=TIMESTAMP}-->
+        <!--where id = #{id,jdbcType=INTEGER}-->
+        <!--</update>-->

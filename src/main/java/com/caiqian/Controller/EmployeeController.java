@@ -1,7 +1,14 @@
 package com.caiqian.Controller;
 
+import com.caiqian.Bean.UserInfo;
+import com.caiqian.Service.EmployeeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpSession;
 
 /**
  * @author SGN196
@@ -19,10 +26,33 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/employee")
 public class EmployeeController
 {
+    @Autowired
+    private EmployeeService employeeService;
+
 
     @RequestMapping("/toLogin")
-    public String toLogin(){
+    public String toLogin()
+    {
+        return "emp/login";
+    }
 
+
+    @RequestMapping("/login")
+    public String login(UserInfo userInfo, Model model, HttpSession httpSession){
+        userInfo = employeeService.login(userInfo);
+        if(userInfo == null){
+            model.addAttribute("errMsg", "用户名或密码错误");
+            return "emp/login";
+        }
+        httpSession.setAttribute("userInfo", userInfo);
+        return "emp/index";
+    }
+
+    @RequestMapping("/logout")
+    public String logout(HttpSession httpSession){
+
+        httpSession.removeAttribute("userInfo");
+        httpSession.invalidate();
         return "emp/login";
     }
 

@@ -2,8 +2,8 @@ package com.caiqian.mapper;
 
 import com.caiqian.Bean.DataDictionary;
 
-public interface DataDictionaryMapper {
-    int insert(DataDictionary record);
+import java.util.ArrayList;
 
-    int insertSelective(DataDictionary record);
+public interface DataDictionaryMapper {
+    ArrayList<Integer> isAccessAuthorityRepertoryListOfEmployee();
 }
