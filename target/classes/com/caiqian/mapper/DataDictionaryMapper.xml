@@ -10,4 +10,13 @@
       </where>
 
   </select>
+
+    <select id="queryEmployeeDept" resultType="java.lang.String">
+        select value_name
+        from data_dictionary
+        <where>
+            type_code="DEPARTMENT" AND
+            value_id=#{id}
+        </where>
+    </select>
 </mapper>

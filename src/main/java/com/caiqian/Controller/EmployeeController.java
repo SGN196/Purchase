@@ -44,6 +44,8 @@ public class EmployeeController
             model.addAttribute("errMsg", "用户名或密码错误");
             return "emp/login";
         }
+        String deptName = employeeService.queryEmployeeDept(userInfo.getDeptId());
+        httpSession.setAttribute("deptName", deptName);
         httpSession.setAttribute("userInfo", userInfo);
         return "emp/index";
     }

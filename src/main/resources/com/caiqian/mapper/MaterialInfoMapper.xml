@@ -25,9 +25,14 @@
         m2.category_name as category_level_one_name,
         m3.category_name as category_level_two_name
 
+
+
         from material_info m1
         left join material_category m2 on m1.category_level1 = m2.id
         left join material_category m3 on m1.category_level2 = m3.id
+
+
+
         <where>
             <if test="id != null">
                 and m1.id = #{id}
@@ -44,6 +49,101 @@
 
         </where>
 
+        ORDER BY m1.id desc
+
+    </select>
+
+    <select id="queryByIdToUpdateDTO" resultType="com.caiqian.DTO.UpdateMaterialDTO">
+        select id, material_name, material_unit, material_info,category_level1,category_level2
+        from material_info
+        <where>
+            id = #{id}
+        </where>
+    </select>
+    <insert id="addMaterial" keyProperty="id" useGeneratedKeys="true">
+        insert into material_info
+        <trim prefix="(" suffix=")" prefixOverrides=",">
+
+            <if test="materialQuantity != null">
+                ,material_quantity
+            </if>
+            <if test="materialName != null and materialName != ''">
+                ,material_name
+            </if>
+            <if test="materialUnit != null and materialUnit != ''">
+                ,material_unit
+            </if>
+            <if test="materialInfo != null and materialInfo != ''">
+                ,material_info
+            </if>
+            <if test="categoryLevel1 != null">
+                ,category_level1
+            </if>
+            <if test="categoryLevel2 != null">
+                ,category_level2
+            </if>
+
+        </trim>
+        <trim prefix="values(" suffix=")" prefixOverrides=",">
+            <if test="materialQuantity != null">
+                ,#{materialQuantity}
+            </if>
+            <if test="materialName != null and materialName != ''">
+                ,#{materialName}
+            </if>
+            <if test="materialUnit != null and materialUnit != ''">
+                ,#{materialUnit}
+            </if>
+            <if test="materialInfo != null and materialInfo != ''">
+                ,#{materialInfo}
+            </if>
+            <if test="categoryLevel1 != null">
+                ,#{categoryLevel1.id}
+            </if>
+            <if test="categoryLevel2 != null">
+                ,#{categoryLevel2.id}
+            </if>
+        </trim>
+
+
+    </insert>
+    <update id="updateMaterialInfoDTO">
+        update material_info
+        <trim prefixOverrides="," prefix="set" suffix="">
+            <if test="materialUnit != null and materialUnit != ''">
+                ,material_unit = #{materialUnit}
+            </if>
+            <if test="levelOne != null and levelOne != ''">
+                ,category_level1 = #{levelOne}
+            </if>
+            <if test="levelTwo != null and levelTwo != ''">
+                ,category_level2 = #{levelTwo}
+            </if>
+            ,material_info = #{materialInfo}
+
+        </trim>
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+        </where>
+
+    </update>
+
+    <select id="queryMaterialNameByLevelTwo" resultType="com.caiqian.Bean.MaterialInfo">
+        select *
+        from material_info
+        <where>
+            category_level2 = #{id}
+        </where>
+    </select>
+
+    <select id="queryUnitById" resultType="java.lang.String">
+        select material_unit
+        from material_info
+        <where>
+            id = #{id}
+        </where>
     </select>
 </mapper>
 

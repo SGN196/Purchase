@@ -20,7 +20,7 @@
             <div class="layui-body">
                 <!-- 内容主体区域 -->
                 <div style="padding: 15px;">
-                    欢迎你：${sessionScope.userInfo.userName} <br>
+                    ${sessionScope.deptName}：${sessionScope.userInfo.userName}，欢迎你 <br>
 
 
 
@@ -31,6 +31,14 @@
             <!-- 底部固定区域 -->
             <jsp:include page="${ctx}/jsp/common/footer.jsp"/>
 
-        </div>x
+        </div>
+        <script src="${ctx}/static/plugins/layui/layui.js"></script>
+        <script>
+            //JavaScript代码区域
+            layui.use('element', function(){
+                var element = layui.element;
+
+            });
+        </script>
     </body>
 </html>

@@ -6,4 +6,6 @@ import java.util.ArrayList;
 
 public interface DataDictionaryMapper {
     ArrayList<Integer> isAccessAuthorityRepertoryListOfEmployee();
+
+    String queryEmployeeDept(Integer deptId);
 }

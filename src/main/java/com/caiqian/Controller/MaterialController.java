@@ -4,6 +4,7 @@ import com.caiqian.Bean.MaterialCategory;
 import com.caiqian.Bean.MaterialInfo;
 import com.caiqian.Bean.UserInfo;
 import com.caiqian.DTO.MaterialInfoDTO;
+import com.caiqian.DTO.UpdateMaterialDTO;
 import com.caiqian.Service.MaterialService;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -31,10 +31,84 @@ public class MaterialController
     MaterialService materialService;
 
 
+    @RequestMapping("/toUpdateMaterial/{MaterialId}")
+    public String toUpdateMaterial(@PathVariable("MaterialId") Integer id,  Model model){
+        UpdateMaterialDTO updateMaterialDTO = materialService.queryByIdToUpdateDTO(id);
+        List<MaterialCategory> levelOneList = materialService.queryLevelOne();
+        model.addAttribute("updateMaterialDTO", updateMaterialDTO);
+        model.addAttribute("levelOneList", levelOneList);
+
+        return "category/updateMaterial";
+    }
+
+    @RequestMapping("/updateMaterial")
+    public String UpdateMaterial( UpdateMaterialDTO updateMaterialDTO, Model model){
+
+        if(updateMaterialDTO.isEmptyUpdate()){
+            model.addAttribute("ErrUpdateMaterialMsg", "关键数据为空");
+        }else
+        {
+
+            boolean flag = materialService.updateMaterialInfoDTO(updateMaterialDTO);
+            if (flag == true)
+            {
+                model.addAttribute("updateMaterialMsg", "修改成功");
+            } else
+            {
+                model.addAttribute("ErrUpdateMaterialMsg", "修改失败");
+            }
+
+        }
+        List<MaterialCategory> levelOneList = materialService.queryLevelOne();
+        model.addAttribute("levelOneList", levelOneList);
+        model.addAttribute("updateMaterialDTO",updateMaterialDTO );
+        return "category/updateMaterial";
+
+    }
+
+    @RequestMapping("/toAddMaterial")
+    public String toAddMaterial(Model model, HttpSession httpSession){
+        UserInfo userInfo = (UserInfo)httpSession.getAttribute("userInfo");
+        if(userInfo == null){
+            return "emp/login";
+        }
+        List<MaterialCategory> levelOnex = materialService.queryLevelOne();
+        model.addAttribute("levelOnex", levelOnex);
+        return "category/addMaterial";
+    }
+
+
+    @RequestMapping("/addMaterial")
+    public String addMaterial(MaterialInfo materialInfoObj, Model model){
+        List<MaterialCategory> levelOnex = materialService.queryLevelOne();
+        model.addAttribute("levelOnex", levelOnex);
+        if(!materialInfoObj.isEmptyADD())
+        {
+            boolean flag = materialService.addMaterialItem(materialInfoObj);
+            if(flag){
+                model.addAttribute("ErraddMaterialMsg", "");
+                model.addAttribute("addMaterialMsg", "新增成功");
+                return "category/addMaterial";
+            }else{
+                model.addAttribute("addMaterialMsg", "");
+                model.addAttribute("ErraddMaterialMsg", "新增失败");
+            }
+        }else{
+            model.addAttribute("addMaterialMsg", "");
+            model.addAttribute("ErraddMaterialMsg", "信息填写未填全");
+
+        }
+        model.addAttribute("materialInfoTemp", materialInfoObj);
+        return "category/addMaterial";
+    }
+
     //判断登录的员工账号，是否有权限访问库存信息
     @RequestMapping("/repertoryList")
     public String repertoryList(MaterialInfoDTO materialInfoDTO, HttpSession httpSession, Model model){
         UserInfo userInfo = (UserInfo)httpSession.getAttribute("userInfo");
+        if(userInfo == null){
+            return "emp/login";
+        }
         boolean isAuthority = materialService.isAccessAuthorityRepertoryOfEmployee(userInfo.getDeptId());
         if(isAuthority)
         {
@@ -46,8 +120,8 @@ public class MaterialController
             model.addAttribute("page", pageInfo);
             model.addAttribute("levelOneList", levelOneList);
             model.addAttribute("materialInfoDTO", materialInfoDTO);
-            
-            return "repo/index";
+
+            return "category/index";
         }
         else{
             model.addAttribute("PermissionDenied", "权限不足，无法访问");
@@ -61,6 +135,22 @@ public class MaterialController
     public List<MaterialCategory> queryLevelTwoByLevelOne(@PathVariable("levelId") Integer id){
         List<MaterialCategory> list = materialService.queryLevelTwoByLevelOne(id);
         return list;
+    }
+
+    @ResponseBody
+    @RequestMapping("/category/queryMaterialNameByLevelTwo/{levelTwoId}")
+    public List<MaterialInfo> queryMaterialNameByLevelTwo(@PathVariable("levelTwoId") Integer id){
+        List<MaterialInfo> list = materialService.queryMaterialNameByLevelTwo(id);
+        return list;
+    }
+
+
+    @ResponseBody
+    @RequestMapping("/category/queryUnitById/{Id}")
+    public String queryUnitById(@PathVariable("Id") Integer id){
+        String str = materialService.queryUnitById(id);
+        System.out.println(str);
+        return str;
     }
 
 

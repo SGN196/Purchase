@@ -12,4 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/customer")
 public class CustomerController
 {
+    @RequestMapping("/toLogin")
+    public String toLogin(){
+        return "customer/login";
+    }
 }

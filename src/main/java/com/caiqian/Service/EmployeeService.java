@@ -10,4 +10,6 @@ import com.caiqian.Bean.UserInfo;
 public interface EmployeeService
 {
     UserInfo login(UserInfo userInfo);
+
+    String queryEmployeeDept(Integer deptId);
 }

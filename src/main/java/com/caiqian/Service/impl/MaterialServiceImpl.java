@@ -4,6 +4,7 @@ import com.caiqian.Bean.DataDictionary;
 import com.caiqian.Bean.MaterialCategory;
 import com.caiqian.Bean.MaterialInfo;
 import com.caiqian.DTO.MaterialInfoDTO;
+import com.caiqian.DTO.UpdateMaterialDTO;
 import com.caiqian.Service.MaterialService;
 import com.caiqian.constant.CommonCodeConstant;
 import com.caiqian.mapper.DataDictionaryMapper;
@@ -46,6 +47,24 @@ public class MaterialServiceImpl implements MaterialService
         return false;
     }
 
+    @Override
+    public boolean updateMaterialInfoDTO(UpdateMaterialDTO updateMaterialDTO)
+    {
+        return materialInfoMapper.updateMaterialInfoDTO(updateMaterialDTO);
+    }
+
+    @Override
+    public UpdateMaterialDTO queryByIdToUpdateDTO(Integer id)
+    {
+        return materialInfoMapper.queryByIdToUpdateDTO(id);
+    }
+
+    @Override
+    public boolean addMaterialItem(MaterialInfo materialInfo)
+    {
+        materialInfo.setMaterialQuantity(0);
+        return materialInfoMapper.addMaterial(materialInfo);
+    }
 
     @Override
     public PageInfo<MaterialInfo> query(MaterialInfoDTO materialInfoDTO)
@@ -60,6 +79,18 @@ public class MaterialServiceImpl implements MaterialService
     public List<MaterialCategory> queryLevelTwoByLevelOne(Integer id)
     {
         return materialCategoryMapper.queryLevelTwoByLevelOne(id);
+    }
+
+    @Override
+    public List<MaterialInfo> queryMaterialNameByLevelTwo(Integer id)
+    {
+        return materialInfoMapper.queryMaterialNameByLevelTwo(id);
+    }
+
+    @Override
+    public String queryUnitById(Integer id)
+    {
+        return materialInfoMapper.queryUnitById(id);
     }
 
     @Override

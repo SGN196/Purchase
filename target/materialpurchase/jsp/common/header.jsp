@@ -8,7 +8,7 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="layui-header">
-    <div class="layui-logo">企业管理系统</div>
+    <a href="${ctx}/employee/login"><div class="layui-logo">企业管理系统</div></a>
     <!-- 头部区域（可配合layui已有的水平导航） -->
     <%--<ul class="layui-nav layui-layout-left">--%>
     <%--<li class="layui-nav-item"><a href="">控制台</a></li>--%>
@@ -42,31 +42,44 @@
     <div class="layui-side-scroll">
         <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
         <ul class="layui-nav layui-nav-tree"  lay-filter="test">
-            <li class="layui-nav-item layui-nav-itemed">
-                <a class="" href="javascript:;">APP账户管理</a>
+                <li id="useApply" class="layui-nav-item">
+                    <a class="" href="javascript:;">领用物资</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="${ctx}/record/toReceiveApply">领用物资申请</a></dd>
+                        <dd><a href="${ctx}/record/myApplyList">${PermissionDenied}申请列表</a></dd>
+                    </dl>
+                </li>
+            <li id="materialList" class="layui-nav-item">
+                <a class="" href="javascript:;">物资相关</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="javascript:;">列表一</a></dd>
-                    <dd><a href="javascript:;">列表二</a></dd>
-                    <dd><a href="javascript:;">列表三</a></dd>
-                    <dd><a href="javascript:;">超链接</a></dd>
+                    <dd><a href="${ctx}/material/repertoryList">${PermissionDenied}物资查询</a></dd>
+                    <dd><a href="${ctx}/material/toAddMaterial">${PermissionDenied}新增物资种类</a></dd>
                 </dl>
             </li>
             <li class="layui-nav-item">
-                <a href="${ctx}/material/repertoryList">${PermissionDenied}库存查询</a>
+                <a class="" href="javascript:;">${PermissionDenied}库存查询</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="${ctx}/material/repertoryList/devId/${sessionScope.userInfo.deptId}"></a></dd>
+                    <dd><a href="${ctx}/material/repertoryList/devId/${sessionScope.userInfo.deptId}">库存详情</a></dd>
+                    <dd><a href="${ctx}/material/repertoryList/devId/${sessionScope.userInfo.deptId}">进出库记录</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a class="" href="javascript:;">${PermissionDenied}采购系统</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="${ctx}/material/purchase/devId/${sessionScope.userInfo.deptId}">发布采购需求</a></dd>
+                    <dd><a href="${ctx}/material/purchase/devId/${sessionScope.userInfo.deptId}">订单管理</a></dd>
+                </dl>
+            </li>
 
-                </dl>
-            </li>
-            <li class="layui-nav-item">
-                <a href="javascript:;"></a>
-                <dl class="layui-nav-child">
-                    <dd><a href="${ctx}/app/index/devId/${sessionScope.devUser.id}">APP维护</a></dd>
 
-                </dl>
-            </li>
             <li class="layui-nav-item">
-                <a href="javascript:;">个人设置</a>
+                <a></a>
+
+            </li>
+
+
+            <li class="layui-nav-item">
+                <a class="" href="javascript:;">个人设置</a>
                 <dl class="layui-nav-child">
                     <dd><a href="${ctx}/app/index/devId/${sessionScope.devUser.id}">APP维护</a></dd>
 

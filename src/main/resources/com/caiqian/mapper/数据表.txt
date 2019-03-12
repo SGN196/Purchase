@@ -121,14 +121,17 @@ create table material_info(
 -- 物品流水清单
 create table material_record(
 
-    id int,
+    id int primary key,
     material_id int,          -- 对应物品表ID
     material_num int,         -- 数量
     user_id int,              -- 对应员工表id
 
-    record_status int,        -- 原因
+    use_reason varchar(200),  -- 备注
+    record_status int,        -- 审批状态
 
-    create_by int,            -- 仓库管理员id
+    manager_id int,           -- 审批人ID
+
+    create_by int,            --
     create_date datetime,     -- 时间
     modify_by int,
     modify_date datetime

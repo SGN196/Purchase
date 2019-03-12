@@ -127,4 +127,31 @@ public class MaterialInfo {
     public void setModifyDate(Date modifyDate) {
         this.modifyDate = modifyDate;
     }
+
+    public boolean isEmptyADD(){
+        if(materialName == null || "".equals(materialName) || materialUnit == null || "".equals(materialUnit)
+                || categoryLevel1 == null || categoryLevel2 == null)
+            return true;
+        else
+            return false;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "MaterialInfo{" +
+                "id=" + id +
+                ", materialName='" + materialName + '\'' +
+                ", materialQuantity=" + materialQuantity +
+                ", materialUnit='" + materialUnit + '\'' +
+                ", materialInfo='" + materialInfo + '\'' +
+                ", categoryLevel1=" + categoryLevel1 +
+                ", categoryLevel2=" + categoryLevel2 +
+                ", categoryLevel3=" + categoryLevel3 +
+                ", createBy=" + createBy +
+                ", createDate=" + createDate +
+                ", modifyBy=" + modifyBy +
+                ", modifyDate=" + modifyDate +
+                '}';
+    }
 }
