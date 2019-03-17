@@ -14,6 +14,11 @@ public class CustomerController
 {
     @RequestMapping("/toLogin")
     public String toLogin(){
-        return "customer/login";
+        return "customer/login/login";
+    }
+
+    @RequestMapping("/toRegister")
+    public String toRegister(){
+        return "customer/login/register";
     }
 }

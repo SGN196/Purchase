@@ -9,7 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>企业首页</title>
+    <title>物资采购管理系统</title>
 
     <style>
         body{
@@ -30,9 +30,9 @@
 <body>
 
     <div id="divcss1">
-   这是一个没有特效的首页<br>
+   这是一个没有特效的企业首页<br>
         <a href="${ctx}/employee/toLogin">企业内部系统</a><br>
-        <a href="${ctx}/customer/toLogin">竞标系统</a>
+        <a href="${ctx}/customer/toLogin">友商竞标系统</a>
     </div>
 </body>
 </html>

@@ -7,11 +7,15 @@ public class MaterialRecord {
 
     private Integer materialId;
 
+    private String materialName;
+
     private Integer materialNum;
 
     private Integer userId;
 
     private String useReason;
+
+    private String refuseReason;
 
     private Integer recordStatus;
 
@@ -24,6 +28,39 @@ public class MaterialRecord {
     private Integer modifyBy;
 
     private Date modifyDate;
+
+    private Integer pageNum = 1;
+
+    public Integer getPageNum()
+    {
+        return pageNum;
+    }
+
+    public void setPageNum(Integer pageNum)
+    {
+        this.pageNum = pageNum;
+    }
+
+
+    public String getRefuseReason()
+    {
+        return refuseReason;
+    }
+
+    public void setRefuseReason(String refuseReason)
+    {
+        this.refuseReason = refuseReason;
+    }
+
+    public String getMaterialName()
+    {
+        return materialName;
+    }
+
+    public void setMaterialName(String materialName)
+    {
+        this.materialName = materialName;
+    }
 
     public Integer getId() {
         return id;
@@ -110,6 +147,36 @@ public class MaterialRecord {
     }
 
     public void setModifyDate(Date modifyDate) {
+
         this.modifyDate = modifyDate;
+    }
+
+    public boolean isAddEmpty(){
+        if(materialId == null || userId == null || materialNum == null )
+            return true;
+        else
+            return false;
+
+    }
+
+    @Override
+    public String toString()
+    {
+        return "MaterialRecord{" +
+                "id=" + id +
+                ", materialId=" + materialId +
+                ", materialName='" + materialName + '\'' +
+                ", materialNum=" + materialNum +
+                ", userId=" + userId +
+                ", useReason='" + useReason + '\'' +
+                ", refuseReason='" + refuseReason + '\'' +
+                ", recordStatus=" + recordStatus +
+                ", managerId=" + managerId +
+                ", createBy=" + createBy +
+                ", createDate=" + createDate +
+                ", modifyBy=" + modifyBy +
+                ", modifyDate=" + modifyDate +
+                ", pageNum=" + pageNum +
+                '}';
     }
 }

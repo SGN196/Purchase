@@ -52,6 +52,10 @@
         ORDER BY m1.id desc
 
     </select>
+    <select id="queryQuantityByMaterialId" resultType="java.lang.Integer">
+        select material_quantity from material_info
+        where id = #{materialId}
+    </select>
 
     <select id="queryByIdToUpdateDTO" resultType="com.caiqian.DTO.UpdateMaterialDTO">
         select id, material_name, material_unit, material_info,category_level1,category_level2

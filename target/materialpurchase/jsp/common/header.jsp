@@ -8,7 +8,7 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="layui-header">
-    <a href="${ctx}/employee/login"><div class="layui-logo">企业管理系统</div></a>
+    <a href="${ctx}/employee/login"><div class="layui-logo">企业物资管理系统</div></a>
     <!-- 头部区域（可配合layui已有的水平导航） -->
     <%--<ul class="layui-nav layui-layout-left">--%>
     <%--<li class="layui-nav-item"><a href="">控制台</a></li>--%>
@@ -42,13 +42,13 @@
     <div class="layui-side-scroll">
         <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
         <ul class="layui-nav layui-nav-tree"  lay-filter="test">
-                <li id="useApply" class="layui-nav-item">
-                    <a class="" href="javascript:;">领用物资</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="${ctx}/record/toReceiveApply">领用物资申请</a></dd>
-                        <dd><a href="${ctx}/record/myApplyList">${PermissionDenied}申请列表</a></dd>
-                    </dl>
-                </li>
+            <li id="useApply" class="layui-nav-item">
+                <a class="" href="javascript:;">领用物资</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="${ctx}/record/toReceiveApply">领用物资申请</a></dd>
+                    <dd><a href="${ctx}/record/toMyApplyList/${sessionScope.userInfo.id}">${PermissionDenied}本人申请列表</a></dd>
+                </dl>
+            </li>
             <li id="materialList" class="layui-nav-item">
                 <a class="" href="javascript:;">物资相关</a>
                 <dl class="layui-nav-child">
@@ -56,11 +56,11 @@
                     <dd><a href="${ctx}/material/toAddMaterial">${PermissionDenied}新增物资种类</a></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item">
-                <a class="" href="javascript:;">${PermissionDenied}库存查询</a>
+            <li id="recordList" class="layui-nav-item">
+                <a class="" href="javascript:;">${PermissionDenied}库存审核</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="${ctx}/material/repertoryList/devId/${sessionScope.userInfo.deptId}">库存详情</a></dd>
-                    <dd><a href="${ctx}/material/repertoryList/devId/${sessionScope.userInfo.deptId}">进出库记录</a></dd>
+                    <dd><a href="${ctx}/record/toCheckApplyList">领用物资审批</a></dd>
+                    <dd><a href="${ctx}/record/toInOutRecord">进出库记录</a></dd>
                 </dl>
             </li>
             <li class="layui-nav-item">

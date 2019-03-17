@@ -33,7 +33,12 @@
         <label id="divcss5">领用物资</label>
         <div id="divcss4">
 
-            <form method="get" action="${ctx}/material/addMaterial" class="layui-form">
+            <form method="post" action="${ctx}/record/applyForOutRepository" class="layui-form">
+
+                <div>
+
+                    <input type="hidden" name="userId" value="${sessionScope.userInfo.id}">
+                </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">领用人</label>
                     <div class="layui-input-inline">
@@ -60,10 +65,11 @@
                     </div>
                 </div>
                 <br>
+
                 <div class="layui-inline">
                     <label class="layui-form-label">物品名称</label>
                     <div class="layui-input-block">
-                        <select name="materialName" lay-filter="materialNamex" id="materialName">
+                        <select name="materialId" lay-filter="materialNamex" id="materialName">
                             <option value="">-请选择-</option>
                         </select>
                     </div>
@@ -74,6 +80,13 @@
                     <label class="layui-form-label">计量单位</label>
                     <div class="layui-input-inline">
                         <label id="materialUnit"></label>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">领用数量</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="materialNum" value="${materialRecord.materialNum}"  autocomplete="off"
+                               class="layui-input">
                     </div>
                 </div>
 
@@ -91,12 +104,12 @@
                         <%--<textarea cols="30" rows="10"--%>
                     <%--</div>--%>
                     <div class="layui-input-block">
-                        <textarea name="materialInfo" placeholder="请输入申请原因"   class="layui-textarea">${materialInfoTemp.materialInfo}</textarea>
+                        <textarea name="useReason" placeholder="请输入申请原因"   class="layui-textarea">${materialRecord.useReason}</textarea>
                     </div>
                 </div>
                 <div style="text-align: center">
-                    <p style="color: green; " >${addMaterialMsg}</p>
-                    <p style="color: red;" >${ErraddMaterialMsg}</p>
+                    <a style="color: green"> <p style="color: green; " >${successMsg}</p></a>
+                    <a style="color: red"> <p style="color: red;" >${errorMsg}</p></a>
                 </div>
                 <br>
                 <div class="layui-form-item">
@@ -170,7 +183,7 @@
         });
 
         form.on('select(materialNamex)', function () {
-            var materialId = $('#materialUnit').val();
+            var materialId = $('#materialName').val();
             if(materialId == ''){
                 return;
             }else{

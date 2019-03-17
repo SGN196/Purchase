@@ -24,89 +24,89 @@
 
 </head>
 <body class="layui-layout-body">
-<div class="layui-layout layui-layout-admin">
+    <div class="layui-layout layui-layout-admin">
 
-    <jsp:include page="/jsp/common/header.jsp"></jsp:include>
-    
-    <div class="layui-body">
-        <!-- 内容主体区域 -->
-        <label id="divcss5">新增物资种类</label>
-        <div id="divcss4">
+        <jsp:include page="/jsp/common/header.jsp"></jsp:include>
 
-            <form method="get" action="${ctx}/material/addMaterial" class="layui-form">
+        <div class="layui-body">
+            <!-- 内容主体区域 -->
+            <label id="divcss5">新增物资种类</label>
+            <div id="divcss4">
 
-                <div class="layui-form-item">
-                    <label class="layui-form-label">物资名称</label>
-                    <div class="layui-input-inline">
-                        <input type="text" name="materialName" value="${materialInfoTemp.materialName}" placeholder="请输入物资名称" autocomplete="off" class="layui-input">
+                <form method="get" action="${ctx}/material/addMaterial" class="layui-form">
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">物资名称</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="materialName" value="${materialInfoTemp.materialName}" placeholder="请输入物资名称" autocomplete="off" class="layui-input">
+                        </div>
                     </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">计量单位</label>
-                    <div class="layui-input-inline">
-                        <input type="text" name="materialUnit" value="${materialInfoTemp.materialUnit}" placeholder="计量单位"  autocomplete="off" class="layui-input">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">计量单位</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="materialUnit" value="${materialInfoTemp.materialUnit}" placeholder="计量单位"  autocomplete="off" class="layui-input">
+                        </div>
                     </div>
-                </div>
 
-                <!------------------------------------------------->
-                <div class="layui-inline">
-                    <label class="layui-form-label">一级分类</label>
-                    <div class="layui-input-block">
-                        <select name="categoryLevel1.id" id="levelOne" lay-filter="levelOnex"  >
-                            <option value="" >-请选择-</option>
-                            <c:forEach items="${levelOnex}" var="obj">
-                                <option value="${obj.id}" <c:if test="${obj.id eq materialInfoTemp.levelOne}" >selected</c:if>  >${obj.categoryName }</option>
-                            </c:forEach>
-                        </select>
+                    <!------------------------------------------------->
+                    <div class="layui-inline">
+                        <label class="layui-form-label">一级分类</label>
+                        <div class="layui-input-block">
+                            <select name="categoryLevel1.id" id="levelOne" lay-filter="levelOnex"  >
+                                <option value="" >-请选择-</option>
+                                <c:forEach items="${levelOnex}" var="obj">
+                                    <option value="${obj.id}" <c:if test="${obj.id eq materialInfoTemp.levelOne}" >selected</c:if>  >${obj.categoryName }</option>
+                                </c:forEach>
+                            </select>
+                        </div>
+                    </div><br>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">二级分类</label>
+                        <div class="layui-input-block">
+                            <select name="categoryLevel2.id" lay-filter="levelTwo" id="levelTwo">
+                                <option value="">-请选择-</option>
+                            </select>
+                        </div>
                     </div>
-                </div><br>
-                <div class="layui-inline">
-                    <label class="layui-form-label">二级分类</label>
-                    <div class="layui-input-block">
-                        <select name="categoryLevel2.id" lay-filter="levelTwo" id="levelTwo">
-                            <option value="">-请选择-</option>
-                        </select>
-                    </div>
-                </div>
-                <br>
+                    <br>
 
 
 
 
-                <%-------------------------------------------------%>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">物资简介</label>
-                    <%--<div class="layui-input-inline">--%>
+                    <%-------------------------------------------------%>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">物资简介</label>
+                        <%--<div class="layui-input-inline">--%>
                         <%--<input type="textarea" name="materialInfo" placeholder="请输入物资简介" autocomplete="off" class="layui-input">--%>
                         <%--<textarea cols="30" rows="10"--%>
-                    <%--</div>--%>
-                    <div class="layui-input-block">
-                        <textarea name="materialInfo" placeholder="请输入物资简介"   class="layui-textarea">${materialInfoTemp.materialInfo}</textarea>
+                        <%--</div>--%>
+                        <div class="layui-input-block">
+                            <textarea name="materialInfo" placeholder="请输入物资简介"   class="layui-textarea">${materialInfoTemp.materialInfo}</textarea>
+                        </div>
                     </div>
-                </div>
-                <div style="text-align: center">
-                    <p style="color: green; " >${addMaterialMsg}</p>
-                    <p style="color: red;" >${ErraddMaterialMsg}</p>
-                </div>
-                <br>
-                <div class="layui-form-item">
-                    <div class="layui-input-block">
-                        <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                    <div style="text-align: center">
+                        <p style="color: green; " >${addMaterialMsg}</p>
+                        <p style="color: red;" >${ErraddMaterialMsg}</p>
+                    </div>
+                    <br>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+
+                        </div>
 
                     </div>
+                </form>
 
-                </div>
-            </form>
-
+            </div>
         </div>
+        <!-- 底部固定区域 -->
+        <jsp:include page="/jsp/common/footer.jsp"/>
     </div>
 
-</div>
 
-    <!-- 底部固定区域 -->
-    <jsp:include page="/jsp/common/footer.jsp"/>
 
-</div>
+
 <script src="${ctx}/static/plugins/layui/layui.js"></script>
 <script>
     //JavaScript代码区域

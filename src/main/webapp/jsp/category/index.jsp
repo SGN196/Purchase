@@ -63,6 +63,11 @@
                         </div>
                     </div>
                     <div class="layui-inline">
+                        <div class="layui-input-inline">
+                            <input type="hidden" name="pageNum">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
                         <div class="layui-input-block">
                             <button class="layui-btn" lay-submit="" lay-filter="demo1">立即查询</button>
                         </div>
@@ -79,7 +84,7 @@
                     <tr>
                         <th>材料编号</th>
                         <th>材料名称</th>
-
+                        <th>库存数量</th>
                         <th>计量单位</th>
 
                         <th>所属分类（一级、二级）</th>
@@ -92,6 +97,7 @@
                         <tr>
                             <td>${obj.id}</td>
                             <td>${obj.materialName}</td>
+                            <td>${obj.materialQuantity}</td>
                             <td>${obj.materialUnit}</td>
 
                             <td>${obj.categoryLevel1.categoryName} -> ${obj.categoryLevel2.categoryName}</td>
@@ -148,6 +154,34 @@
             var $ = layui.jquery;
 
             document.getElementById("materialList").className="layui-nav-item layui-nav-itemed";
+
+            $('a[page]').click(function () {
+
+                var pageNum = 1;
+                var currPage = '${page.pageNum}';
+                var totalPages ='${page.pages}';
+                var v = $(this).attr('page');
+
+                switch (v) {
+                    case "first": pageNum = 1; break;
+                    case "prev":
+                        pageNum = parseInt(currPage) - 1;
+                        if(pageNum < 1)
+                            pageNum = 1;
+                        break;
+                    case 'next':
+                        pageNum = parseInt(currPage) + 1;
+                        if(pageNum > totalPages){
+                            pageNum = totalPages;
+                        }
+                        break;
+                    case "last":
+                        pageNum = totalPages;
+                        break;
+                }
+                $('input[name=pageNum]').val(pageNum);
+                $('form').submit();
+            })
 
             form.on('select(levelOnex)', function () {
                 var levelOneId = $('#levelOne').val();

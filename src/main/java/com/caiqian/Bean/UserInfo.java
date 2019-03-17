@@ -122,4 +122,23 @@ public class UserInfo {
     public void setModifyDate(Date modifyDate) {
         this.modifyDate = modifyDate;
     }
+
+    @Override
+    public String toString()
+    {
+        return "UserInfo{" +
+                "id=" + id +
+                ", userCode='" + userCode + '\'' +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", userEmail='" + userEmail + '\'' +
+                ", userTel='" + userTel + '\'' +
+                ", deptId=" + deptId +
+                ", isUse=" + isUse +
+                ", createBy=" + createBy +
+                ", createDate=" + createDate +
+                ", modifyBy=" + modifyBy +
+                ", modifyDate=" + modifyDate +
+                '}';
+    }
 }

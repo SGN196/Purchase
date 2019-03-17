@@ -48,6 +48,12 @@ public class MaterialServiceImpl implements MaterialService
     }
 
     @Override
+    public Integer queryQuantityByMaterialId(Integer materialId)
+    {
+        return materialInfoMapper.queryQuantityByMaterialId(materialId);
+    }
+
+    @Override
     public boolean updateMaterialInfoDTO(UpdateMaterialDTO updateMaterialDTO)
     {
         return materialInfoMapper.updateMaterialInfoDTO(updateMaterialDTO);
@@ -69,7 +75,7 @@ public class MaterialServiceImpl implements MaterialService
     @Override
     public PageInfo<MaterialInfo> query(MaterialInfoDTO materialInfoDTO)
     {
-        PageHelper.startPage(1, CommonCodeConstant.PAGE_SIZE);
+        PageHelper.startPage(materialInfoDTO.getPageNum(), CommonCodeConstant.PAGE_SIZE);
         ArrayList<MaterialInfo> list =  materialInfoMapper.queryAll(materialInfoDTO);
         PageInfo<MaterialInfo> page = new PageInfo<>(list);
         return page;

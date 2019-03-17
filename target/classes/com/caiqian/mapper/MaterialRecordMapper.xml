@@ -1,35 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.caiqian.mapper.MaterialRecordMapper" >
-  <resultMap id="BaseResultMap" type="com.caiqian.Bean.MaterialRecord" >
-    <result column="id" property="id" jdbcType="INTEGER" />
-    <result column="material_id" property="materialId" jdbcType="INTEGER" />
-    <result column="material_num" property="materialNum" jdbcType="INTEGER" />
-    <result column="user_id" property="userId" jdbcType="INTEGER" />
-    <result column="use_reason" property="useReason" jdbcType="VARCHAR" />
-    <result column="record_status" property="recordStatus" jdbcType="INTEGER" />
-    <result column="manager_id" property="managerId" jdbcType="INTEGER" />
-    <result column="create_by" property="createBy" jdbcType="INTEGER" />
-    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
-    <result column="modify_by" property="modifyBy" jdbcType="INTEGER" />
-    <result column="modify_date" property="modifyDate" jdbcType="TIMESTAMP" />
-  </resultMap>
-  <insert id="insert" parameterType="com.caiqian.Bean.MaterialRecord" >
-    insert into material_record (id, material_id, material_num, 
-      user_id, use_reason, record_status, 
-      manager_id, create_by, create_date, 
-      modify_by, modify_date)
-    values (#{id,jdbcType=INTEGER}, #{materialId,jdbcType=INTEGER}, #{materialNum,jdbcType=INTEGER}, 
-      #{userId,jdbcType=INTEGER}, #{useReason,jdbcType=VARCHAR}, #{recordStatus,jdbcType=INTEGER}, 
-      #{managerId,jdbcType=INTEGER}, #{createBy,jdbcType=INTEGER}, #{createDate,jdbcType=TIMESTAMP}, 
-      #{modifyBy,jdbcType=INTEGER}, #{modifyDate,jdbcType=TIMESTAMP})
-  </insert>
-  <insert id="insertSelective" parameterType="com.caiqian.Bean.MaterialRecord" >
+
+  <insert id="addNewRecord" parameterType="com.caiqian.Bean.MaterialRecord" >
     insert into material_record
     <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        id,
-      </if>
       <if test="materialId != null" >
         material_id,
       </if>
@@ -62,39 +37,115 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        #{id,jdbcType=INTEGER},
-      </if>
       <if test="materialId != null" >
-        #{materialId,jdbcType=INTEGER},
+        #{materialId},
       </if>
       <if test="materialNum != null" >
-        #{materialNum,jdbcType=INTEGER},
+        #{materialNum},
       </if>
       <if test="userId != null" >
-        #{userId,jdbcType=INTEGER},
+        #{userId},
       </if>
       <if test="useReason != null" >
-        #{useReason,jdbcType=VARCHAR},
+        #{useReason},
       </if>
       <if test="recordStatus != null" >
-        #{recordStatus,jdbcType=INTEGER},
+        #{recordStatus},
       </if>
       <if test="managerId != null" >
-        #{managerId,jdbcType=INTEGER},
+        #{managerId},
       </if>
       <if test="createBy != null" >
-        #{createBy,jdbcType=INTEGER},
+        #{createBy},
       </if>
       <if test="createDate != null" >
-        #{createDate,jdbcType=TIMESTAMP},
+        #{createDate},
       </if>
       <if test="modifyBy != null" >
-        #{modifyBy,jdbcType=INTEGER},
+        #{modifyBy},
       </if>
       <if test="modifyDate != null" >
-        #{modifyDate,jdbcType=TIMESTAMP},
+        #{modifyDate},
       </if>
     </trim>
   </insert>
+
+  <delete id="deleteById" >
+
+    delete from material_record where id = #{id}
+  </delete>
+
+  <update id="approveRecord">
+     update material_record set record_status = #{status}, manager_id = #{userId}, modify_date = #{date}
+     <where>
+        id = #{id}
+     </where>
+  </update>
+
+  <update id="disApproveRecord">
+    update material_record set record_status = #{status}, manager_id = #{userId}, modify_date= #{date}
+    <where>
+      id = #{id}
+    </where>
+  </update>
+
+  <select id="queryAllIORecord" resultType="com.caiqian.DTO.RecordDTO">
+     select r1.*, u1.user_name, i1.material_name from material_record r1, user_info u1, material_info i1
+     <where>
+       r1.manager_id=u1.id and r1.record_status=1 and r1.material_id=i1.id
+     </where>
+  </select>
+
+  <select id="queryIORecord" resultType="com.caiqian.DTO.RecordDTO">
+    select r1.*, u1.user_name, i1.material_name from material_record r1, user_info u1, material_info i1
+    <where>
+      r1.manager_id=u1.id and r1.record_status=1 and r1.material_id=i1.id
+      <if test="id != null">
+        and r1.id = #{id}
+      </if>
+      <if test="materialId != null">
+        and r1.material_id = #{materialId}
+      </if>
+      <if test="materialName != null and materialName != ''">
+        and i1.material_name like concat('%',#{materialName},'%')
+      </if>
+      <if test="userName != null and userName != ''">
+        and u1.user_name like concat('%',#{userName},'%')
+      </if>
+
+    </where>
+
+
+  </select>
+
+  <select id="queryByUserId" resultType="com.caiqian.Bean.MaterialRecord">
+      select m1.*, m2.material_name from material_record m1, material_info m2
+      <where>
+        user_id = #{id} and  m1.material_id = m2.id
+      </where>
+  </select>
+
+  <select id="queryAll" resultType="com.caiqian.Bean.MaterialRecord">
+    select m1.*, m2.material_name from material_record m1, material_info m2
+    <where>
+      m1.record_status=0 and  m1.material_id = m2.id
+    </where>
+  </select>
+
+
+  <select id="queryUserIdByRecordId" resultType="java.lang.Integer">
+    select user_id from material_record
+    <where>
+      id = #{id}
+    </where>
+  </select>
+
+  <select id="queryByRecordId" resultType="com.caiqian.Bean.MaterialRecord">
+    select * from material_record
+    <where>
+      id = #{id}
+    </where>
+
+
+  </select>
 </mapper>

@@ -55,7 +55,6 @@
                             ${errMsg}
                         </div>
                         <button class="layui-btn" lay-submit lay-filter="formDemo">登录</button>
-                        <button class="layui-btn"  ><a href="${ctx}/dev/toRegister">注册</a></button>
 
                     </div>
                 </div>

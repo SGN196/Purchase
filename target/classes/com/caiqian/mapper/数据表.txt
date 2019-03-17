@@ -1,9 +1,24 @@
+-- "超级管理员","总经理办公室","仓库管理部"  具有修改仓库权限
+
+-- 数据字典
+create table data_dictionary(
+    id bigint,
+    type_code varchar(50),
+    type_name varchar(50),
+    value_id int,
+    value_name varchar(50),
+    create_by int,
+    create_date datetime,
+    modify_by int,
+    modify_date datetime
+);
+
 -- 公司内部员工信息
 create table user_info(
 
     id int,
     user_code varchar(20),       -- 登录账号
-    user_name varchar(20),       -- 用户昵称
+    user_name varchar(20),       -- 员工姓名
     password varchar(20),
     user_email varchar(50),
     user_tel varchar(20),
@@ -85,22 +100,6 @@ create table order_form(
 );
 
 
-
-
-
--- 数据字典
-create table data_dictionary(
-    id bigint,
-    type_code varchar(50),
-    type_name varchar(50),
-    value_id int,
-    value_name varchar(50),
-    create_by int,
-    create_date datetime,
-    modify_by int,
-    modify_date datetime
-);
-
 -- 物品表
 create table material_info(
     id int,
@@ -125,12 +124,9 @@ create table material_record(
     material_id int,          -- 对应物品表ID
     material_num int,         -- 数量
     user_id int,              -- 对应员工表id
-
     use_reason varchar(200),  -- 备注
-    record_status int,        -- 审批状态
-
+    record_status int,        -- 审批状态 0:待审核 1：审核通过 2：审核失败。66：进库记录
     manager_id int,           -- 审批人ID
-
     create_by int,            --
     create_date datetime,     -- 时间
     modify_by int,
@@ -148,3 +144,5 @@ create table material_category(
     modify_by int,
     modify_date datetime
 );
+
+

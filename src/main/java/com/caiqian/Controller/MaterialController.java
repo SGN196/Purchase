@@ -112,7 +112,9 @@ public class MaterialController
         boolean isAuthority = materialService.isAccessAuthorityRepertoryOfEmployee(userInfo.getDeptId());
         if(isAuthority)
         {
-
+            if(materialInfoDTO.getPageNum() == null){
+                materialInfoDTO.setPageNum(1);
+            }
             PageInfo<MaterialInfo> pageInfo = materialService.query(materialInfoDTO);
             List<MaterialCategory> levelOneList = materialService.queryLevelOne();
 
@@ -148,6 +150,7 @@ public class MaterialController
     @ResponseBody
     @RequestMapping("/category/queryUnitById/{Id}")
     public String queryUnitById(@PathVariable("Id") Integer id){
+
         String str = materialService.queryUnitById(id);
         System.out.println(str);
         return str;

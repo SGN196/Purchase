@@ -50,6 +50,7 @@
             </array>
         </property>
 
+
     </bean>
 
     <!--持久层接口-->

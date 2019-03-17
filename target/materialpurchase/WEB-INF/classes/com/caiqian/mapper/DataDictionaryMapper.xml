@@ -6,11 +6,20 @@
       FROM data_dictionary
       <where>
             type_code="DEPARTMENT" AND
-           value_name in ("超级管理员","总经理办公室","生产技术部")
+           value_name in ("超级管理员","总经理办公室","仓库管理部")
       </where>
 
   </select>
 
+    <select id="isAccessAuthorityRecordOfEmployee" resultType="java.lang.Integer">
+        select value_id
+        FROM data_dictionary
+        <where>
+            type_code="DEPARTMENT" AND
+            value_name in ("超级管理员","总经理办公室")
+        </where>
+
+    </select>
     <select id="queryEmployeeDept" resultType="java.lang.String">
         select value_name
         from data_dictionary
@@ -19,4 +28,6 @@
             value_id=#{id}
         </where>
     </select>
+
+
 </mapper>

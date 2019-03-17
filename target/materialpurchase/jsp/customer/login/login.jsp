@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>employee login</title>
+    <title>友商竞标系统</title>
     <link rel="stylesheet" href="${ctx}/static/plugins/layui/css/layui.css"/>
 
     <style>
@@ -32,7 +32,7 @@
 
 
 <div id="divcss1">
-    <h2>&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;竞标系统</h2><br>
+    <h2>&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;友商竞标系统</h2><br>
     <form class="layui-form" action="${ctx}/employee/login" lay-ignore method="post">
         <div class="layui-form-item">
             <label class="layui-form-label">用户名</label>

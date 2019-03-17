@@ -20,4 +20,6 @@ public interface MaterialInfoMapper {
     List<MaterialInfo> queryMaterialNameByLevelTwo(Integer id);
 
     String queryUnitById(Integer id);
+
+    Integer queryQuantityByMaterialId(Integer materialId);
 }
