@@ -37,7 +37,7 @@
                 <!-- 内容主体区域 -->
             <div id="divcss4">
                 <div >
-                   <label style="font-size: 30px;">新增物资种类</label>
+                   <label style="font-size: 30px;">领用物资申请列表</label>
                 </div>
                 <hr>
                 <table class="layui-table">

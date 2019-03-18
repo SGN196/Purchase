@@ -15,12 +15,12 @@
     <body class="layui-layout-body">
         <div class="layui-layout layui-layout-admin">
 
-            <jsp:include page="${ctx}/jsp/common/header.jsp"></jsp:include>
+            <jsp:include page="${ctx}/jsp/customer/common/headerCustomer.jsp"></jsp:include>
 
             <div class="layui-body">
                 <!-- 内容主体区域 -->
                 <div style="padding: 15px;">
-                    ${sessionScope.deptName}：${sessionScope.userInfo.userName}，欢迎你 <br>
+                    您好，${sessionScope.customerInfo.customerName}，欢迎来到物资采购系统 <br>
 
 
 
@@ -29,7 +29,7 @@
 
 
             <!-- 底部固定区域 -->
-            <jsp:include page="${ctx}/jsp/common/footer.jsp"/>
+            <jsp:include page="${ctx}/jsp/customer/common/footerCustomer.jsp"/>
 
         </div>
         <script src="${ctx}/static/plugins/layui/layui.js"></script>

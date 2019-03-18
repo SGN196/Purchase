@@ -33,7 +33,7 @@
 
 <div id="divcss1">
     <h2>&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;友商竞标系统</h2><br>
-    <form class="layui-form" action="${ctx}/employee/login" lay-ignore method="post">
+    <form class="layui-form" action="${ctx}/customer/login" lay-ignore method="post">
         <div class="layui-form-item">
             <label class="layui-form-label">用户名</label>
             <div class="layui-input-inline">
@@ -55,7 +55,7 @@
                     ${errMsg}
                 </div>
                 <button class="layui-btn" lay-submit lay-filter="formDemo">登录</button>
-                <button class="layui-btn"  ><a href="${ctx}/dev/toRegister">注册</a></button>
+                <button class="layui-btn"  ><a href="${ctx}/customer/toRegister">注册</a></button>
 
             </div>
         </div>

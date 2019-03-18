@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.caiqian.mapper.QuoteInfoMapper" >
+
+  <insert id="addQuote" keyProperty="id" useGeneratedKeys="true">
+    insert into quote_info
+    <trim prefix="(" suffix=")" prefixOverrides=",">
+
+      <if test="materialId != null">
+        ,material_id
+      </if>
+      <if test="quoteQuantity != null">
+        ,quote_quantity
+      </if>
+      <if test="quoteStatus != null">
+        ,quote_status
+      </if>
+      <if test="quoteDesc != null and quoteDesc != ''">
+        ,quote_desc
+      </if>
+      <if test="quoteEndtime != null">
+        ,quote_endtime
+      </if>
+      <if test="createBy != null">
+        ,create_by
+      </if>
+      <if test="createDate != null">
+        ,create_date
+      </if>
+    </trim>
+    <trim prefix="values(" suffix=")" prefixOverrides=",">
+      <if test="materialId != null">
+        ,#{materialId}
+      </if>
+      <if test="quoteQuantity != null">
+        ,#{quoteQuantity}
+      </if>
+      <if test="quoteStatus != null">
+        ,#{quoteStatus}
+      </if>
+      <if test="quoteDesc != null and quoteDesc != ''">
+        ,#{quoteDesc}
+      </if>
+      <if test="quoteEndtime != null">
+        ,#{quoteEndtime}
+      </if>
+      <if test="createBy != null">
+        ,#{createBy}
+      </if>
+      <if test="createDate != null">
+        ,#{createDate}
+      </if>
+    </trim>
+
+  </insert>
+
+  <select id="queryQuoteByRequire" resultType="com.caiqian.Bean.QuoteInfo">
+    select
+    q1.id,
+    q1.material_id,
+    q1.quote_quantity,
+    q1.quote_status,
+    q1.quote_desc,
+    q1.quote_endtime,
+    q1.create_by,
+    q1.create_date,
+    m1.material_name,
+    u1.user_name
+    from quote_info q1
+    left join material_info m1 on q1.material_id = m1.id
+    left join user_info u1 on q1.create_by = u1.id
+
+
+
+    <where>
+      <if test="id != null">
+        and q1.id = #{id}
+      </if>
+      <if test="materialId != null">
+        and q1.material_id = #{materialId}
+      </if>
+      <if test="materialName != null and materialName != ''">
+        and m1.material_name like concat('%',#{materialName},'%')
+      </if>
+      <if test="quoteQuantity != null">
+        and q1.quote_quantity = #{quoteQuantity}
+      </if>
+      <if test="quoteStatus != null">
+        and q1.quote_status = #{quoteStatus}
+      </if>
+      <if test="quoteDesc != null and quoteDesc != ''">
+        and q1.quote_desc = #{quoteDesc}
+      </if>
+      <if test="quoteEndtime != null">
+        and q1.quote_endtime = #{quoteEndtime}
+      </if>
+      <if test="createBy != null">
+        and q1.create_by = #{createBy}
+      </if>
+      <if test="userName != null and userName != ''">
+        and u1.user_name = #{userName}
+      </if>
+      <if test="createDate != null">
+        and q1.create_date = #{createDate}
+      </if>
+
+    </where>
+
+  </select>
+
+</mapper>

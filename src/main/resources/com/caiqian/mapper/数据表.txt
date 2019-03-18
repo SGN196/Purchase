@@ -44,25 +44,25 @@ create table customer_info(
     customer_tel varchar(20),
     customer_desc varchar(500),
     is_use  int,                 -- 1：使用，0：不使用，99：审核失败
-    create_by int,               -- 审核人员
+    create_by int,               -- 审核人员（对应员工表中的ID）
     create_date datetime,
     modify_by int,
     modify_date datetime
 );
 
 
--- 采购需求表
+
+
+-- 采购需求表（超级管理员，总经理办公室）
 create table quote_info(
 
-    id int(11),
-    quote_id int,                    -- 采购需求的订单号
+    id int(11),                      -- 采购需求的订单号
     material_id int,                 -- 用于竞标企业的访问，依赖于物品表的id
-    quote_name varchar(50),          -- 采购内容
     quote_quantity int,              -- 采购数量
-    quote_status int,                -- 采购清单状态 1.未确认 2.采购中  3. 采购完成
+    quote_status int,                -- 采购清单状态 1：采购中  0：采购完成 88：采购失败
     quote_desc varchar(500),         -- 本次采购细节描述
-    quote_endtime datetime,          -- 采购截止时间
-    create_by int,
+    quote_endtime datetime,          -- 友商报价的终止时间
+    create_by int,                   -- 需求创建
     create_date datetime,
     modify_by int,
     modify_date datetime
@@ -76,9 +76,9 @@ create table bid_info(
     quote_id int,                 -- 用于竞标企业的访问（采购需求表中的订单号），依赖于采购需求表的订单号
     customer_id int,              -- 供应商ID，依赖于供应商账户id
     bid_total_price double,       -- 竞价方总报价
-    bid_status int,               -- 竞价状态？1：进行中  2:已结束
-    time_purchase datetime,       -- 订货时间
-    time_deliver datetime,        -- 交货时间
+    bid_status int,               -- 竞价状态？1：进行中  0:已结束
+    time_purchase datetime,       -- 提交报价的时间
+    time_deliver datetime,        -- 预计交货时间
     create_by int,
     create_date datetime,
     modify_by int,
@@ -92,9 +92,9 @@ create table order_form(
     bid_id int,                   -- 对应竞标单
     customer_id int,              -- 供应商ID，依赖于供应商账户id
     bid_total_price double,       -- 成交价格
-    order_status int,             -- 订单成功？ 2：供应方确认 3：双方确认(已采购）
-    time_purchase datetime,       -- 订货时间
-    time_deliver datetime,        -- 交货时间
+    order_status int,             -- 订单成功？ 0：交货完毕，1：还在交易中, 88：订单失败
+    time_purchase datetime,       -- 订单确定时间
+    time_deliver datetime,        -- 实际交货时间
 
     create_by int,
     create_date datetime,

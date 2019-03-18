@@ -63,10 +63,11 @@
                     <dd><a href="${ctx}/record/toInOutRecord">进出库记录</a></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item">
+            <li id="purchase" class="layui-nav-item">
                 <a class="" href="javascript:;">${PermissionDenied}采购系统</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="${ctx}/material/purchase/devId/${sessionScope.userInfo.deptId}">发布采购需求</a></dd>
+                    <dd><a href="${ctx}/purchase/toMaterialPurchase">发布采购需求</a></dd>
+                    <dd><a href="${ctx}/purchase/toPurchaseList">需求管理</a></dd>
                     <dd><a href="${ctx}/material/purchase/devId/${sessionScope.userInfo.deptId}">订单管理</a></dd>
                 </dl>
             </li>
@@ -74,7 +75,6 @@
 
             <li class="layui-nav-item">
                 <a></a>
-
             </li>
 
 

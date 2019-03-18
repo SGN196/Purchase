@@ -9,7 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>领用物资申请列表</title>
+    <title>需求管理</title>
     <link rel="stylesheet" href="${ctx}/static/plugins/layui/css/layui.css">
     <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
     <style>
@@ -37,21 +37,21 @@
                 <!-- 内容主体区域 -->
             <div id="divcss4">
                 <div >
-                   <label style="font-size: 30px;">领用物资申请列表</label>
+                   <label style="font-size: 30px;">需求管理</label>
                 </div>
                 <hr>
                 <table class="layui-table">
                     <thead>
                     <tr>
                         <th>订单编号</th>
-
                         <th>材料标号</th>
                         <th>材料名称</th>
-
-                        <th>数量</th>
-                        <th>申请原因</th>
-                        <th>申请状态</th>
+                        <th>采购数量</th>
+                        <th>状态</th>
+                        <th>截止日期</th>
+                        <th>负责人</th>
                         <th>操作</th>
+
 
                     </tr>
                     </thead>
@@ -61,15 +61,15 @@
                             <td>${obj.id}</td>
                             <td>${obj.materialId}</td>
                             <td>${obj.materialName}</td>
-                            <td>${obj.materialNum}</td>
-                            <td>${obj.useReason}</td>
-
+                            <td>${obj.quoteQuantity}</td>
                             <td>
-                                    <c:if test="${obj.recordStatus eq 0}">待审核 </c:if>
-                                    <c:if test="${obj.recordStatus eq 1}">审核通过</c:if>
-                                    <c:if test="${obj.recordStatus eq 2}">审核失败</c:if>
+                                    <c:if test="${obj.quoteStatus eq 0}"><p style="color: green">采购成功</p>  </c:if>
+                                    <c:if test="${obj.quoteStatus eq 1}">采购中</c:if>
+                                    <c:if test="${obj.quoteStatus eq 99}"><p style="color: red">审核失败</p> </c:if>
 
                             </td>
+                            <td>${obj.quoteEndtime}</td>
+                            <td>${obj.userName}</td>
                             <td>
                                 <div class="site-demo-button" id="layerDemo" style="margin-bottom: 0;">
                                     <a href="${ctx}" data-method="notice" class="layui-btn layui-btn-normal layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe642</i></a>
