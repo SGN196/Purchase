@@ -42,19 +42,12 @@
     <div class="layui-side-scroll">
         <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
         <ul class="layui-nav layui-nav-tree"  lay-filter="test">
-            <li id="materialList" class="layui-nav-item">
+            <li id="bidList" class="layui-nav-item">
                 <a class="" href="javascript:;">报价相关</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="${ctx}/material/repertoryList">${PermissionDenied}需求清单</a></dd>
-                    <dd><a href="${ctx}/material/toAddMaterial">${PermissionDenied}我的订单</a></dd>
-                </dl>
-            </li>
-
-            <li class="layui-nav-item">
-                <a class="" href="javascript:;">${PermissionDenied}采购系统</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="${ctx}/material/purchase/devId/${sessionScope.userInfo.deptId}">发布采购需求</a></dd>
-                    <dd><a href="${ctx}/material/purchase/devId/${sessionScope.userInfo.deptId}">订单管理</a></dd>
+                    <dd><a href="${ctx}/bid/toQuoteList">${PermissionDenied}竞标商品选择</a></dd>
+                    <dd><a href="${ctx}/bid/toMyBidList">我的竞价清单</a></dd>
+                    <dd><a href="${ctx}/bid/toMyOrderFrom">成功订单</a></dd>
                 </dl>
             </li>
 

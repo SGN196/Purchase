@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.caiqian.mapper.BidInfoMapper">
+
+
+    <insert id="addBidItem" keyProperty="id" useGeneratedKeys="true">
+        insert into bid_info
+        <trim prefix="(" suffix=")" prefixOverrides=",">
+
+            <if test="quoteId != null">
+                ,quote_id
+            </if>
+            <if test="bidTotalPrice != null">
+                ,bid_total_price
+            </if>
+            <if test="bidStatus != null">
+                ,bid_status
+            </if>
+            <if test="timeDeliver != null">
+                ,time_deliver
+            </if>
+            <if test="createBy != null">
+                ,create_by
+            </if>
+            <if test="createDate != null">
+                ,create_date
+            </if>
+
+        </trim>
+        <trim prefix="values(" suffix=")" prefixOverrides=",">
+            <if test="quoteId != null">
+                ,#{quoteId}
+            </if>
+            <if test="bidTotalPrice != null">
+                ,#{bidTotalPrice}
+            </if>
+            <if test="bidStatus != null">
+                ,#{bidStatus}
+            </if>
+            <if test="timeDeliver != null">
+                ,#{timeDeliver}
+            </if>
+            <if test="createBy != null">
+                ,#{createBy}
+            </if>
+            <if test="createDate != null">
+                ,#{createDate}
+            </if>
+        </trim>
+
+    </insert>
+
+    <select id="queryBidList" resultType="com.caiqian.Bean.BidInfo">
+        select * from bid_info b1
+
+
+        left join customer_info c1 on c1.id = b1.create_by
+
+
+
+        <where>
+            <if test="quoteId != null">
+                and b1.quote_id = #{quoteId}
+            </if>
+            <if test="id != null">
+                and b1.id = #{id}
+            </if>
+            <if test="bidStatus != null">
+                and b1.bid_status = #{bidStatus}
+            </if>
+
+            <if test="customerName != null and customerName != ''">
+                and c1.customer_name like concat('%',#{customerName},'%')
+            </if>
+
+
+
+        </where>
+
+
+    </select>
+</mapper>

@@ -98,7 +98,7 @@
         and q1.create_by = #{createBy}
       </if>
       <if test="userName != null and userName != ''">
-        and u1.user_name = #{userName}
+        and u1.user_name = like concat('%',#{userName},'%')
       </if>
       <if test="createDate != null">
         and q1.create_date = #{createDate}

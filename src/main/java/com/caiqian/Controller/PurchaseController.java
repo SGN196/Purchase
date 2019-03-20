@@ -77,6 +77,7 @@ public class PurchaseController
 
     @RequestMapping("/toPurchaseList")
     public String toPurchaseList(QuoteInfo quoteInfo, Model model, HttpSession httpSession){
+
         UserInfo userInfo = (UserInfo)httpSession.getAttribute("userInfo");
         if(userInfo == null){
             return "emp/login";
@@ -85,6 +86,7 @@ public class PurchaseController
 
         PageInfo<QuoteInfo> pageInfo = quoteService.queryQuoteByRequire(quoteInfo);
         model.addAttribute("page", pageInfo);
+        model.addAttribute("quoteInfo", quoteInfo);
         return "purchase/purchaseList";
     }
 

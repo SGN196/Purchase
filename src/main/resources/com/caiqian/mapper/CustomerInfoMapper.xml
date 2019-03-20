@@ -5,12 +5,11 @@
       select *
       from customer_info
       <where>
-        <if test="customerCode != null and customerCode != ''">
-          AND customer_code=#{customerCode}
-        </if>
-        <if test="customerPassword != null and customerPassword != ''">
+
+       customer_code=#{customerCode}
+
           and customer_password=#{customerPassword}
-        </if>
+
       </where>
 
 

@@ -74,10 +74,8 @@ create table bid_info(
 
     id int(11),
     quote_id int,                 -- 用于竞标企业的访问（采购需求表中的订单号），依赖于采购需求表的订单号
-    customer_id int,              -- 供应商ID，依赖于供应商账户id
     bid_total_price double,       -- 竞价方总报价
-    bid_status int,               -- 竞价状态？1：进行中  0:已结束
-    time_purchase datetime,       -- 提交报价的时间
+    bid_status int,               -- 竞价状态？1：进行中 , 66：竞价成功，0：竞价失败。(如果quote_status 不为1时，本项也不能为1）
     time_deliver datetime,        -- 预计交货时间
     create_by int,
     create_date datetime,
@@ -92,7 +90,7 @@ create table order_form(
     bid_id int,                   -- 对应竞标单
     customer_id int,              -- 供应商ID，依赖于供应商账户id
     bid_total_price double,       -- 成交价格
-    order_status int,             -- 订单成功？ 0：交货完毕，1：还在交易中, 88：订单失败
+    order_status int,             -- 订单成功？ 0：还在交易中，1：交易完毕, 88：订单失败
     time_purchase datetime,       -- 订单确定时间
     time_deliver datetime,        -- 实际交货时间
 

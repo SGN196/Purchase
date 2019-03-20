@@ -39,7 +39,70 @@
                 <div >
                    <label style="font-size: 30px;">需求管理</label>
                 </div>
-                <hr>
+
+
+                <div style="padding: 15px;">
+                    <form class="layui-form" action="${ctx}/purchase/toPurchaseList" method="get">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">订单编号</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="id" value="${quoteInfo.id}" autocomplete="off"
+                                       class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">材料标号</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="materialId" value="${quoteInfo.materialId}" autocomplete="off"
+                                       class="layui-input"/>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <input type="hidden" name="pageNum" value="1">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">材料名称</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="materialName" value="${quoteInfo.materialName}" autocomplete="off"
+                                       class="layui-input"/>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">采购状态</label>
+                            <div class="layui-input-block">
+                                <select name="quoteStatus" id="levelOne" lay-filter="levelOnex">
+                                    <option value="">请选择</option>
+                                    <option <c:if test="${1 eq quoteInfo.quoteStatus}">selected</c:if> value="1">采购中</option>
+                                    <option <c:if test="${0 eq quoteInfo.quoteStatus}">selected</c:if> value="0">采购完成</option>
+                                    <option <c:if test="${88 eq quoteInfo.quoteStatus}">selected</c:if> value="88">采购失败</option>
+                                    <%--<c:if test="${obj.id eq materialInfoDTO.levelOne}">selected</c:if> >${obj.categoryName }</option>--%>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">负责人</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="userName" value="${quoteInfo.userName}" autocomplete="off"
+                                       class="layui-input"/>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" lay-submit="" lay-filter="demo1">立即查询</button>
+                            </div>
+                        </div>
+                        <%--<div class="layui-input-block">--%>
+                        <%--<a class="layui-btn" lay-submit="" lay-filter="demo1" href="${ctx}/material/toAddMaterial">新增物资种类</a>--%>
+                        <%--</div>--%>
+
+                    </form>
+                </div>
+
+
+                    <hr>
                 <table class="layui-table">
                     <thead>
                     <tr>
@@ -121,29 +184,8 @@
             var form = layui.form;
             var $ = layui.jquery;
 
-            document.getElementById("useApply").className="layui-nav-item layui-nav-itemed";
+            document.getElementById("purchase").className="layui-nav-item layui-nav-itemed";
 
-            form.on('select(levelOnex)', function () {
-                var levelOneId = $('#levelOne').val();
-                if(levelOneId == ''){
-                    return;
-                }else{
-                    $.ajax({
-                        url:'${ctx}/material/category/queryLevelTwoByLevelOne/' + levelOneId,
-                        type:'get',
-                        success:function (data) {
-                            var html = '<option value""> -请选择- </option>';
-                            var len = data.length;
-
-                            for(var i = 0; i < len; i++){
-                                html += '<option value="' + data[i].id + '">' + data[i].categoryName + '</option>';
-                            }
-                            $('#levelTwo').html(html);
-                            form.render();
-                        }
-                    })
-                }
-            });
             $('a[page]').click(function () {
 
                 var pageNum = 1;

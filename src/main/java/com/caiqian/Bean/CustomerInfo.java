@@ -129,7 +129,28 @@ public class CustomerInfo {
         return modifyDate;
     }
 
+    @Override
+    public String toString()
+    {
+        return "CustomerInfo{" +
+                "id=" + id +
+                ", customerCode='" + customerCode + '\'' +
+                ", customerName='" + customerName + '\'' +
+                ", customerPassword='" + customerPassword + '\'' +
+                ", customerAddr='" + customerAddr + '\'' +
+                ", customerEmail='" + customerEmail + '\'' +
+                ", customerTel='" + customerTel + '\'' +
+                ", customerDesc='" + customerDesc + '\'' +
+                ", isUse=" + isUse +
+                ", createBy=" + createBy +
+                ", createDate=" + createDate +
+                ", modifyBy=" + modifyBy +
+                ", modifyDate=" + modifyDate +
+                '}';
+    }
+
     public void setModifyDate(Date modifyDate) {
+
         this.modifyDate = modifyDate;
     }
 }

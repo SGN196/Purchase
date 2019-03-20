@@ -68,6 +68,7 @@
                 <dl class="layui-nav-child">
                     <dd><a href="${ctx}/purchase/toMaterialPurchase">发布采购需求</a></dd>
                     <dd><a href="${ctx}/purchase/toPurchaseList">需求管理</a></dd>
+                    <dd><a href="${ctx}/bid/toCompanyList">友商报价管理</a></dd>
                     <dd><a href="${ctx}/material/purchase/devId/${sessionScope.userInfo.deptId}">订单管理</a></dd>
                 </dl>
             </li>
