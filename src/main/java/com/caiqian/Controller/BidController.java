@@ -112,7 +112,7 @@ public class BidController
         boolean flag = bidService.addBidItem(bidInfo);
 
         if(flag){
-            model.addAttribute("successMsg", "竞价成功");
+            model.addAttribute("successMsg", "成功参与竞价");
         }else{
             model.addAttribute("errorMsg", "系统错误");
 

@@ -9,7 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>需求管理</title>
+    <title>采购需求管理</title>
     <link rel="stylesheet" href="${ctx}/static/plugins/layui/css/layui.css">
     <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
     <style>
@@ -37,9 +37,8 @@
                 <!-- 内容主体区域 -->
             <div id="divcss4">
                 <div >
-                   <label style="font-size: 30px;">需求管理</label>
+                    <cite style="font-size: 40px">采购需求管理</cite>
                 </div>
-
 
                 <div style="padding: 15px;">
                     <form class="layui-form" action="${ctx}/purchase/toPurchaseList" method="get">

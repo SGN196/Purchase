@@ -61,6 +61,7 @@
                 <dl class="layui-nav-child">
                     <dd><a href="${ctx}/record/toCheckApplyList">领用物资审批</a></dd>
                     <dd><a href="${ctx}/record/toInOutRecord">进出库记录</a></dd>
+                    <dd><a href="${ctx}/order/toRepoByOrder">订单入库</a></dd>
                 </dl>
             </li>
             <li id="purchase" class="layui-nav-item">
@@ -68,8 +69,14 @@
                 <dl class="layui-nav-child">
                     <dd><a href="${ctx}/purchase/toMaterialPurchase">发布采购需求</a></dd>
                     <dd><a href="${ctx}/purchase/toPurchaseList">需求管理</a></dd>
+                    <dd><a href="${ctx}/order/toOrderFromList">订单管理</a></dd>
+                </dl>
+            </li>
+
+            <li id="customer" class="layui-nav-item">
+                <a class="" href="javascript:;">${PermissionDenied}报价审核</a>
+                <dl class="layui-nav-child">
                     <dd><a href="${ctx}/bid/toCompanyList">友商报价管理</a></dd>
-                    <dd><a href="${ctx}/material/purchase/devId/${sessionScope.userInfo.deptId}">订单管理</a></dd>
                 </dl>
             </li>
 

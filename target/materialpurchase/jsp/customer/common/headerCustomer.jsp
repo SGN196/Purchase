@@ -47,14 +47,7 @@
                 <dl class="layui-nav-child">
                     <dd><a href="${ctx}/bid/toQuoteList">${PermissionDenied}竞标商品选择</a></dd>
                     <dd><a href="${ctx}/bid/toMyBidList">我的竞价清单</a></dd>
-                </dl>
-            </li>
-
-            <li class="layui-nav-item">
-                <a class="" href="javascript:;">${PermissionDenied}采购系统</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="${ctx}">竞标商品选择</a></dd>
-                    <dd><a href="${ctx}/material/purchase/devId/${sessionScope.userInfo.deptId}">订单管理</a></dd>
+                    <dd><a href="${ctx}/order/toMyOrderList">成功订单</a></dd>
                 </dl>
             </li>
 

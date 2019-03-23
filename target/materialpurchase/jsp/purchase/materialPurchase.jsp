@@ -98,6 +98,14 @@
 
 
 
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">采购截止时间</label>
+                        <div class="layui-input-inline">
+                            <input name="tempDate" type="text" class="layui-input" id="test11" placeholder="yyyy年MM月dd日">
+                        </div>
+                    </div>
+                </div>
 
                 <%-------------------------------------------------%>
                 <div class="layui-form-item">
@@ -112,14 +120,6 @@
                 </div>
 
 
-                <div class="layui-form-item">
-                    <div class="layui-inline">
-                        <label class="layui-form-label">请选择日期</label>
-                        <div class="layui-input-inline">
-                            <input name="tempDate" type="text" class="layui-input" id="test11" placeholder="yyyy年MM月dd日">
-                        </div>
-                    </div>
-                </div>
                 <div style="text-align: center">
                     <p style="color: green; " >${successMsg}</p>
                     <p style="color: red;" >${errorMsg}</p>

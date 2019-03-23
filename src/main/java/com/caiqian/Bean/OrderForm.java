@@ -5,17 +5,22 @@ import java.util.Date;
 public class OrderForm {
     private Integer id;
 
+
     private Integer quoteId;
 
     private Integer bidId;
 
     private Integer customerId;
 
+//    private String materialName;
+
     private String customerName;
 
     private Double bidTotalPrice;
 
     private Integer orderStatus;
+
+    private String tempTime;
 
     private Date timeDeliver;
 
@@ -137,6 +142,18 @@ public class OrderForm {
         this.pageNum = pageNum;
     }
 
+    public String getTempTime()
+    {
+        return tempTime;
+    }
+
+    public void setTempTime(String tempTime)
+    {
+        this.tempTime = tempTime;
+    }
+
+
+
     @Override
     public String toString()
     {
@@ -148,6 +165,7 @@ public class OrderForm {
                 ", customerName='" + customerName + '\'' +
                 ", bidTotalPrice=" + bidTotalPrice +
                 ", orderStatus=" + orderStatus +
+                ", tempTime='" + tempTime + '\'' +
                 ", timeDeliver=" + timeDeliver +
                 ", createBy=" + createBy +
                 ", createDate=" + createDate +

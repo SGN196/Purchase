@@ -75,7 +75,7 @@ create table bid_info(
     id int(11),
     quote_id int,                 -- 用于竞标企业的访问（采购需求表中的订单号），依赖于采购需求表的订单号
     bid_total_price double,       -- 竞价方总报价
-    bid_status int,               -- 竞价状态？1：进行中 , 66：竞价成功，0：竞价失败。(如果quote_status 不为1时，本项也不能为1）
+    bid_status int,               -- 竞价状态？1：运输中 , 66：竞价成功，0：竞价失败。(如果quote_status 不为1时，本项也不能为1）
     time_deliver datetime,        -- 预计交货时间
     create_by int,
     create_date datetime,

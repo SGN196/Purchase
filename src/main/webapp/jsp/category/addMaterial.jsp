@@ -30,10 +30,12 @@
 
         <div class="layui-body">
             <!-- 内容主体区域 -->
-            <label id="divcss5">新增物资种类</label>
-            <div id="divcss4">
 
+            <div id="divcss4">
+                <cite style="font-size: 40px">新增物资种类</cite>
+                <hr>
                 <form method="get" action="${ctx}/material/addMaterial" class="layui-form">
+                    <label id="divcss5"></label>
 
                     <div class="layui-form-item">
                         <label class="layui-form-label">物资名称</label>

@@ -12,14 +12,6 @@
 
             transform: translate(-50%,-50%);
         }
-        #divcss5{
-            left: 50%;
-            top: 20%;
-            position: absolute;
-
-            transform: translate(-50%,-50%);
-            font-size: 30px;
-        }
     </style>
 
 </head>
@@ -30,9 +22,10 @@
     
     <div class="layui-body">
         <!-- 内容主体区域 -->
-        <label id="divcss5">领用物资</label>
         <div id="divcss4">
-
+            <div >
+                <cite style="font-size: 40px">领用物资</cite>
+            </div>
             <form method="post" action="${ctx}/record/applyForOutRepository" class="layui-form">
 
                 <div>

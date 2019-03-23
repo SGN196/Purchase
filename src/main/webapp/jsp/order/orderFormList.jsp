@@ -9,7 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>甲方需求列表</title>
+    <title>订单管理</title>
     <link rel="stylesheet" href="${ctx}/static/plugins/layui/css/layui.css">
     <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
     <style>
@@ -29,84 +29,86 @@
 <body class="layui-layout-body">
     <div class="layui-layout layui-layout-admin">
 
-        <jsp:include page="${ctx}/jsp/customer/common/headerCustomer.jsp"></jsp:include>
+        <jsp:include page="${ctx}/jsp/common/header.jsp"></jsp:include>
 
         <div class="layui-body">
-
-
-                <!-- 内容主体区域 -->
             <div id="divcss4">
-                <div >
-                    <cite style="font-size: 40px">甲方需求列表
-                       <p style="color: red">${errorMsg}</p>
-                       <p style="color: green">${successMsg}</p>
-                    </cite>
-                </div>
+            <!-- 内容主体区域 -->
+            <div >
+                <label style="font-size: 30px;">订单管理
+                    <p style="color: red">${errorMsg}</p>
+                    <p style="color: green">${successMsg}</p>
+                </label>
+            </div>
+            <div style="padding: 15px;">
+                <form class="layui-form" action="${ctx}/bid/toCompanyList" method="post">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">订单编号</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="quoteId" value="${orderForm.id}" autocomplete="off"
+                                   class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">需求编号</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="quoteId" value="${orderForm.quoteId}" autocomplete="off"
+                                   class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">报价单编号</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="id" value="${orderForm.bidId}" autocomplete="off"
+                                   class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">竞价状态</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="bidStatus" value="${orderForm.orderStatus}" autocomplete="off"
+                                   class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">友商名称</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="customerName" value="${orderForm.customerName}" autocomplete="off"
+                                   class="layui-input">
+                        </div>
+                    </div>
 
+                    <div class="layui-inline">
+                        <div class="layui-input-inline">
+                            <input type="hidden" name="pageNum" value="1">
+                        </div>
+                    </div>
+                    <!------------------------------------------------->
 
-                <div style="padding: 15px;">
-                    <form class="layui-form" action="${ctx}/bid/toQuoteList" method="get">
-                        <div class="layui-inline">
-                            <label class="layui-form-label">订单编号</label>
-                            <div class="layui-input-inline">
-                                <input type="text" name="id" value="${quoteInfo.id}" autocomplete="off"
-                                       class="layui-input">
-                            </div>
+                    <div class="layui-inline">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit="" lay-filter="demo1">立即查询</button>
                         </div>
-                        <div class="layui-inline">
-                            <label class="layui-form-label">材料标号</label>
-                            <div class="layui-input-inline">
-                                <input type="text" name="materialId" value="${quoteInfo.materialId}" autocomplete="off"
-                                       class="layui-input"/>
-                            </div>
-                        </div><br>
-                        <div class="layui-inline">
-                            <div class="layui-input-inline">
-                                <input type="hidden" name="pageNum" value="1">
-                            </div>
-                        </div>
-                        <div class="layui-inline">
-                            <label class="layui-form-label">材料名称</label>
-                            <div class="layui-input-inline">
-                                <input type="text" name="materialName" value="${quoteInfo.materialName}" autocomplete="off"
-                                       class="layui-input"/>
-                            </div>
-                        </div>
-
-                        <div class="layui-inline">
-                            <label class="layui-form-label">负责人</label>
-                            <div class="layui-input-inline">
-                                <input type="text" name="userName" value="${quoteInfo.userName}" autocomplete="off"
-                                       class="layui-input"/>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="layui-inline">
-                            <div class="layui-input-block">
-                                <button class="layui-btn" lay-submit="" lay-filter="demo1">立即查询</button>
-                            </div>
-                        </div>
-                        <%--<div class="layui-input-block">--%>
+                    </div>
+                    <%--<div class="layui-input-block">--%>
                         <%--<a class="layui-btn" lay-submit="" lay-filter="demo1" href="${ctx}/material/toAddMaterial">新增物资种类</a>--%>
-                        <%--</div>--%>
+                    <%--</div>--%>
 
-                    </form>
-                </div>
+                </form>
 
-
-                    <hr>
+                <hr>
                 <table class="layui-table">
                     <thead>
                     <tr>
                         <th>订单编号</th>
-                        <th>材料标号</th>
-                        <th>材料名称</th>
-                        <th>采购数量</th>
-                        <th>状态</th>
-                        <th>截止日期</th>
-                        <th>是否参与</th>
-                        <th>操作</th>
+                        <th>需求编号</th>
+                        <th>报价单编号</th>
+                        <th>友商名称</th>
+                        <th>友商总报价</th>
 
+                        <th>预计交货时间</th>
+                        <th>报价单状态</th>
+                        <th>操作</th>
 
                     </tr>
                     </thead>
@@ -114,44 +116,43 @@
                     <c:forEach items="${page.list}" var="obj">
                         <tr>
                             <td>${obj.id}</td>
-                            <td>${obj.materialId}</td>
-                            <td>${obj.materialName}</td>
-                            <td>${obj.quoteQuantity}</td>
-                            <td>
-                                    <c:if test="${obj.quoteStatus eq 1}">采购中</c:if>
+                            <td>${obj.quoteId}</td>
+                            <td>${obj.bidId}</td>
+                            <td>${obj.customerName}</td>
+                            <td>${obj.bidTotalPrice}</td>
+                            <td>${obj.timeDeliver}</td>
 
+
+                            <td>
+                                <c:if test="${obj.orderStatus eq 1}">交易完毕 </c:if>
+                                <c:if test="${obj.orderStatus eq 0}">还在交易中</c:if>
+                                <c:if test="${obj.orderStatus eq 88}">订单失败</c:if>
                             </td>
-                            <td>${obj.quoteEndtime}</td>
-                            <td>${obj.userName}</td>
+
                             <td>
                                 <div class="site-demo-button" id="layerDemo" style="margin-bottom: 0;">
+                                    <a href="${ctx}/material/toUpdateMaterial/${obj.id}" data-method="notice" class="layui-btn layui-btn-normal layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe642</i></a>
 
-                                    <button type="button" onclick="openModak(this)" class="layui-btn layui-btn-radius layui-btn-normal">开始竞价</button>
-                                    <a href="" class="layui-btn layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe615</i></a>
+
+                                    <a href="${ctx}/app/delete/${obj.id}" class="layui-btn layui-btn-danger layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe640</i></a>
+                                    <a href="${ctx}/app/queryById/${obj.id}" class="layui-btn layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe615</i></a>
                                 </div>
                             </td>
 
                         </tr>
                     </c:forEach>
-                    <form action="${ctx}/bid/toQuoteList" method="post">
-                        <tr>
-                            <td>
-                                共${page.total} 条记录 第 ${page.pageNum}/ ${page.pages}页
-                            </td>
-                            <td colspan="8">
-                                <a href="javascript:void(0);" page="first">首页</a>
-                                <a href="javascript:void(0);" page="prev">上一页</a>
-                                <a href="javascript:void(0);" page="next">下一页</a>
-                                <a href="javascript:void(0);" page="last">尾页</a>
+                    <tr>
+                        <td>
+                            共${page.total} 条记录 第 ${page.pageNum}/ ${page.pages}页
+                        </td>
+                        <td colspan="8">
+                            <a href="javascript:void(0);" page="first">首页</a>
+                            <a href="javascript:void(0);" page="prev">上一页</a>
+                            <a href="javascript:void(0);" page="next">下一页</a>
+                            <a href="javascript:void(0);" page="last">尾页</a>
 
-                            </td>
-                        </tr>
-                        <div class="layui-inline">
-                            <div class="layui-input-inline">
-                                <input type="hidden" name="pageNum">
-                            </div>
-                        </div>
-                    </form>
+                        </td>
+                    </tr>
                     </tbody>
 
                 </table>
@@ -160,54 +161,19 @@
 
             </div>
         </div>
-
-
-
+        </div>
 
         <!-- 底部固定区域 -->
         <jsp:include page="${ctx}/jsp/common/footer.jsp"/>
     </div>
-    <script type="text/javascript" src="${ctx}/static/plugins/layui/layui.js"></script>
-    <script type="text/javascript" src="${ctx}/static/plugins/jQuery/jquery-3.3.1.js"></script>
+    <script src="${ctx}/static/plugins/layui/layui.js"></script>
     <script>
-        function openModak(obj){
-
-
-            var quoteId = $(obj).parent().parent().prev().prev().prev().prev().prev().prev().prev().html().trim();
-            $("[name='quoteId']").val(quoteId);
-                                                //向模态框中赋值(与name属性值相关）
-
-            layui.use(['layer'],function () {
-                var layer = layui.layer,$=layui.$;
-                layer.open({
-                    type:1,//类型
-                    area:['450px','350px'],//定义宽和高
-                    title:'订单报价',//题目
-                    shadeClose:false,//点击遮罩层关闭
-                    content: $('#ModalFrame')//打开的内容
-                });
-            })
-        }
-
-
-
-        layui.use(['laydate', 'element', 'form', 'jquery'], function() {
+        layui.use(['element', 'form', 'jquery'], function() {
             var element = layui.element;
             var form = layui.form;
             var $ = layui.jquery;
-            var laydate = layui.laydate;
 
-            laydate.render({
-                elem: '#test11'
-                ,format: 'yyyy年MM月dd日'
-            });
-
-
-            document.getElementById("bidList").className="layui-nav-item layui-nav-itemed";
-
-
-
-
+            document.getElementById("purchase").className="layui-nav-item layui-nav-itemed";
             $('a[page]').click(function () {
 
                 var pageNum = 1;
@@ -235,6 +201,30 @@
                 $('input[name=pageNum]').val(pageNum);
                 $('form').submit();
             })
+
+            form.on('select(levelOnex)', function () {
+                var levelOneId = $('#levelOne').val();
+                if(levelOneId == ''){
+                    return;
+                }else{
+                    $.ajax({
+                        url:'${ctx}/material/category/queryLevelTwoByLevelOne/' + levelOneId,
+                        type:'get',
+                        success:function (data) {
+                            var html = '<option value""> -请选择- </option>';
+                            var len = data.length;
+
+                            for(var i = 0; i < len; i++){
+                                html += '<option value="' + data[i].id + '">' + data[i].categoryName + '</option>';
+                            }
+                            $('#levelTwo').html(html);
+                            form.render();
+                        }
+                    })
+                }
+            });
+
+
             $(function () {
                 var levelOne = $('#levelOne').val();
                 if(levelOne != '' && levelOne != null){
@@ -262,6 +252,8 @@
                     }
                 }
             });
+
+
             //模态框 失败
             <%--var active = {--%>
                 <%--notice: function(){--%>
@@ -330,10 +322,14 @@
                 <%--}--%>
 
             <%--};--%>
+
+
+
             $('#layerDemo .layui-btn').on('click', function(){
                 var othis = $(this), method = othis.data('method');
                 active[method] ? active[method].call(this, othis) : '';
             });
+
         });
 
 
@@ -344,41 +340,3 @@
 
 </body>
 </html>
-
-<div id="ModalFrame"  style="display: none;">
-
-
-    <form class="layui-form" action="${ctx}/bid/addBid">
-
-
-            <div class="layui-inline">
-                <label class="layui-form-label">订单编号</label>
-                <div class="layui-input-inline">
-                    <input type="text" name="quoteId" disabled="disabled"  id="quoteId" autocomplete="off"
-                           class="layui-input"/>
-                </div>
-            </div><br>
-            <input type="hidden" name="quoteId" value="${quoteId}">
-            <div class="layui-inline">
-                <label class="layui-form-label">你的报价</label>
-                <div class="layui-input-inline">
-                    <input type="text" name="bidTotalPrice" id="test1name"  autocomplete="off"
-                           class="layui-input"/>
-                </div>
-            </div>
-            <div class="layui-form-item">
-                <div class="layui-inline">
-                    <label class="layui-form-label">预计交货日期</label>
-                    <div class="layui-input-inline">
-                        <input name="tempTime" type="text" class="layui-input" id="test11" placeholder="yyyy年MM月dd日">
-                    </div>
-                </div>
-            </div>
-            <div class="layui-inline">
-                <div class="layui-input-block">
-                    <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
-                </div>
-            </div>
-
-    </form>
-</div>

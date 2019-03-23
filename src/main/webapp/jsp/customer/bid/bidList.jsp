@@ -37,9 +37,10 @@
                 <!-- 内容主体区域 -->
             <div id="divcss4">
                 <div >
-                   <label style="font-size: 30px;">甲方需求列表
+                    <cite style="font-size: 40px">甲方需求列表
                        <p style="color: red">${errorMsg}</p>
-                       <p style="color: green">${successMsg}</p></label>
+                       <p style="color: green">${successMsg}</p>
+                    </cite>
                 </div>
 
 

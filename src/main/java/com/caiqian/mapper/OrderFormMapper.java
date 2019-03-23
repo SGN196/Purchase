@@ -1,9 +1,11 @@
 package com.caiqian.mapper;
 
 import com.caiqian.Bean.OrderForm;
+import com.github.pagehelper.PageInfo;
+
+import java.util.ArrayList;
 
 public interface OrderFormMapper {
-    int insert(OrderForm record);
 
-    int insertSelective(OrderForm record);
+    ArrayList<OrderForm> queryByPOJO(OrderForm orderForm);
 }

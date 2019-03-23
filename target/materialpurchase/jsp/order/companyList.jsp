@@ -164,7 +164,7 @@
             var form = layui.form;
             var $ = layui.jquery;
 
-            document.getElementById("purchase").className="layui-nav-item layui-nav-itemed";
+            document.getElementById("customer").className="layui-nav-item layui-nav-itemed";
             $('a[page]').click(function () {
 
                 var pageNum = 1;
