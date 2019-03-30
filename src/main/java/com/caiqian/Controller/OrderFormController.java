@@ -8,8 +8,12 @@ import com.caiqian.Service.OrderFormService;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 
@@ -50,10 +54,31 @@ public class OrderFormController
         }
         if(orderForm.getOrderStatus() == null)
             orderForm.setOrderStatus(0);
+        if(orderForm.getOrderStatus() == 22){
+            orderForm.setOrderStatus(null);
+        }
         PageInfo<OrderForm> pageInfo = orderFormService.queryByPOJO(orderForm);
         model.addAttribute("page", pageInfo);
         model.addAttribute("orderForm", orderForm);
         return "repo/RepoByOrder";
+    }
+
+    @Transactional
+    @RequestMapping("/OrderInRepo/{id}")
+    public String OrderInRepo(@PathVariable("id") Integer id, HttpSession httpSession){
+        UserInfo userInfo = (UserInfo)httpSession.getAttribute("userInfo");
+        if(userInfo == null)
+        {
+            return "emp/login";
+        }
+        boolean flag = orderFormService.OrderInRepo(id);
+        if(!flag)
+        {
+            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+            System.out.println("执行失败");
+        }
+        System.out.println("执行成功");
+        return "order/orderFormList";
     }
 
     @RequestMapping("/toMyOrderList")

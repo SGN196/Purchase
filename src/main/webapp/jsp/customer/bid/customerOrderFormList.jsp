@@ -34,13 +34,13 @@
         <div class="layui-body">
             <div id="divcss4">
             <!-- 内容主体区域 -->
-            <div >
-                <label style="font-size: 30px;">订单管理
+
+            <div style="padding: 15px;">
+                <cite style="font-size: 40px">订单管理
                     <p style="color: red">${errorMsg}</p>
                     <p style="color: green">${successMsg}</p>
-                </label>
-            </div>
-            <div style="padding: 15px;">
+                </cite>
+
                 <form class="layui-form" action="${ctx}/bid/toMyOrderList" method="post">
                     <div class="layui-inline">
                         <label class="layui-form-label">订单编号</label>
@@ -173,7 +173,7 @@
             var form = layui.form;
             var $ = layui.jquery;
 
-            document.getElementById("purchase").className="layui-nav-item layui-nav-itemed";
+            document.getElementById("orderList").className="layui-nav-item layui-nav-itemed";
             $('a[page]').click(function () {
 
                 var pageNum = 1;

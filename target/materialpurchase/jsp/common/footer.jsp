@@ -14,6 +14,7 @@
     <div class="layui-footer">
         <!-- 底部固定区域 -->
         © SGN196@163.com - 底部固定区域aa
+        <a href="${ctx}/root/index" > 后台系统</a>
     </div>
 </body>
 </html>

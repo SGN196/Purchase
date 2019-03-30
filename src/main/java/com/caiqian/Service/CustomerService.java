@@ -1,6 +1,7 @@
 package com.caiqian.Service;
 
 import com.caiqian.Bean.CustomerInfo;
+import com.github.pagehelper.PageInfo;
 
 /**
  * @author SGN196
@@ -10,4 +11,6 @@ import com.caiqian.Bean.CustomerInfo;
 public interface CustomerService
 {
     CustomerInfo login(CustomerInfo customerInfo);
+
+    PageInfo<CustomerInfo> queryAll(CustomerInfo customerInfo);
 }

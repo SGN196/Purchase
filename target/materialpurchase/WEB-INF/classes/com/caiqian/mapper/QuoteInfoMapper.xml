@@ -108,4 +108,26 @@
 
   </select>
 
+  <update id="success" parameterType="java.lang.Integer">
+    update quote_info set quote_status=0
+    <where>
+      <if test="quoteId != null">
+        and id = #{quoteId}
+      </if>
+    </where>
+  </update>
+
+  <select id="queryQuoteById" resultType="com.caiqian.Bean.QuoteInfo">
+    select * from quote_info
+    <where>
+      id=#{quoteId}
+    </where>
+  </select>
+
+ <select id="queryQuantityById" resultType="java.lang.Integer">
+    select quote_quantity from quote_info
+    <where>
+      id = #{quoteId};
+    </where>
+ </select>
 </mapper>

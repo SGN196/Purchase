@@ -29,6 +29,18 @@ public class CustomerInfo {
 
     private Date modifyDate;
 
+    private Integer pageNum = 1;
+
+    public Integer getPageNum()
+    {
+        return pageNum;
+    }
+
+    public void setPageNum(Integer pageNum)
+    {
+        this.pageNum = pageNum;
+    }
+
     public Integer getId() {
         return id;
     }

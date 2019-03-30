@@ -86,6 +86,12 @@
             <if test="categoryLevel2 != null">
                 ,category_level2
             </if>
+            <if test="createBy != null">
+                ,create_by
+            </if>
+            <if test="createDate != null">
+                ,create_date
+            </if>
 
         </trim>
         <trim prefix="values(" suffix=")" prefixOverrides=",">
@@ -106,6 +112,12 @@
             </if>
             <if test="categoryLevel2 != null">
                 ,#{categoryLevel2.id}
+            </if>
+            <if test="createBy != null">
+                ,#{createBy}
+            </if>
+            <if test="createDate != null">
+                ,#{createDate}
             </if>
         </trim>
 
@@ -133,6 +145,14 @@
         </where>
 
     </update>
+    <select id="queryByName" resultType="com.caiqian.Bean.MaterialInfo">
+        select * from material_info
+        <where>
+            <if test="materialName != null and materialName != ''">
+                and material_name = #{materialName}
+            </if>
+        </where>
+    </select>
 
     <select id="queryMaterialNameByLevelTwo" resultType="com.caiqian.Bean.MaterialInfo">
         select *
@@ -149,6 +169,12 @@
             id = #{id}
         </where>
     </select>
+    <update id="addMaterialQuantity">
+        update material_info set material_quantity=#{number}, modify_date=#{modifyDate}
+        <where>
+            id=#{id}
+        </where>
+    </update>
 </mapper>
 
 

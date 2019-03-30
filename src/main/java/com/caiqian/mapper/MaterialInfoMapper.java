@@ -3,6 +3,7 @@ package com.caiqian.mapper;
 import com.caiqian.Bean.MaterialInfo;
 import com.caiqian.DTO.MaterialInfoDTO;
 import com.caiqian.DTO.UpdateMaterialDTO;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,5 +22,9 @@ public interface MaterialInfoMapper {
 
     String queryUnitById(Integer id);
 
-    Integer queryQuantityByMaterialId(Integer materialId);
+    Integer queryQuantityByMaterialId(@Param("materialId") Integer materialId);
+
+    ArrayList<MaterialInfo> queryByName(MaterialInfo materialInfo);
+
+    boolean addMaterialQuantity(@Param("number") Integer number, @Param("id") Integer id, @Param("modifyDate") java.sql.Date modifyDate);
 }

@@ -17,6 +17,8 @@ public class UserInfo {
 
     private Integer deptId;
 
+    private String deptName;
+
     private Integer isUse;
 
     private Integer createBy;
@@ -26,6 +28,18 @@ public class UserInfo {
     private Integer modifyBy;
 
     private Date modifyDate;
+
+    private Integer pageNum = 1;
+
+    public Integer getPageNum()
+    {
+        return pageNum;
+    }
+
+    public void setPageNum(Integer pageNum)
+    {
+        this.pageNum = pageNum;
+    }
 
     public Integer getId() {
         return id;
@@ -45,6 +59,16 @@ public class UserInfo {
 
     public String getUserName() {
         return userName;
+    }
+
+    public String getDeptName()
+    {
+        return deptName;
+    }
+
+    public void setDeptName(String deptName)
+    {
+        this.deptName = deptName;
     }
 
     public void setUserName(String userName) {

@@ -21,6 +21,7 @@
         <div class="layui-body">
             <!-- 内容主体区域 -->
             <div style="padding: 15px;">
+                <cite style="font-size: 40px">物资查询</cite>
                 <form class="layui-form" action="${ctx}/material/repertoryList" method="get">
                     <div class="layui-inline">
                         <label class="layui-form-label">材料编号</label>

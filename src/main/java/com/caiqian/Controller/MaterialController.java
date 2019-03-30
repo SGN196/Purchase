@@ -79,23 +79,36 @@ public class MaterialController
 
 
     @RequestMapping("/addMaterial")
-    public String addMaterial(MaterialInfo materialInfoObj, Model model){
+    public String addMaterial(MaterialInfo materialInfoObj, HttpSession httpSession, Model model){
+        UserInfo userInfo = (UserInfo)httpSession.getAttribute("userInfo");
+        if(userInfo == null){
+            return "emp/login";
+        }
+        //判断数据库中，是否存在该商品信息
+        boolean exist = materialService.isExistByName(materialInfoObj);
+        if(exist){
+            model.addAttribute("addMaterialMsg","");
+            model.addAttribute("ErraddMaterialMsg", "该材料已存在");
+            return "category/addMaterial";
+        }
+
         List<MaterialCategory> levelOnex = materialService.queryLevelOne();
         model.addAttribute("levelOnex", levelOnex);
         if(!materialInfoObj.isEmptyADD())
         {
+            materialInfoObj.setCreateBy(userInfo.getId());
             boolean flag = materialService.addMaterialItem(materialInfoObj);
             if(flag){
-                model.addAttribute("ErraddMaterialMsg", "");
                 model.addAttribute("addMaterialMsg", "新增成功");
+                model.addAttribute("ErraddMaterialMsg", "");
                 return "category/addMaterial";
             }else{
-                model.addAttribute("addMaterialMsg", "");
                 model.addAttribute("ErraddMaterialMsg", "新增失败");
+                model.addAttribute("addMaterialMsg","");
             }
         }else{
-            model.addAttribute("addMaterialMsg", "");
             model.addAttribute("ErraddMaterialMsg", "信息填写未填全");
+            model.addAttribute("addMaterialMsg","");
 
         }
         model.addAttribute("materialInfoTemp", materialInfoObj);

@@ -1,6 +1,8 @@
 package com.caiqian.Service;
 
+import com.caiqian.Bean.MaterialInfo;
 import com.caiqian.Bean.UserInfo;
+import com.github.pagehelper.PageInfo;
 
 /**
  * @author SGN196
@@ -12,4 +14,8 @@ public interface EmployeeService
     UserInfo login(UserInfo userInfo);
 
     String queryEmployeeDept(Integer deptId);
+
+    boolean isRoot(UserInfo userInfo);
+
+    PageInfo<UserInfo> queryAll(UserInfo userInfo);
 }

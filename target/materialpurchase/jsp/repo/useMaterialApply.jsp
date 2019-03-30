@@ -24,7 +24,7 @@
         <!-- 内容主体区域 -->
         <div id="divcss4">
             <div >
-                <cite style="font-size: 40px">领用物资</cite>
+                <cite style="font-size: 30px">领用物资</cite>
             </div>
             <form method="post" action="${ctx}/record/applyForOutRepository" class="layui-form">
 

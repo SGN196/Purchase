@@ -1,6 +1,6 @@
 package com.caiqian.Bean;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class DataDictionary {
     private Long id;

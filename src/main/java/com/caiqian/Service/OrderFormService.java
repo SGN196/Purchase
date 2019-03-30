@@ -11,4 +11,8 @@ import com.github.pagehelper.PageInfo;
 public interface OrderFormService
 {
     PageInfo<OrderForm> queryByPOJO(OrderForm orderForm);
+
+    OrderForm queryOrderById(Integer id);
+
+    boolean OrderInRepo(Integer id);
 }

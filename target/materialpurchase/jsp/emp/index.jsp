@@ -21,7 +21,7 @@
                 <!-- 内容主体区域 -->
                 <div style="padding: 15px;">
                     ${sessionScope.deptName}：${sessionScope.userInfo.userName}，欢迎你 <br>
-
+                    ${sessionScope.str};
 
 
                 </div>

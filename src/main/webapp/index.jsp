@@ -33,6 +33,7 @@
    这是一个没有特效的企业首页<br>
         <a href="${ctx}/employee/toLogin">企业内部系统</a><br>
         <a href="${ctx}/customer/toLogin">友商竞标系统</a>
+        <a href="${ctx}/root/index">ROOT</a>
     </div>
 </body>
 </html>

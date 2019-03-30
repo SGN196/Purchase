@@ -32,7 +32,12 @@
             <!-- 内容主体区域 -->
 
             <div id="divcss4">
-                <cite style="font-size: 40px">新增物资种类</cite>
+                <cite style="font-size: 30px">
+                    &emsp;&emsp; 新增物资种类
+
+                </cite>
+                <p style="color: green; font-size: 25px;" >${addMaterialMsg}</p>
+                <p style="color: red; font-size: 25px;" >${ErraddMaterialMsg}</p>
                 <hr>
                 <form method="get" action="${ctx}/material/addMaterial" class="layui-form">
                     <label id="divcss5"></label>
@@ -86,10 +91,7 @@
                             <textarea name="materialInfo" placeholder="请输入物资简介"   class="layui-textarea">${materialInfoTemp.materialInfo}</textarea>
                         </div>
                     </div>
-                    <div style="text-align: center">
-                        <p style="color: green; " >${addMaterialMsg}</p>
-                        <p style="color: red;" >${ErraddMaterialMsg}</p>
-                    </div>
+
                     <br>
                     <div class="layui-form-item">
                         <div class="layui-input-block">

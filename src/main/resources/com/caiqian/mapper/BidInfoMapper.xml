@@ -79,4 +79,13 @@
 
 
     </select>
+    <update id="success" parameterType="java.lang.Integer">
+        update bid_info set bid_status=66
+        <where>
+            <if test="bidId != null">
+                and id = #{bidId}
+            </if>
+        </where>
+    </update>
+
 </mapper>

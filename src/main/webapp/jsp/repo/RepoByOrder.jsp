@@ -41,7 +41,7 @@
                 </label>
             </div>
             <div style="padding: 15px;">
-                <form class="layui-form" action="${ctx}/bid/toRepoByOrder" method="post">
+                <form class="layui-form" action="${ctx}/order/toRepoByOrder" method="post">
                     <div class="layui-inline">
                         <label class="layui-form-label">订单编号</label>
                         <div class="layui-input-inline">
@@ -62,9 +62,10 @@
                         <div class="layui-input-block">
                             <select name="quoteStatus" id="levelOne" lay-filter="levelOnex">
                                 <option value="">请选择</option>
-                                <option <c:if test="${0 eq orderForm.orderStatus}">selected</c:if> value="0">交货中</option>
-                                <option <c:if test="${1 eq orderForm.orderStatus}">selected</c:if> value="1">订单完成</option>
+                                <option <c:if test="${0 eq orderForm.orderStatus}">selected</c:if> value="0">生产/运输</option>
+                                <option <c:if test="${1 eq orderForm.orderStatus}">selected</c:if> value="1">订单成功完结</option>
                                 <option <c:if test="${88 eq orderForm.orderStatus}">selected</c:if> value="88">订单失败</option>
+                                <option <c:if test="${22 eq orderForm.orderStatus}">selected</c:if> value="88">全部订单</option>
                                 <%--<c:if test="${obj.id eq materialInfoDTO.levelOne}">selected</c:if> >${obj.categoryName }</option>--%>
 
                             </select>
@@ -95,7 +96,8 @@
                         <th>订单编号</th>
 
                         <th>友商名称</th>
-
+                        <th>材料名称</th>
+                        <th>采购数量</th>
 
                         <th>预计交货时间</th>
                         <th>报价单状态</th>
@@ -110,22 +112,28 @@
                             <td>${obj.bidId}</td>
                             <td>${obj.customerName}</td>
 
+                            <td>${obj.bidId}</td>
+                            <td>${obj.bidId}</td>
+
                             <td>${obj.timeDeliver}</td>
 
 
                             <td>
-                                <c:if test="${obj.orderStatus eq 1}">交易完毕 </c:if>
-                                <c:if test="${obj.orderStatus eq 0}">还在交易中</c:if>
+                                <c:if test="${obj.orderStatus eq 1}">订单成功完结 </c:if>
+                                <c:if test="${obj.orderStatus eq 0}">生产/运输</c:if>
                                 <c:if test="${obj.orderStatus eq 88}">订单失败</c:if>
                             </td>
 
                             <td>
                                 <div class="site-demo-button" id="layerDemo" style="margin-bottom: 0;">
-                                    <a href="${ctx}/material/toUpdateMaterial/${obj.id}" data-method="notice" class="layui-btn layui-btn-normal layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe642</i></a>
 
+                                    <div class="layui-anim layui-anim-up">
 
-                                    <a href="${ctx}/app/delete/${obj.id}" class="layui-btn layui-btn-danger layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe640</i></a>
-                                    <a href="${ctx}/app/queryById/${obj.id}" class="layui-btn layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe615</i></a>
+                                        <a href="${ctx}/order/OrderInRepo/${obj.id}">
+                                            <button data-method="notice"  class="layui-btn">订单入库</button>
+                                        </a>
+                                    </div>
+
                                 </div>
                             </td>
 
@@ -158,6 +166,8 @@
     </div>
     <script src="${ctx}/static/plugins/layui/layui.js"></script>
     <script>
+
+
         layui.use(['element', 'form', 'jquery'], function() {
             var element = layui.element;
             var form = layui.form;

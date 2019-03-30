@@ -30,12 +30,12 @@
     
     <div class="layui-body">
         <!-- 内容主体区域 -->
-        <div id="divcss5">
-            <label >发布采购需求</label>
 
-        </div>
         <div id="divcss4">
 
+            <div >
+                <cite style="font-size: 40px">发布采购需求</cite>
+            </div>
             <form method="post" action="${ctx}/purchase/launchRequirement" class="layui-form">
 
                 <div>

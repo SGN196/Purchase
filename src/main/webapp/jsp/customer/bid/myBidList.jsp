@@ -34,13 +34,13 @@
         <div class="layui-body">
             <div id="divcss4">
             <!-- 内容主体区域 -->
-            <div >
-                <label style="font-size: 30px;">本企业报价页面
-                    <p style="color: red">${errorMsg}</p>
-                    <p style="color: green">${successMsg}</p>
-                </label>
-            </div>
-            <div style="padding: 15px;">
+
+                <div >
+                    <cite style="font-size: 40px">新增物资种类</cite>
+                        <p style="color: red">${errorMsg}</p>
+                        <p style="color: green">${successMsg}</p>
+                    </cite>
+                </div>
                 <form class="layui-form" action="${ctx}/bid/toMyBidList" method="post">
                     <div class="layui-inline">
                         <label class="layui-form-label">需求编号</label>
@@ -137,7 +137,7 @@
 
 
             </div>
-        </div>
+
         </div>
 
         <!-- 底部固定区域 -->
@@ -150,7 +150,7 @@
             var form = layui.form;
             var $ = layui.jquery;
 
-            document.getElementById("bidList").className="layui-nav-item layui-nav-itemed";
+            document.getElementById("orderList").className="layui-nav-item layui-nav-itemed";
             $('a[page]').click(function () {
 
                 var pageNum = 1;

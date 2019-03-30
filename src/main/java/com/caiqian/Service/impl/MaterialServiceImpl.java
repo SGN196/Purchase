@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.lang.reflect.Array;
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -65,10 +66,25 @@ public class MaterialServiceImpl implements MaterialService
         return materialInfoMapper.queryByIdToUpdateDTO(id);
     }
 
+
+    @Override
+    public boolean isExistByName(MaterialInfo materialInfoObj)
+    {
+        if(materialInfoObj.getMaterialName() == null){
+            materialInfoObj.setMaterialName("fwefwjoifwjfwoifejfuwfwefwefjewifjweofwjofweifjofejfi");
+        }
+        ArrayList<MaterialInfo> list =  materialInfoMapper.queryByName(materialInfoObj);
+        if(list.isEmpty())
+            return false;
+        else
+            return true;
+    }
+
     @Override
     public boolean addMaterialItem(MaterialInfo materialInfo)
     {
         materialInfo.setMaterialQuantity(0);
+        materialInfo.setCreateDate(new Date(System.currentTimeMillis()));
         return materialInfoMapper.addMaterial(materialInfo);
     }
 

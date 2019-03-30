@@ -23,7 +23,7 @@ create table user_info(
     user_email varchar(50),
     user_tel varchar(20),
     dept_id int,                 -- 所在部门（用户权限，根据数据字典确定，符合权限才能创建采购需求）
-    is_use  int,                 -- 1：使用 。0不使用
+    is_use  int,                 -- 1：使用 。0：未启用
     create_by int,
     create_date datetime,
     modify_by int,

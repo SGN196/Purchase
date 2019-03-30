@@ -1,5 +1,6 @@
 package com.caiqian.Controller;
 
+import com.alibaba.fastjson.JSON;
 import com.caiqian.Bean.UserInfo;
 import com.caiqian.Service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,15 @@ public class EmployeeController
     private EmployeeService employeeService;
 
 
+    @RequestMapping("/toIndex")
+    public  String toIndex(HttpSession httpSession){
+        UserInfo userInfo = (UserInfo)httpSession.getAttribute("userInfo");
+        if(userInfo == null){
+            return "emp/login";
+        }
+        return "emp/index";
+    }
+
     @RequestMapping("/toLogin")
     public String toLogin()
     {
@@ -47,6 +57,8 @@ public class EmployeeController
         String deptName = employeeService.queryEmployeeDept(userInfo.getDeptId());
         httpSession.setAttribute("deptName", deptName);
         httpSession.setAttribute("userInfo", userInfo);
+        String str = JSON.toJSONString(userInfo);
+        httpSession.setAttribute("str", str);
         return "emp/index";
     }
 

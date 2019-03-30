@@ -13,5 +13,28 @@
             </if>
         </where>
     </select>
+    
+    <select id="queryAll" resultType="com.caiqian.Bean.UserInfo">
+
+        select u1.*, d1.value_name
+        from user_info u1
+        left join data_dictionary d1 on d1.value_id = u1.dept_id
+        <where>
+            d1.type_code ="DEPARTMENT"
+            <if test="userCode != null and userCode != ''">
+                AND u1.user_code=#{userCode}
+            </if>
+            <if test="userName != null and userName != ''">
+                and u1.user_name=#{userName}
+            </if>
+            <if test="deptId != null">
+                AND u1.dept_id=#{deptId}
+            </if>
+            <if test="isUse != null">
+                and u1.is_use=#{isUse}
+            </if>
+        </where>
+    </select>
+
 
 </mapper>
