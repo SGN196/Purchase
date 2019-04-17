@@ -3,9 +3,11 @@ package com.caiqian.Controller;
 import com.alibaba.fastjson.JSON;
 import com.caiqian.Bean.UserInfo;
 import com.caiqian.Service.EmployeeService;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.ServletContext;
@@ -30,6 +32,45 @@ public class EmployeeController
     @Autowired
     private EmployeeService employeeService;
 
+
+    @RequestMapping("/AcountStart/{id}")
+    public String AcountStart(@PathVariable("id")Integer id, Model model, HttpSession httpSession){
+        UserInfo userInfo = (UserInfo)httpSession.getAttribute("userInfo");
+        if(userInfo == null)
+        {
+            return "emp/login";
+        }
+        boolean isRoot = employeeService.isRoot(userInfo);
+        if(!isRoot){
+            return "emp/index";
+        }
+        boolean flag  = employeeService.acountStart(id);
+
+        UserInfo userInfoQuery = new UserInfo();
+        PageInfo<UserInfo> pageInfo = employeeService.queryAll(userInfoQuery);
+        model.addAttribute("page", pageInfo);
+        model.addAttribute("userInfoQuery",userInfoQuery);
+        return "root/empAcount";
+    }
+    @RequestMapping("/AcountStop/{id}")
+    public String AcountStop(@PathVariable("id")Integer id, Model model, HttpSession httpSession){
+        UserInfo userInfo = (UserInfo)httpSession.getAttribute("userInfo");
+        if(userInfo == null)
+        {
+            return "emp/login";
+        }
+        boolean isRoot = employeeService.isRoot(userInfo);
+        if(!isRoot){
+            return "emp/index";
+        }
+        boolean flag  = employeeService.acountStop(id);
+
+        UserInfo userInfoQuery = new UserInfo();
+        PageInfo<UserInfo> pageInfo = employeeService.queryAll(userInfoQuery);
+        model.addAttribute("page", pageInfo);
+        model.addAttribute("userInfoQuery",userInfoQuery);
+        return "root/empAcount";
+    }
 
     @RequestMapping("/toIndex")
     public  String toIndex(HttpSession httpSession){

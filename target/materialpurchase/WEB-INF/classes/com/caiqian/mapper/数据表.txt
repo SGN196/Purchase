@@ -100,7 +100,7 @@ create table order_form(
 );
 
 
--- 物品表
+-- 材料信息表
 create table material_info(
     id int,
     material_name varchar(20),          -- 材料名称

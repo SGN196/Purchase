@@ -81,11 +81,9 @@
                                     <div class="layui-anim layui-anim-up">
 
                                         <a href="${ctx}/record/approveRecord/${obj.id}" 	class="layui-btn layui-btn-radius">批准</a>
-                                    </div>
-                                    <div class="layui-anim layui-anim-up">
-
                                         <a href="${ctx}/record/disApproveRecord/${obj.id}" 	class="layui-btn layui-btn-radius layui-btn-danger">驳回</a>
                                     </div>
+
                                     <%--<a href="${ctx}/record/deleteById/${obj.id}" class="layui-btn layui-btn-danger layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe640</i></a>--%>
 
                                 </div>

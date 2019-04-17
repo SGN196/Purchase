@@ -16,7 +16,7 @@
     
     <select id="queryAll" resultType="com.caiqian.Bean.UserInfo">
 
-        select u1.*, d1.value_name
+        select u1.*, d1.value_name deptName
         from user_info u1
         left join data_dictionary d1 on d1.value_id = u1.dept_id
         <where>
@@ -35,6 +35,83 @@
             </if>
         </where>
     </select>
+    
+    <select id="isExists" resultType="com.caiqian.Bean.UserInfo">
+        select * from user_info
+        <where>
+            <if test="userCode != null and userCode != ''">
+                AND user_code=#{userCode}
+            </if>
+        </where>
+
+    </select>
+    <insert id="addEmployee" keyProperty="id" useGeneratedKeys="true">
+          insert into user_info
+        <trim prefix="(" suffix=")" prefixOverrides=",">
+
+            <if test="userCode != null and userCode != ''">
+                ,user_code
+            </if>
+            <if test="userName != null and userName != ''">
+                ,user_name
+            </if>
+            <if test="password != null and password != ''">
+                ,password
+            </if>
+            <if test="deptId != null ">
+                ,dept_id
+            </if>
+            ,is_use
+
+
+        </trim>
+        <trim prefix="values(" suffix=")" prefixOverrides=",">
+            <if test="userCode != null and userCode != ''">
+                ,#{userCode}
+            </if>
+            <if test="userName != null and userName != ''">
+                ,#{userName}
+            </if>
+            <if test="password != null and password != ''">
+                ,#{password}
+            </if>
+            <if test="userName != null">
+                ,#{deptId}
+            </if>
+            ,0
+        </trim>
+
+
+
+
+
+
+    </insert>
+
+    <update id="acountStop">
+        update user_info
+        <trim prefixOverrides="," prefix="set" suffix="">
+                ,is_use = 0
+        </trim>
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+        </where>
+
+    </update>
+    <update id="acountStart">
+        update user_info
+        <trim prefixOverrides="," prefix="set" suffix="">
+                ,is_use = 1
+        </trim>
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+        </where>
+
+    </update>
 
 
 </mapper>

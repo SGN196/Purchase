@@ -50,7 +50,7 @@
                 </dl>
             </li>
             <li id="materialList" class="layui-nav-item">
-                <a class="" href="javascript:;">物资相关</a>
+                <a class="" href="javascript:;">物资种类</a>
                 <dl class="layui-nav-child">
                     <dd><a href="${ctx}/material/repertoryList">${PermissionDenied}物资查询</a></dd>
                     <dd><a href="${ctx}/material/toAddMaterial">${PermissionDenied}新增物资种类</a></dd>

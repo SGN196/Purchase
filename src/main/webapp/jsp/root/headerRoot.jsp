@@ -45,6 +45,7 @@
             <li id="root" class="layui-nav-item">
                 <a class="" href="javascript:;">${PermissionDenied}超级管理员</a>
                 <dl class="layui-nav-child">
+                    <dd><a href="${ctx}/root/toAddEmployee">新增员工账号</a></dd>
                     <dd><a href="${ctx}/root/toEmpAcount">员工账号启停</a></dd>
                     <dd><a href="${ctx}/root/toCustomerAcount">友商账号管理</a></dd>
                     <dd><a href="${ctx}/root/toCloseOrderForm">关闭订单</a></dd>

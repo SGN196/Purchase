@@ -44,4 +44,16 @@ public class CustomerServiceImpl implements CustomerService
         PageInfo<CustomerInfo> page = new PageInfo<>(list);
         return page;
     }
+
+    @Override
+    public boolean acountStart(Integer id)
+    {
+        return customerInfoMapper.acountStart(id);
+    }
+
+    @Override
+    public boolean acountStop(Integer id)
+    {
+        return customerInfoMapper.acountStop(id);
+    }
 }

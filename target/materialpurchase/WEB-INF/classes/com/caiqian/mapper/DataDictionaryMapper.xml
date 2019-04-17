@@ -28,6 +28,11 @@
             value_id=#{id}
         </where>
     </select>
-
+    <select id="queryDeptName" resultType="com.caiqian.Bean.DataDictionary">
+        select * from data_dictionary
+          <where>
+            type_code="DEPARTMENT"
+          </where>
+    </select>
 
 </mapper>

@@ -3,6 +3,7 @@ package com.caiqian.Controller;
 import com.caiqian.Bean.*;
 import com.caiqian.DTO.MaterialInfoDTO;
 import com.caiqian.Service.CustomerService;
+import com.caiqian.Service.DataDictionaryService;
 import com.caiqian.Service.EmployeeService;
 import com.caiqian.Service.MaterialService;
 import com.caiqian.mapper.MaterialInfoMapper;
@@ -35,6 +36,9 @@ public class RootController
     @Autowired
     MaterialService materialService;
 
+    @Autowired
+    DataDictionaryService dataDictionaryService;
+
     @RequestMapping("/index")
     public String index(HttpSession httpSession){
         UserInfo userInfo = (UserInfo)httpSession.getAttribute("userInfo");
@@ -64,10 +68,42 @@ public class RootController
 
         PageInfo<UserInfo> pageInfo = employeeService.queryAll(userInfoQuery);
         model.addAttribute("page", pageInfo);
+        model.addAttribute("userInfoQuery",userInfoQuery);
 
 
 
         return "root/empAcount";
+    }
+
+    @RequestMapping("/toAddEmployee")
+    public String toAddEmployee(HttpSession httpSession, Model model, UserInfo addUser){
+        UserInfo userInfo = (UserInfo)httpSession.getAttribute("userInfo");
+        if(userInfo == null)
+        {
+            return "emp/login";
+        }
+        boolean isRoot = employeeService.isRoot(userInfo);
+        if(!isRoot){
+            return "emp/index";
+        }
+
+        List<DataDictionary> deptIdX = dataDictionaryService.queryDeptName();
+        model.addAttribute("deptIdX", deptIdX);
+        if(addUser.getUserCode() == null){   //避免首次访问时出现失败字体
+            return "root/addEmployee";
+        }
+        boolean flag = employeeService.addEmployee(addUser);
+        if(flag){
+            model.addAttribute("ErrorMsg", "");
+            model.addAttribute("SuccessMsg", "创建成功");
+
+        }else{
+            model.addAttribute("ErrorMsg", "创建失败");
+            model.addAttribute("addUser", addUser);
+        }
+
+
+        return "root/addEmployee";
     }
 
     @RequestMapping("/toCustomerAcount")
@@ -83,8 +119,7 @@ public class RootController
         }
         PageInfo<CustomerInfo> pageInfo = customerService.queryAll(customerInfo);
         model.addAttribute("page", pageInfo);
-
-
+        model.addAttribute("customerInfo",customerInfo);
         return "root/customerAcount";
     }
     @RequestMapping("/toCloseOrderForm")

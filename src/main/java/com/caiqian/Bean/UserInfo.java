@@ -165,4 +165,12 @@ public class UserInfo {
                 ", modifyDate=" + modifyDate +
                 '}';
     }
+
+    public boolean isAddEmpty(){
+        if(userCode == null || userName == null || password == null || deptId == null){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

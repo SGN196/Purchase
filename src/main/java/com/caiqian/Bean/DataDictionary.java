@@ -3,7 +3,7 @@ package com.caiqian.Bean;
 import java.sql.Date;
 
 public class DataDictionary {
-    private Long id;
+    private Integer id;
 
     private String typeCode;
 
@@ -21,11 +21,13 @@ public class DataDictionary {
 
     private Date modifyDate;
 
-    public Long getId() {
+    public Integer getId()
+    {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id)
+    {
         this.id = id;
     }
 

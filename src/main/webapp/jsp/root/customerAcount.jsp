@@ -26,14 +26,14 @@
                     <div class="layui-inline">
                         <label class="layui-form-label">友商账号</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="customerCode" value="${materialInfoDTO.id}" autocomplete="off"
+                            <input type="text" name="customerCode" value="${customerInfo.customerCode}" autocomplete="off"
                                    class="layui-input">
                         </div>
                     </div>
                     <div class="layui-inline">
                         <label class="layui-form-label">友商姓名</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="customerName" value="${materialInfoDTO.materialName}" autocomplete="off"
+                            <input type="text" name="customerName" value="${customerInfo.customerName}" autocomplete="off"
                                    class="layui-input">
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                     <div class="layui-inline">
                         <label class="layui-form-label">账号状态</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="isUse" value="${materialInfoDTO.materialName}" autocomplete="off"
+                            <input type="text" name="isUse" value="${customerInfo.isUse}" autocomplete="off"
                                    class="layui-input">
                         </div>
                     </div>
@@ -92,11 +92,8 @@
 
                             <td>
                                 <div class="site-demo-button" id="layerDemo" style="margin-bottom: 0;">
-                                    <a href="${ctx}/material/toUpdateMaterial/${obj.id}" data-method="notice" class="layui-btn layui-btn-normal layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe642</i></a>
-
-
-                                    <a href="${ctx}/app/delete/${obj.id}" class="layui-btn layui-btn-danger layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe640</i></a>
-                                    <a href="${ctx}/app/queryById/${obj.id}" class="layui-btn layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe615</i></a>
+                                    <c:if test="${obj.isUse eq 0}"> <a href="${ctx}/customer/AcountStart/${obj.id}" 	class="layui-btn layui-btn-radius">启用</a></c:if>
+                                    <c:if test="${obj.isUse eq 1}"><a href="${ctx}/customer/AcountStop/${obj.id}" 	class="layui-btn layui-btn-radius layui-btn-danger">停用</a></c:if>
                                 </div>
                             </td>
 

@@ -67,4 +67,32 @@ public class EmployeeServiceImpl implements EmployeeService
         }
 
     }
+
+    @Override
+    public boolean addEmployee(UserInfo addUser)
+    {
+        if(!addUser.isAddEmpty())
+        {
+            if(userInfoMapper.isExists(addUser.getUserCode()) == null){
+                if(addUser.getPassword() == null){
+                    addUser.setPassword("123456");
+                }
+                return userInfoMapper.addEmployee(addUser);
+            }
+        }
+
+        return false;
+    }
+
+    @Override
+    public boolean acountStop(Integer id)
+    {
+        return userInfoMapper.acountStop(id);
+    }
+
+    @Override
+    public boolean acountStart(Integer id)
+    {
+        return userInfoMapper.acountStart(id);
+    }
 }

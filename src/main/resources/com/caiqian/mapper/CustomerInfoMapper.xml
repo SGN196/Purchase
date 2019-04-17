@@ -31,117 +31,32 @@
             </if>
         </where>
     </select>
+
+
+    <update id="acountStop">
+        update customer_info
+        <trim prefixOverrides="," prefix="set" suffix="">
+            ,is_use = 0
+        </trim>
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+        </where>
+
+    </update>
+    <update id="acountStart">
+        update customer_info
+        <trim prefixOverrides="," prefix="set" suffix="">
+            ,is_use = 1
+        </trim>
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+        </where>
+
+    </update>
+
 </mapper>
 
-<!--<resultMap id="BaseResultMap" type="com.caiqian.Bean.CustomerInfo" >-->
-<!--<result column="id" property="id" jdbcType="INTEGER" />-->
-<!--<result column="customer_code" property="customerCode" jdbcType="VARCHAR" />-->
-<!--<result column="customer_name" property="customerName" jdbcType="VARCHAR" />-->
-<!--<result column="customer_password" property="customerPassword" jdbcType="VARCHAR" />-->
-<!--<result column="customer_addr" property="customerAddr" jdbcType="VARCHAR" />-->
-<!--<result column="customer_email" property="customerEmail" jdbcType="VARCHAR" />-->
-<!--<result column="customer_tel" property="customerTel" jdbcType="VARCHAR" />-->
-<!--<result column="customer_desc" property="customerDesc" jdbcType="VARCHAR" />-->
-<!--<result column="is_use" property="isUse" jdbcType="INTEGER" />-->
-<!--<result column="create_by" property="createBy" jdbcType="INTEGER" />-->
-<!--<result column="create_date" property="createDate" jdbcType="TIMESTAMP" />-->
-<!--<result column="modify_by" property="modifyBy" jdbcType="INTEGER" />-->
-<!--<result column="modify_date" property="modifyDate" jdbcType="TIMESTAMP" />-->
-<!--</resultMap>-->
-<!--<insert id="insert" parameterType="com.caiqian.Bean.CustomerInfo" >-->
-    <!--insert into customer_info (id, customer_code, customer_name, -->
-      <!--customer_password, customer_addr, customer_email, -->
-      <!--customer_tel, customer_desc, is_use, -->
-      <!--create_by, create_date, modify_by, -->
-      <!--modify_date)-->
-    <!--values (#{id,jdbcType=INTEGER}, #{customerCode,jdbcType=VARCHAR}, #{customerName,jdbcType=VARCHAR}, -->
-      <!--#{customerPassword,jdbcType=VARCHAR}, #{customerAddr,jdbcType=VARCHAR}, #{customerEmail,jdbcType=VARCHAR}, -->
-      <!--#{customerTel,jdbcType=VARCHAR}, #{customerDesc,jdbcType=VARCHAR}, #{isUse,jdbcType=INTEGER}, -->
-      <!--#{createBy,jdbcType=INTEGER}, #{createDate,jdbcType=TIMESTAMP}, #{modifyBy,jdbcType=INTEGER}, -->
-      <!--#{modifyDate,jdbcType=TIMESTAMP})-->
-  <!--</insert>-->
-<!--<insert id="insertSelective" parameterType="com.caiqian.Bean.CustomerInfo" >-->
-<!--insert into customer_info-->
-<!--<trim prefix="(" suffix=")" suffixOverrides="," >-->
-  <!--<if test="id != null" >-->
-    <!--id,-->
-  <!--</if>-->
-  <!--<if test="customerCode != null" >-->
-    <!--customer_code,-->
-  <!--</if>-->
-  <!--<if test="customerName != null" >-->
-    <!--customer_name,-->
-  <!--</if>-->
-  <!--<if test="customerPassword != null" >-->
-    <!--customer_password,-->
-  <!--</if>-->
-  <!--<if test="customerAddr != null" >-->
-    <!--customer_addr,-->
-  <!--</if>-->
-  <!--<if test="customerEmail != null" >-->
-    <!--customer_email,-->
-  <!--</if>-->
-  <!--<if test="customerTel != null" >-->
-    <!--customer_tel,-->
-  <!--</if>-->
-  <!--<if test="customerDesc != null" >-->
-    <!--customer_desc,-->
-  <!--</if>-->
-  <!--<if test="isUse != null" >-->
-    <!--is_use,-->
-  <!--</if>-->
-  <!--<if test="createBy != null" >-->
-    <!--create_by,-->
-  <!--</if>-->
-  <!--<if test="createDate != null" >-->
-    <!--create_date,-->
-  <!--</if>-->
-  <!--<if test="modifyBy != null" >-->
-    <!--modify_by,-->
-  <!--</if>-->
-  <!--<if test="modifyDate != null" >-->
-    <!--modify_date,-->
-  <!--</if>-->
-<!--</trim>-->
-<!--<trim prefix="values (" suffix=")" suffixOverrides="," >-->
-  <!--<if test="id != null" >-->
-    <!--#{id,jdbcType=INTEGER},-->
-  <!--</if>-->
-  <!--<if test="customerCode != null" >-->
-    <!--#{customerCode,jdbcType=VARCHAR},-->
-  <!--</if>-->
-  <!--<if test="customerName != null" >-->
-    <!--#{customerName,jdbcType=VARCHAR},-->
-  <!--</if>-->
-  <!--<if test="customerPassword != null" >-->
-    <!--#{customerPassword,jdbcType=VARCHAR},-->
-  <!--</if>-->
-  <!--<if test="customerAddr != null" >-->
-    <!--#{customerAddr,jdbcType=VARCHAR},-->
-  <!--</if>-->
-  <!--<if test="customerEmail != null" >-->
-    <!--#{customerEmail,jdbcType=VARCHAR},-->
-  <!--</if>-->
-  <!--<if test="customerTel != null" >-->
-    <!--#{customerTel,jdbcType=VARCHAR},-->
-  <!--</if>-->
-  <!--<if test="customerDesc != null" >-->
-    <!--#{customerDesc,jdbcType=VARCHAR},-->
-  <!--</if>-->
-  <!--<if test="isUse != null" >-->
-    <!--#{isUse,jdbcType=INTEGER},-->
-  <!--</if>-->
-  <!--<if test="createBy != null" >-->
-    <!--#{createBy,jdbcType=INTEGER},-->
-  <!--</if>-->
-  <!--<if test="createDate != null" >-->
-    <!--#{createDate,jdbcType=TIMESTAMP},-->
-  <!--</if>-->
-  <!--<if test="modifyBy != null" >-->
-    <!--#{modifyBy,jdbcType=INTEGER},-->
-  <!--</if>-->
-  <!--<if test="modifyDate != null" >-->
-    <!--#{modifyDate,jdbcType=TIMESTAMP},-->
-  <!--</if>-->
-<!--</trim>-->
-<!--</insert>-->

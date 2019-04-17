@@ -165,4 +165,6 @@ public class CustomerInfo {
 
         this.modifyDate = modifyDate;
     }
+
+
 }

@@ -54,12 +54,22 @@
                         <div id="divcss2">
                             ${errMsg}
                         </div>
-                        <button class="layui-btn" lay-submit lay-filter="formDemo">登录</button>
+                        <button class="layui-btn" lay-submit lay-filter="formDemo" onclick="login()">登录</button>
 
                     </div>
                 </div>
             </form>
         </div>
     <script src="${ctx}/static/plugins/layui/layui.js"></script>
+    <script >
+        function login() {
+            $("#loginForm").validate({
+                submitHandler:function(form){
+                    doLogin();
+                }
+            })
+        }
+
+    </script>
 </body>
 </html>

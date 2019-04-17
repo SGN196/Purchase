@@ -18,4 +18,10 @@ public interface EmployeeService
     boolean isRoot(UserInfo userInfo);
 
     PageInfo<UserInfo> queryAll(UserInfo userInfo);
+
+    boolean addEmployee(UserInfo addUser);
+
+    boolean acountStart(Integer id);
+
+    boolean acountStop(Integer id);
 }

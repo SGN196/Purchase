@@ -13,4 +13,8 @@ public interface CustomerService
     CustomerInfo login(CustomerInfo customerInfo);
 
     PageInfo<CustomerInfo> queryAll(CustomerInfo customerInfo);
+
+    boolean acountStart(Integer id);
+
+    boolean acountStop(Integer id);
 }
