@@ -7,148 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10bb1a94-9e05-42f7-a76f-cc86cb4fb5c7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/DataDictionaryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/DataDictionaryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/result/CodeMsg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/result/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/util/MD5Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/root/addEmployee.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Bean/CustomerInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Bean/CustomerInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Bean/DataDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Bean/DataDictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Bean/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Bean/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/RootController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/RootController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/CustomerInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/CustomerInfoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/DataDictionaryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/DataDictionaryMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/UserInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/UserInfoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/CustomerInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/CustomerInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/DataDictionaryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/DataDictionaryMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/UserInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/数据表.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/数据表.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/emp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/emp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/repo/checkApplyList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/repo/checkApplyList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/root/customerAcount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/root/customerAcount.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/root/empAcount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/root/empAcount.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/root/headerRoot.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/root/headerRoot.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/12_26任务书、选题审批表、课题说明/(未完成)蔡淇安_高校专业实训评价系统的设计与实现_选题审批表.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/12_26任务书、选题审批表、课题说明/蔡淇安_附件5 桂林航天工业学院本科毕业设计（论文）任务书_.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/12_26任务书、选题审批表、课题说明/课题说明_蔡淇安.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/12_27开题报告、文件综述、外文译文/新建 DOCX 文档.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/12_27开题报告、文件综述、外文译文/蔡淇安_2015070030326_开题报告、文件综述、外文译文.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/12_27开题报告、文件综述、外文译文/蔡淇安_2015070030326_附件6 桂林航天工业学院本科毕业设计（论文）开题报告.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/12_27开题报告、文件综述、外文译文/蔡淇安_2015070030326_附件7 桂林航天工业学院本科毕业设计（论文）文献综述.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/12_27开题报告、文件综述、外文译文/蔡淇安_2015070030326_附件8 桂林航天工业学院本科毕业设计（论文）外文译文.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/19_1_24需求分析/2月15日.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/19_1_24需求分析/3系统需求分析.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/19_1_24需求分析/4系统总体设计.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/19_1_24需求分析/数据库设计.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/临时文件/蔡淇安附件6 桂林航天工业学院本科毕业设计（论文）开题报告.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/临时文件/蔡淇安附件7 桂林航天工业学院本科毕业设计（论文）文献综述.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/临时文件/蔡淇安附件8 桂林航天工业学院本科毕业设计（论文）外文译文.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/临时文件/附件678_蔡淇安2015070030326.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/原件/毕业设计（论文）模板（理工类）.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/原件/毕业设计（论文）过程文档封面.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/原件/附件10 桂林航天工业学院本科毕业设计（论文）中期进展情况检查表.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/原件/附件11 桂林航天工业学院本科毕业设计（论文）验收表.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/原件/附件2 桂林航天工业学院本科毕业设计（论文）选题审批表.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/原件/附件4 桂林航天工业学院本科毕业设计（论文）选题变更审批表.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/原件/附件5 桂林航天工业学院本科毕业设计（论文）任务书.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/原件/附件6 桂林航天工业学院本科毕业设计（论文）开题报告.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/原件/附件7 桂林航天工业学院本科毕业设计（论文）文献综述.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/原件/附件8 桂林航天工业学院本科毕业设计（论文）外文译文.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/原件/附件9 桂林航天工业学院本科毕业设计（论文）指导情况记录表.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/参考文献/MVC框架吹水.caj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/参考文献/[Foundations of Management] Importance of Costs of Risks in Material Management.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/参考文献/基于B_S的高校采购系统的设计与实现_丁莉丽.caj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/参考文献/基于SAP的石油物资采购系统集成功能的设计与实现_姚玢.caj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/参考文献/基于信息化技术的物资采购创新研究_陶媛.caj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/参考文献/文章结构_数据库.caj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/参考文献/某部队军需物资采购管理系统的研究与分析_孙杰.caj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/参考文献/物资采购管理系统的设计与开发策略研究_廖晖.caj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/参考文献/电信企业物资采购管理系统的设计与实现_陈倩.caj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/参考文献/译文Importance of Costs of Risks in Material Management.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/参考文献/采购管理信息系统建设_卢战果.caj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/参考文献/高校网上物资采购系统的设计与实现_王明雪.caj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/各种文档（已加好日期）/~$2 桂林航天工业学院本科毕业设计（论文）选题审批表.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/各种文档（已加好日期）/~$4 桂林航天工业学院本科毕业设计（论文）选题变更审批表.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/各种文档（已加好日期）/~$7 桂林航天工业学院本科毕业设计（论文）文献综述.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/各种文档（已加好日期）/~$8 桂林航天工业学院本科毕业设计（论文）外文译文.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/各种文档（已加好日期）/毕业设计（论文）模板（理工类）.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/各种文档（已加好日期）/毕业设计（论文）过程文档封面.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/各种文档（已加好日期）/附件10 桂林航天工业学院本科毕业设计（论文）中期进展情况检查表.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/各种文档（已加好日期）/附件11 桂林航天工业学院本科毕业设计（论文）验收表.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/各种文档（已加好日期）/附件2 桂林航天工业学院本科毕业设计（论文）选题审批表.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/各种文档（已加好日期）/附件4 桂林航天工业学院本科毕业设计（论文）选题变更审批表.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/各种文档（已加好日期）/附件5 桂林航天工业学院本科毕业设计（论文）任务书.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/各种文档（已加好日期）/附件6 桂林航天工业学院本科毕业设计（论文）开题报告.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/各种文档（已加好日期）/附件7 桂林航天工业学院本科毕业设计（论文）文献综述.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/各种文档（已加好日期）/附件8 桂林航天工业学院本科毕业设计（论文）外文译文.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/各种文档（已加好日期）/附件9 桂林航天工业学院本科毕业设计（论文）指导情况记录表.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/桂林航天工业学院本科毕业设计(论文）教学管理工作规程/桂林航天工业学院本科毕业设计(论文）教学管理工作规程-附件/附件1 桂林航天工业学院本科毕业设计（论文）评分标准.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/桂林航天工业学院本科毕业设计(论文）教学管理工作规程/桂林航天工业学院本科毕业设计(论文）教学管理工作规程-附件/附件10 桂林航天工业学院本科毕业设计（论文）中期进展情况检查表.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/桂林航天工业学院本科毕业设计(论文）教学管理工作规程/桂林航天工业学院本科毕业设计(论文）教学管理工作规程-附件/附件11 桂林航天工业学院本科毕业设计（论文）验收表.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/桂林航天工业学院本科毕业设计(论文）教学管理工作规程/桂林航天工业学院本科毕业设计(论文）教学管理工作规程-附件/附件12 桂林航天工业学院本科毕业设计（论文）验收汇总表.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/桂林航天工业学院本科毕业设计(论文）教学管理工作规程/桂林航天工业学院本科毕业设计(论文）教学管理工作规程-附件/附件16桂林航天工业学院本科毕业设计（论文）成绩总评表.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/桂林航天工业学院本科毕业设计(论文）教学管理工作规程/桂林航天工业学院本科毕业设计(论文）教学管理工作规程-附件/附件2 桂林航天工业学院本科毕业设计（论文）选题审批表.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/桂林航天工业学院本科毕业设计(论文）教学管理工作规程/桂林航天工业学院本科毕业设计(论文）教学管理工作规程-附件/附件3 桂林航天工业学院本科毕业设计（论文）选题汇总表.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/桂林航天工业学院本科毕业设计(论文）教学管理工作规程/桂林航天工业学院本科毕业设计(论文）教学管理工作规程-附件/附件4 桂林航天工业学院本科毕业设计（论文）选题变更审批表.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/桂林航天工业学院本科毕业设计(论文）教学管理工作规程/桂林航天工业学院本科毕业设计(论文）教学管理工作规程-附件/附件5 桂林航天工业学院本科毕业设计（论文）任务书.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/桂林航天工业学院本科毕业设计(论文）教学管理工作规程/桂林航天工业学院本科毕业设计(论文）教学管理工作规程-附件/附件6 桂林航天工业学院本科毕业设计（论文）开题报告.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/桂林航天工业学院本科毕业设计(论文）教学管理工作规程/桂林航天工业学院本科毕业设计(论文）教学管理工作规程-附件/附件7 桂林航天工业学院本科毕业设计（论文）文献综述.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/桂林航天工业学院本科毕业设计(论文）教学管理工作规程/桂林航天工业学院本科毕业设计(论文）教学管理工作规程-附件/附件8 桂林航天工业学院本科毕业设计（论文）外文译文.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/桂林航天工业学院本科毕业设计(论文）教学管理工作规程/桂林航天工业学院本科毕业设计(论文）教学管理工作规程-附件/附件9 桂林航天工业学院本科毕业设计（论文）指导情况记录表.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/桂林航天工业学院本科毕业设计(论文）教学管理工作规程/桂林航天工业学院本科毕业设计(论文）教学管理工作规程.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/桂林航天工业学院本科毕业设计（论文）撰写规范/桂林航天工业学院本科毕业设计（论文）撰写规范.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/桂林航天工业学院本科毕业设计（论文）撰写规范/附件2  桂林航天工业学院本科毕业设计（论文）模板（理工类）.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/毕业论文/桂林航天工业学院本科毕业设计（论文）撰写规范/附件3  毕业设计（论文）过程文档封面.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/Bean/DataDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/Bean/DataDictionary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/Bean/UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/Bean/UserInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/Controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/Controller/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/Controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/Controller/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/Controller/RootController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/Controller/RootController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/Service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/Service/CustomerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/Service/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/Service/EmployeeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/Service/impl/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/Service/impl/CustomerServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/Service/impl/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/Service/impl/EmployeeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/CustomerInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/CustomerInfoMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/CustomerInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/CustomerInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/DataDictionaryMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/DataDictionaryMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/DataDictionaryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/DataDictionaryMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/UserInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/UserInfoMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/UserInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/数据表.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/数据表.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Bean/DataDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Bean/DataDictionary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Bean/UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Bean/UserInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Controller/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Controller/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Controller/RootController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Controller/RootController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/CustomerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/EmployeeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/impl/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/impl/CustomerServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/impl/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/impl/EmployeeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/CustomerInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/CustomerInfoMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/CustomerInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/CustomerInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/DataDictionaryMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/DataDictionaryMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/DataDictionaryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/DataDictionaryMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/UserInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/UserInfoMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/UserInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/数据表.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/数据表.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/lib/commons-lang3-3.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/jsp/common/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/jsp/common/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/jsp/emp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/jsp/emp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/jsp/repo/checkApplyList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/jsp/repo/checkApplyList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/jsp/root/customerAcount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/jsp/root/customerAcount.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/jsp/root/empAcount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/jsp/root/empAcount.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/jsp/root/headerRoot.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/jsp/root/headerRoot.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test01/19_4_1文章内容/已修改/2使用技术简介.docx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test01/19_4_1文章内容/已修改/2使用技术简介.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test01/19_4_1文章内容/已修改/3系统需求分析.docx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test01/19_4_1文章内容/已修改/3系统需求分析.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test01/19_4_1文章内容/已修改/4系统总体设计.docx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test01/19_4_1文章内容/已修改/4系统总体设计.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test01/19_4_1文章内容/已修改/5系统实现.docx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test01/19_4_1文章内容/已修改/5系统实现.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test01/19_4_1文章内容/未修改/3系统需求分析15.docx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test01/19_4_1文章内容/未修改/3系统需求分析15.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test01/19_4_1文章内容/未修改/4系统总体设计20.docx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test01/19_4_1文章内容/未修改/4系统总体设计20.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test01/19_4_1文章内容/未修改/5系统实现20.docx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test01/19_4_1文章内容/未修改/5系统实现20.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test01/19_4_1文章内容/未修改/~$系统实现20.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test01/19_4_1文章内容/未修改/~$统总体设计20.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test01/各种文档（已加好日期）/~$7 桂林航天工业学院本科毕业设计（论文）文献综述.doc" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -181,49 +50,6 @@
     </expand>
     <select />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file leaf-file-name="数据表.txt" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/数据表.txt">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="561">
-                    <caret line="136" column="30" selection-start-line="136" selection-start-column="13" selection-end-line="136" selection-end-column="30" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="log.txt" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/main/log.txt">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="102">
-                    <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="CustomerInfo.java" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Bean/CustomerInfo.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="119">
-                    <caret line="7" column="31" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="31" />
-                    <folding>
-                      <element signature="e#566#567#0" expanded="true" />
-                      <element signature="e#596#597#0" expanded="true" />
-                      <element signature="e#647#648#0" expanded="true" />
-                      <element signature="e#685#686#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FavoritesManager">
     <favorites_list name="materialpurchase" />
   </component>
@@ -242,16 +68,30 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/common/header.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="578">
-              <caret line="34" column="17" lean-forward="true" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+              <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommonCodeConstant.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CommonCodeConstant.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/constant/CommonCodeConstant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="289">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="template.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/template.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -437,7 +277,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -476,61 +315,6 @@
               <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="caiqian" type="462c0819:PsiDirectoryNode" />
-              <item name="constant" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="caiqian" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="caiqian" type="462c0819:PsiDirectoryNode" />
-              <item name="result" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="caiqian" type="462c0819:PsiDirectoryNode" />
-              <item name="Service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="caiqian" type="462c0819:PsiDirectoryNode" />
-              <item name="Service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="caiqian" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -538,165 +322,15 @@
               <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="category" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="customer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="customer" type="462c0819:PsiDirectoryNode" />
-              <item name="bid" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="customer" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="customer" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="emp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="order" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="purchase" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="repo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="root" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -714,21 +348,21 @@
     <property name="settings.editor.selected.configurable" value="preferences.customizations" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\materialpurchase\src\main\webapp\jsp\customer\login" />
-      <recent name="D:\materialpurchase\src\main\webapp\jsp\customer\common" />
-      <recent name="D:\materialpurchase\src\main\webapp\jsp\category" />
-      <recent name="D:\materialpurchase\src\main\webapp\jsp" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.caiqian.constant" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\materialpurchase\src\main\webapp\jsp\root" />
       <recent name="D:\materialpurchase\src\main\webapp\jsp\repo" />
       <recent name="D:\materialpurchase\src\main\webapp\jsp\customer\bid" />
       <recent name="D:\materialpurchase\src\main\webapp\jsp\order" />
       <recent name="D:\materialpurchase\src\main\webapp\jsp\purchase" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.caiqian.constant" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\materialpurchase\src\main\webapp\jsp\customer\login" />
+      <recent name="D:\materialpurchase\src\main\webapp\jsp\customer\common" />
+      <recent name="D:\materialpurchase\src\main\webapp\jsp\category" />
+      <recent name="D:\materialpurchase\src\main\webapp\jsp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -899,12 +533,14 @@
       <workItem from="1554477635646" duration="77000" />
       <workItem from="1554511795851" duration="8460000" />
       <workItem from="1555042812624" duration="3748000" />
-      <workItem from="1555506096468" duration="2739000" />
+      <workItem from="1555506096468" duration="3389000" />
+      <workItem from="1556086144431" duration="499000" />
+      <workItem from="1556087269073" duration="785000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="326305000" />
+    <option name="totallyTimeSpent" value="328239000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -916,7 +552,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="31" y="22" width="1242" height="1053" extended-state="0" />
+    <frame x="31" y="22" width="1242" height="1053" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -937,22 +574,22 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.24565217" />
       <window_info anchor="bottom" id="Version Control" order="15" weight="0.32932165" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.24565217" />
       <window_info anchor="bottom" id="Spring" order="9" weight="0.32933652" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32900432" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49144635" visible="true" weight="0.1928934" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49144635" visible="true" weight="0.27326566" />
       <window_info id="Web" order="5" sideWeight="0.50765866" side_tool="true" weight="0.20990391" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Favorites" order="6" sideWeight="0.507764" side_tool="true" weight="0.20990391" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.3291032" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32772437" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32932165" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.3291032" />
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="Application Servers" order="8" weight="0.32932693" />
@@ -1016,20 +653,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/repo/RepoByOrder.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="67" column="91" selection-start-line="67" selection-start-column="91" selection-end-line="67" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/category/updateMaterial.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/repo/useMaterialApply.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1059,9 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1341,26 +961,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="31" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="31" />
-          <folding>
-            <element signature="e#566#567#0" expanded="true" />
-            <element signature="e#596#597#0" expanded="true" />
-            <element signature="e#647#648#0" expanded="true" />
-            <element signature="e#685#686#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/common/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
-          <caret line="34" column="17" lean-forward="true" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/constant/CommonCodeConstant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/template.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
