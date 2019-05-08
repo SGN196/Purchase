@@ -54,6 +54,13 @@ public class CustomerController
         return "customer/login/indexCustomer";
     }
 
+    @RequestMapping("/customerRegister")
+    public String customerRegister(CustomerInfo customerInfo){
+        System.out.println(customerInfo.toString());
+        return null;
+
+    }
+
     @RequestMapping("/logout")
     public String logout(HttpSession httpSession){
 

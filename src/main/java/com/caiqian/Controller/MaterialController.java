@@ -33,7 +33,7 @@ public class MaterialController
 
     @RequestMapping("/toUpdateMaterial/{MaterialId}")
     public String toUpdateMaterial(@PathVariable("MaterialId") Integer id,  Model model){
-        UpdateMaterialDTO updateMaterialDTO = materialService.queryByIdToUpdateDTO(id);
+        UpdateMaterialDTO updateMaterialDTO  = materialService.queryByIdToUpdateDTO(id);
         List<MaterialCategory> levelOneList = materialService.queryLevelOne();
         model.addAttribute("updateMaterialDTO", updateMaterialDTO);
         model.addAttribute("levelOneList", levelOneList);

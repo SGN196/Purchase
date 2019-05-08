@@ -16,7 +16,8 @@
 
         }
         #divcss1{
-
+            background-color: white;
+            border-radius: 20px;
             left: 50%;
             top: 50%;
             position: absolute;
@@ -25,11 +26,14 @@
         #divcss2{
             color: red;
         }
+        body{
+            background-image:url("${ctx}/static/plugins/layui/images/back01.jpg");
+            background-size:cover;
+        }
     </style>
 </head>
-<body>
-
-
+<%--background="${ctx}/static/plugins/layui/images/back.png"--%>
+<body  >
 
         <div id="divcss1">
             <h2>&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;企业内部系统</h2><br>
@@ -41,7 +45,7 @@
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label">密码</label>
+                    <label class="layui-form-label">密&emsp;码</label>
                     <div class="layui-input-inline">
                         <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
                     </div>

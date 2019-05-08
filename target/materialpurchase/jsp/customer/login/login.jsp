@@ -12,11 +12,9 @@
     <link rel="stylesheet" href="${ctx}/static/plugins/layui/css/layui.css"/>
 
     <style>
-        body{
-
-        }
         #divcss1{
-
+            background-color: white;
+            border-radius: 20px;
             left: 50%;
             top: 50%;
             position: absolute;
@@ -25,9 +23,13 @@
         #divcss2{
             color: red;
         }
+        body{
+            background-image:url("${ctx}/static/plugins/layui/images/back01.jpg");
+            background-size:cover;
+        }
     </style>
 </head>
-<body>
+<body >
 
 
 

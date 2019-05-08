@@ -16,4 +16,8 @@ public interface BidService
     boolean addBidItem(BidInfo bidInfo);
 
     PageInfo<BidInfo> queryBidList(BidInfo bidInfo);
+
+    BidInfo queryBidInfoById(Integer id);
+
+    Boolean deleteById(Integer id);
 }

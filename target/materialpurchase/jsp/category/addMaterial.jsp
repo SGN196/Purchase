@@ -83,10 +83,7 @@
                     <%-------------------------------------------------%>
                     <div class="layui-form-item">
                         <label class="layui-form-label">物资简介</label>
-                        <%--<div class="layui-input-inline">--%>
-                        <%--<input type="textarea" name="materialInfo" placeholder="请输入物资简介" autocomplete="off" class="layui-input">--%>
-                        <%--<textarea cols="30" rows="10"--%>
-                        <%--</div>--%>
+
                         <div class="layui-input-block">
                             <textarea name="materialInfo" placeholder="请输入物资简介"   class="layui-textarea">${materialInfoTemp.materialInfo}</textarea>
                         </div>
@@ -111,42 +108,42 @@
 
 
 
-<script src="${ctx}/static/plugins/layui/layui.js"></script>
-<script>
-    //JavaScript代码区域
-    layui.use(['element', 'form', 'jquery'], function(){
-        var element = layui.element;
-        var form = layui.form;
-        var $ = layui.jquery;
+    <script src="${ctx}/static/plugins/layui/layui.js"></script>
+    <script>
+        //JavaScript代码区域
+        layui.use(['element', 'form', 'jquery'], function(){
+            var element = layui.element;
+            var form = layui.form;
+            var $ = layui.jquery;
 
-        document.getElementById("materialList").className="layui-nav-item layui-nav-itemed";
+            document.getElementById("materialList").className="layui-nav-item layui-nav-itemed";
 
-        form.on('select(levelOnex)', function () {
-            var levelOneId = $('#levelOne').val();
-            if(levelOneId == ''){
-                return;
-            }else {
-                $.ajax({
-                    url:'${ctx}/material/category/queryLevelTwoByLevelOne/' + levelOneId,
-                    type:'get',
-                    success:function (data) {
-                        var html = '<option value="" >-请选择-</option>';
-                        var len = data.length;
-                        for(var i = 0; i < len; i++) {
-                            html += '<option value="' + data[i].id + '">' + data[i].categoryName + '</option>';
+            form.on('select(levelOnex)', function () {
+                var levelOneId = $('#levelOne').val();
+                if(levelOneId == ''){
+                    return;
+                }else {
+                    $.ajax({
+                        url:'${ctx}/material/category/queryLevelTwoByLevelOne/' + levelOneId,
+                        type:'get',
+                        success:function (data) {
+                            var html = '<option value="" >-请选择-</option>';
+                            var len = data.length;
+                            for(var i = 0; i < len; i++) {
+                                html += '<option value="' + data[i].id + '">' + data[i].categoryName + '</option>';
+                            }
+                            $('#levelTwo').html(html);
+                            form.render();
                         }
-                        $('#levelTwo').html(html);
-                        form.render();
-                    }
 
-                });
-            }
+                    });
+                }
+            });
+
+
         });
 
 
-    });
-
-
-</script>
+    </script>
 </body>
 </html>

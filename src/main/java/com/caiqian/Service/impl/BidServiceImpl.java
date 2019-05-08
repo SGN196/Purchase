@@ -29,6 +29,20 @@ public class BidServiceImpl implements BidService
     @Autowired
     BidInfoMapper bidInfoMapper;
 
+
+    @Override
+    public Boolean deleteById(Integer id )
+    {
+        return bidInfoMapper.deleteById(id);
+    }
+
+    @Override
+    public BidInfo queryBidInfoById(Integer id)
+    {
+
+        return bidInfoMapper.queryBidInfoById(id);
+    }
+
     @Override
     public boolean addBidItem(BidInfo bidInfo)
     {

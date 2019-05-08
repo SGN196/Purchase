@@ -47,17 +47,17 @@
                 ,#{createDate}
             </if>
         </trim>
-
     </insert>
+
+    <select id="queryBidInfoById" resultType="com.caiqian.Bean.BidInfo">
+        select * from bid_info
+        <where> id = #{bidId}
+        </where>
+    </select>
 
     <select id="queryBidList" resultType="com.caiqian.Bean.BidInfo">
         select * from bid_info b1
-
-
         left join customer_info c1 on c1.id = b1.create_by
-
-
-
         <where>
             <if test="quoteId != null">
                 and b1.quote_id = #{quoteId}
@@ -72,12 +72,7 @@
             <if test="customerName != null and customerName != ''">
                 and c1.customer_name like concat('%',#{customerName},'%')
             </if>
-
-
-
         </where>
-
-
     </select>
     <update id="success" parameterType="java.lang.Integer">
         update bid_info set bid_status=66
@@ -87,5 +82,12 @@
             </if>
         </where>
     </update>
+
+    <delete id="deleteById">
+        delete from bid_info
+        <where>
+            id = #{bidId}
+        </where>
+    </delete>
 
 </mapper>

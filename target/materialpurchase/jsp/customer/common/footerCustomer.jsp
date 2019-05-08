@@ -13,7 +13,7 @@
 <body>
     <div class="layui-footer">
         <!-- 底部固定区域 -->
-        © SGN196@163.com - 底部固定区域aa
+        © SGN196@163.com - 底部固定区域
     </div>
 </body>
 </html>

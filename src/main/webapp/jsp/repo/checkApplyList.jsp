@@ -16,14 +16,6 @@
         #divcss4{
             text-align: center;
         }
-        #divcss5{
-
-            top: 20%;
-
-
-            transform: translate(-50%,-50%);
-            font-size: 50px;
-        }
     </style>
 </head>
 <body class="layui-layout-body">

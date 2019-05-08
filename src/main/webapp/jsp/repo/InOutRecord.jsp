@@ -67,27 +67,7 @@
                             </div>
                         </div>
 
-                        <!------------------------------------------------->
-                        <%--<div class="layui-inline">--%>
-                            <%--<label class="layui-form-label">一级分类</label>--%>
-                            <%--<div class="layui-input-block">--%>
-                                <%--<select name="levelOne" id="levelOne" lay-filter="levelOnex">--%>
-                                    <%--<option value="">-请选择-</option>--%>
-                                    <%--<c:forEach items="${levelOneList}" var="obj">--%>
-                                        <%--<option value="${obj.id}"--%>
-                                                <%--<c:if test="${obj.id eq materialInfoDTO.levelOne}">selected</c:if> >${obj.categoryName }</option>--%>
-                                    <%--</c:forEach>--%>
-                                <%--</select>--%>
-                            <%--</div>--%>
-                        <%--</div>--%>
-                        <%--<div class="layui-inline">--%>
-                            <%--<label class="layui-form-label">二级分类</label>--%>
-                            <%--<div class="layui-input-block">--%>
-                                <%--<select name="levelTwo" lay-filter="levelTwo" id="levelTwo">--%>
-                                    <%--<option value="">-请选择-</option>--%>
-                                <%--</select>--%>
-                            <%--</div>--%>
-                        <%--</div>--%>
+
                         <div class="layui-inline">
                             <label class="layui-form-label">审批人</label>
                             <div class="layui-input-inline">
@@ -106,25 +86,10 @@
                                 <button class="layui-btn" lay-submit="" lay-filter="demo1">立即查询</button>
                             </div>
                         </div>
-                        <%--<div class="layui-input-block">--%>
-                        <%--<a class="layui-btn" lay-submit="" lay-filter="demo1" href="${ctx}/material/toAddMaterial">新增物资种类</a>--%>
-                        <%--</div>--%>
+
 
                     </form>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

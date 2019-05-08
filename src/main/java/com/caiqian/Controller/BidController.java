@@ -9,6 +9,7 @@ import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
@@ -28,6 +29,31 @@ public class BidController
 
     @Autowired
     BidService bidService;
+
+    @RequestMapping("/deleteById/{id}")
+    public String deleteById(@PathVariable("id") Integer id,HttpSession httpSession, Model model){
+        CustomerInfo customerInfo = (CustomerInfo)httpSession.getAttribute("customerInfo");
+        if(customerInfo == null){
+            return "customer/login/login";
+        }
+        BidInfo bidInfo = bidService.queryBidInfoById(id);
+
+        if(bidInfo == null){
+
+        }else{
+            if(bidInfo.getBidStatus() == 0){
+                Boolean flag = bidService.deleteById(bidInfo.getId());
+            }
+        }
+
+
+
+
+        PageInfo<BidInfo> pageInfo = bidService.queryBidList(bidInfo);
+        model.addAttribute("page", pageInfo);
+        model.addAttribute("bidInfo", bidInfo);
+        return "purchase/purchaseList";
+    }
 
     @RequestMapping("/toMyBidList")
     public String toMyBidList(HttpSession httpSession, Model model, BidInfo bidInfo){

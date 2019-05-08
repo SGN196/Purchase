@@ -56,6 +56,7 @@
                                        class="layui-input"/>
                             </div>
                         </div>
+                        <br>
                         <div class="layui-inline">
                             <div class="layui-input-inline">
                                 <input type="hidden" name="pageNum" value="1">
@@ -68,6 +69,7 @@
                                        class="layui-input"/>
                             </div>
                         </div>
+
                         <div class="layui-inline">
                             <label class="layui-form-label">采购状态</label>
                             <div class="layui-input-block">
@@ -80,7 +82,7 @@
 
                                 </select>
                             </div>
-                        </div>
+                        </div>     <br>
                         <div class="layui-inline">
                             <label class="layui-form-label">负责人</label>
                             <div class="layui-input-inline">
@@ -88,6 +90,7 @@
                                        class="layui-input"/>
                             </div>
                         </div>
+
                         <div class="layui-inline">
                             <div class="layui-input-block">
                                 <button class="layui-btn" lay-submit="" lay-filter="demo1">立即查询</button>
@@ -105,7 +108,7 @@
                 <table class="layui-table">
                     <thead>
                     <tr>
-                        <th>订单编号</th>
+                        <th>需求编号</th>
                         <th>材料标号</th>
                         <th>材料名称</th>
                         <th>采购数量</th>
@@ -137,7 +140,7 @@
                                     <a href="${ctx}" data-method="notice" class="layui-btn layui-btn-normal layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe642</i></a>
 
 
-                                    <a href="${ctx}/record/deleteById/${obj.id}" class="layui-btn layui-btn-danger layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe640</i></a>
+                                    <a href="${ctx}/bid/deleteById/${obj.id}" class="layui-btn layui-btn-danger layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe640</i></a>
                                     <a href="" class="layui-btn layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe615</i></a>
                                 </div>
                             </td>
