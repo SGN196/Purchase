@@ -13,4 +13,6 @@ public interface OrderFormMapper {
     OrderForm queryOrderById(@Param("id") Integer id);
 
     boolean success(@Param("orderId")Integer orderId);
+
+    Boolean add(OrderForm orderForm);
 }

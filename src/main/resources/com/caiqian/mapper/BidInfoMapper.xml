@@ -74,8 +74,35 @@
             </if>
         </where>
     </select>
+    <select id="queryBidListByQuoteId"  resultType="com.caiqian.Bean.BidInfo">
+        select * from bid_info
+        <where>
+            <if test="quoteId != null">
+                quote_id = #{quoteId}
+            </if>
+        </where>
+    </select>
+
+
     <update id="success" parameterType="java.lang.Integer">
         update bid_info set bid_status=66
+        <where>
+            <if test="bidId != null">
+                and id = #{bidId}
+            </if>
+        </where>
+    </update>
+
+    <update id="refuseBidById" parameterType="java.lang.Integer">
+        update bid_info set bid_status=0
+        <where>
+            <if test="bidId != null">
+                and id = #{bidId}
+            </if>
+        </where>
+    </update>
+    <update id="transport" parameterType="java.lang.Integer">
+        update bid_info set bid_status=1
         <where>
             <if test="bidId != null">
                 and id = #{bidId}
@@ -89,5 +116,14 @@
             id = #{bidId}
         </where>
     </delete>
+
+
+    <select id="queryBidListById" resultType="com.caiqian.Bean.BidInfo">
+        select * from bid_info
+        <where>
+            id = #{bidId}
+        </where>
+
+    </select>
 
 </mapper>

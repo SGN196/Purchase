@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 import java.text.ParseException;
@@ -30,8 +31,45 @@ public class BidController
     @Autowired
     BidService bidService;
 
+
+    /**
+     * 友商报价驳回功能，应该放在订单取消模块，不能放在这里
+     * */
+    @RequestMapping("/refuseBidById/{id}")
+    @ResponseBody
+    public String refuseBidById(@PathVariable("id") Integer id, HttpSession httpSession, Model model){
+        CustomerInfo customerInfo = (CustomerInfo)httpSession.getAttribute("customerInfo");
+        if(customerInfo == null){
+            return "customer/login/login";
+        }
+        boolean flag = bidService.refuseBidById(id);
+
+        return null;
+    }
+
+    /*
+     * 确定报价单，同时生成订单，把其他报价单，设置为空白
+     * 传入的是报价单ID
+     */
+    @ResponseBody
+    @RequestMapping("/confirmBid/{id}")
+    public String confirmBid(@PathVariable("id") String id, HttpSession httpSession, Model model){
+        UserInfo userInfo = (UserInfo)httpSession.getAttribute("userInfo");
+        if(userInfo == null){
+            return "emp/login";
+        }
+        Integer bidId = Integer.valueOf(id);
+        boolean flag = bidService.confirmBid(bidId, userInfo.getId());
+        if(flag)
+            return "OK";
+        else
+            return "ERROR";
+    }
+
+
+
     @RequestMapping("/deleteById/{id}")
-    public String deleteById(@PathVariable("id") Integer id,HttpSession httpSession, Model model){
+    public String deleteById(@PathVariable("id") Integer id, HttpSession httpSession, Model model){
         CustomerInfo customerInfo = (CustomerInfo)httpSession.getAttribute("customerInfo");
         if(customerInfo == null){
             return "customer/login/login";

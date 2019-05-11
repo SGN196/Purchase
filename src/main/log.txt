@@ -13,7 +13,9 @@
 12. root/empAcount的底栏、选项列表显示不全。
 13. 登录账号时，判断账号启用状态
 14. addEmployee增加部门选择
-15. 可以将empAcount页面,插叙脑功能
+15. 可以将empAcount页面,插入功能
+16 在companyLIst页面，同意采购时，增加判断用户是否为采购部门
+
 
 https://github.com/SGN196/Purchase.git
 
@@ -23,6 +25,8 @@ Bug修复：
 2.修复新增材料时，重复材料多次提交的情况
 3.修复材料页面的数据不到的情况
 4.订单入库加入事务处理
+5.报价单确认后，报价单表的modify_by字段，订单表的一系列责任人
+
 
 4/5
 完成addEmployee页面的逻辑设计

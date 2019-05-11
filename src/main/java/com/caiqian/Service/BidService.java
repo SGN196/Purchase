@@ -20,4 +20,8 @@ public interface BidService
     BidInfo queryBidInfoById(Integer id);
 
     Boolean deleteById(Integer id);
+
+    Boolean refuseBidById(Integer id);
+
+    boolean confirmBid(Integer id, Integer userId);
 }

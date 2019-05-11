@@ -71,4 +71,62 @@
         </where>
 
     </update>
+    <insert id="add" parameterType="com.caiqian.Bean.OrderForm">
+        insert into order_form
+        <trim prefix="(" suffix=")" prefixOverrides=",">
+
+            <if test="quoteId != null">
+                ,quote_id
+            </if>
+            <if test="bidId != null">
+                ,bid_id
+            </if>
+            <if test="customerId != null">
+                ,customer_id
+            </if>
+            <if test="bidTotalPrice != null">
+                ,bid_total_price
+            </if>
+            <if test="orderStatus != null">
+                ,order_status
+            </if>
+            <if test="timeDeliver != null">
+                ,time_deliver
+            </if>
+            <if test="createBy != null">
+                ,create_by
+            </if>
+            <if test="createDate != null">
+                ,create_date
+            </if>
+
+
+        </trim>
+        <trim prefix="values(" suffix=")" prefixOverrides=",">
+            <if test="quoteId != null">
+                ,#{quoteId}
+            </if>
+            <if test="bidId != null">
+                ,#{bidId}
+            </if>
+            <if test="customerId != null">
+                ,#{customerId}
+            </if>
+            <if test="bidTotalPrice != null">
+                ,#{bidTotalPrice}
+            </if>
+            <if test="orderStatus != null">
+                ,#{orderStatus}
+            </if>
+            <if test="timeDeliver != null">
+                ,#{timeDeliver}
+            </if>
+            <if test="createBy != null">
+                ,#{createBy}
+            </if>
+            <if test="createDate != null">
+                ,#{createDate}
+            </if>
+        </trim>
+    </insert>
 </mapper>

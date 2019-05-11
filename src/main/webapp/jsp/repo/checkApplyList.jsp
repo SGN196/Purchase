@@ -59,25 +59,14 @@
                             <td>${obj.materialNum}</td>
                             <td>${obj.useReason}</td>
                             <td><input id="reason" name="reason" type="text" placeholder="若拒绝，请填写原因"/></td>
-                                <%--<td>--%>
-                                <%--<c:if test="${obj.status eq 1}">待审核 </c:if>--%>
-                                <%--<c:if test="${obj.status eq 2}">审核通过</c:if>--%>
-                                <%--<c:if test="${obj.status eq 3}">审核不通过</c:if>--%>
-                                <%--<c:if test="${obj.status eq 4}">已上架</c:if>--%>
-                                <%--<c:if test="${obj.status eq 5}">已下架</c:if>--%>
-                                <%--</td>--%>
-
                             <td>
                                 <div class="site-demo-button" id="layerDemo" style="margin-bottom: 0;">
 
                                     <div class="layui-anim layui-anim-up">
 
                                         <a href="${ctx}/record/approveRecord/${obj.id}" 	class="layui-btn layui-btn-radius">批准</a>
-                                        <a href="${ctx}/record/disApproveRecord/${obj.id}" 	class="layui-btn layui-btn-radius layui-btn-danger">驳回</a>
+
                                     </div>
-
-                                    <%--<a href="${ctx}/record/deleteById/${obj.id}" class="layui-btn layui-btn-danger layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe640</i></a>--%>
-
                                 </div>
                             </td>
 
@@ -105,8 +94,6 @@
                     </tbody>
 
                 </table>
-
-
 
             </div>
         </div>

@@ -54,7 +54,7 @@
                                 <input type="text" name="quoteId" value="${orderForm.quoteId}" autocomplete="off"
                                        class="layui-input">
                             </div>
-                        </div>
+                        </div><br>
                         <div class="layui-inline">
                             <label class="layui-form-label">报价单编号</label>
                             <div class="layui-input-inline">
@@ -68,7 +68,7 @@
                                 <input type="text" name="bidStatus" value="${orderForm.orderStatus}" autocomplete="off"
                                        class="layui-input">
                             </div>
-                        </div>
+                        </div><br>
                         <div class="layui-inline">
                             <label class="layui-form-label">友商名称</label>
                             <div class="layui-input-inline">

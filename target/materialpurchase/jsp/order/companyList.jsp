@@ -10,31 +10,25 @@
 <html>
 <head>
     <title>友商报价页面</title>
+
     <link rel="stylesheet" href="${ctx}/static/plugins/layui/css/layui.css">
     <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+    <script src="${ctx}/static/plugins/jQuery/jquery-3.3.1.js"></script>
     <style>
-        #divcss4{
+        #divcss4 {
             text-align: center;
-        }
-        #divcss5{
-
-            top: 20%;
-
-
-            transform: translate(-50%,-50%);
-            font-size: 50px;
         }
     </style>
 </head>
 <body class="layui-layout-body">
-    <div class="layui-layout layui-layout-admin">
+<div class="layui-layout layui-layout-admin">
 
-        <jsp:include page="${ctx}/jsp/common/header.jsp"></jsp:include>
+    <jsp:include page="${ctx}/jsp/common/header.jsp"></jsp:include>
 
-        <div class="layui-body">
-            <div id="divcss4">
+    <div class="layui-body">
+        <div id="divcss4">
             <!-- 内容主体区域 -->
-            <div >
+            <div>
                 <label style="font-size: 30px;">友商报价页面
                     <p style="color: red">${errorMsg}</p>
                     <p style="color: green">${successMsg}</p>
@@ -55,7 +49,7 @@
                             <input type="text" name="id" value="${bidInfo.id}" autocomplete="off"
                                    class="layui-input">
                         </div>
-                    </div>
+                    </div><br>
                     <div class="layui-inline">
                         <label class="layui-form-label">竞价状态</label>
                         <div class="layui-input-inline">
@@ -70,7 +64,7 @@
                                    class="layui-input">
                         </div>
                     </div>
-
+                    <br>
                     <div class="layui-inline">
                         <div class="layui-input-inline">
                             <input type="hidden" name="pageNum" value="1">
@@ -83,10 +77,6 @@
                             <button class="layui-btn" lay-submit="" lay-filter="demo1">立即查询</button>
                         </div>
                     </div>
-                    <%--<div class="layui-input-block">--%>
-                        <%--<a class="layui-btn" lay-submit="" lay-filter="demo1" href="${ctx}/material/toAddMaterial">新增物资种类</a>--%>
-                    <%--</div>--%>
-
                 </form>
 
                 <hr>
@@ -112,21 +102,19 @@
                             <td>${obj.customerName}</td>
                             <td>${obj.bidTotalPrice}</td>
                             <td>${obj.timeDeliver}</td>
-
-
-                                <td>
+                            <td>
                                 <c:if test="${obj.bidStatus eq 1}">竞价中 </c:if>
-                                    <p style="color:red;">  <c:if test="${obj.bidStatus eq 0}">竞价失败</c:if></p>
-                                    <p style="color:green;">  <c:if test="${obj.bidStatus eq 66}">竞价成功</c:if></p>
-                                </td>
+                                <p style="color:red;"><c:if test="${obj.bidStatus eq 0}">竞价失败</c:if></p>
+                                <p style="color:green;"><c:if test="${obj.bidStatus eq 66}">竞价成功</c:if></p>
+                            </td>
 
                             <td>
                                 <div class="site-demo-button" id="layerDemo" style="margin-bottom: 0;">
-                                    <a href="${ctx}/material/toUpdateMaterial/${obj.id}" data-method="notice" class="layui-btn layui-btn-normal layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe642</i></a>
 
-
-                                    <a href="${ctx}/app/delete/${obj.id}" class="layui-btn layui-btn-danger layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe640</i></a>
-                                    <a href="${ctx}/app/queryById/${obj.id}" class="layui-btn layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe615</i></a>
+                                    <div class="layui-anim layui-anim-up">
+                                        <c:if test="${obj.bidStatus eq 1}"><a href="#" onclick="confirmBid(${obj.id})"
+                                                                              class="layui-btn layui-btn-radius">确定订单</a></c:if>
+                                    </div>
                                 </div>
                             </td>
 
@@ -149,65 +137,72 @@
                 </table>
 
 
-
             </div>
         </div>
-        </div>
-
-        <!-- 底部固定区域 -->
-        <jsp:include page="${ctx}/jsp/common/footer.jsp"/>
     </div>
-    <script src="${ctx}/static/plugins/layui/layui.js"></script>
-    <script>
-        layui.use(['element', 'form', 'jquery'], function() {
-            var element = layui.element;
-            var form = layui.form;
-            var $ = layui.jquery;
 
-            document.getElementById("purchase").className="layui-nav-item layui-nav-itemed";
-            $('a[page]').click(function () {
+    <!-- 底部固定区域 -->
+    <jsp:include page="${ctx}/jsp/common/footer.jsp"/>
+</div>
+<script src="${ctx}/static/plugins/layui/layui.js"></script>
+<script>
+    layui.use(['element', 'form', 'jquery'], function () {
+        var element = layui.element;
+        var form = layui.form;
+        var $ = layui.jquery;
 
-                var pageNum = 1;
-                var currPage = '${page.pageNum}';
-                var totalPages ='${page.pages}';
-                var v = $(this).attr('page');
+        document.getElementById("purchase").className = "layui-nav-item layui-nav-itemed";
+        $('a[page]').click(function () {
 
-                switch (v) {
-                    case "first": pageNum = 1; break;
-                    case "prev":
-                        pageNum = parseInt(currPage) - 1;
-                        if(pageNum < 1)
-                            pageNum = 1;
-                        break;
-                    case 'next':
-                        pageNum = parseInt(currPage) + 1;
-                        if(pageNum > totalPages){
-                            pageNum = totalPages;
-                        }
-                        break;
-                    case "last":
+            var pageNum = 1;
+            var currPage = '${page.pageNum}';
+            var totalPages = '${page.pages}';
+            var v = $(this).attr('page');
+
+            switch (v) {
+                case "first":
+                    pageNum = 1;
+                    break;
+                case "prev":
+                    pageNum = parseInt(currPage) - 1;
+                    if (pageNum < 1)
+                        pageNum = 1;
+                    break;
+                case 'next':
+                    pageNum = parseInt(currPage) + 1;
+                    if (pageNum > totalPages) {
                         pageNum = totalPages;
-                        break;
-                }
-                $('input[name=pageNum]').val(pageNum);
-                $('form').submit();
-            })
-
-
-
-
-            $('#layerDemo .layui-btn').on('click', function(){
-                var othis = $(this), method = othis.data('method');
-                active[method] ? active[method].call(this, othis) : '';
-            });
-
+                    }
+                    break;
+                case "last":
+                    pageNum = totalPages;
+                    break;
+            }
+            $('input[name=pageNum]').val(pageNum);
+            $('form').submit();
+        })
+        $('#layerDemo .layui-btn').on('click', function () {
+            var othis = $(this), method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
         });
-
-
-
-
-
-    </script>
-
+    });
+    function confirmBid(id) {
+        if (confirm('确定将该报价生成订单吗')) {
+            $.ajax({
+                url: '${ctx}/bid/confirmBid/' + id,
+                type: 'post',
+                success: function (data) {
+                    if (data == "OK") {
+                        alert("确定成功");
+                        window.location.reload();
+                    } else {
+                        alert("发生错误");
+                        window.location.reload();
+                    }
+                }
+            });
+        };
+    }
+</script>
 </body>
 </html>

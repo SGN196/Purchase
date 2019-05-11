@@ -12,14 +12,12 @@
     <link rel="stylesheet" href="${ctx}/static/plugins/bootstrap-3.3.7-dist/css/bootstrap.css">
     <style>
         #divcss1 {
-
             border-radius: 20px;
             left: 50%;
             top: 50%;
             position: absolute;
             transform: translate(-50%, -50%);
         }
-
         body {
             background-image: url("${ctx}/static/plugins/layui/images/back01.jpg");
             background-size: cover;
@@ -30,7 +28,7 @@
 <div id="divcss1">
     <div style="text-align: center">
         <h1>注册</h1>
-        <form class="form-inline" action="${ctx}/customer/customerRegister" onsubmit="return checkForm();" method="post">
+        <form class="form-inline" action="${ctx}/customer/customerRegister"  method="post">
             <div class="form-group ">
                 <label>用&nbsp;户&nbsp;名</label>
                 <input class="form-control" type="text" id="devCode" name="devCode" onblur="DevCodeQuery()"
@@ -64,7 +62,7 @@
             </div>
             <br>
 
-            <button class="btn btn-default" type="submit" onclick="">注册</button>
+            <button class="btn btn-default" type="submit" onclick="checkForm()">注册</button>
             <button class="btn btn-default" type="reset">重置</button>
 
         </form>
@@ -107,6 +105,7 @@
     function checkForm() {
 
 
+        alert("昵称不能为空")
         var usernameRegex = /^\w{3,15}$/;
         var passwordRegex = /^\w{6,12}$/;
 

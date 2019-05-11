@@ -153,6 +153,21 @@ public class OrderForm {
     }
 
 
+    public OrderForm(){
+
+    }
+
+    public OrderForm(BidInfo bidInfo, Integer userId){
+        this.quoteId = bidInfo.getQuoteId();
+        this.bidId = bidInfo.getId();
+        this.customerId = bidInfo.getCreateBy();
+        this.bidTotalPrice = bidInfo.getBidTotalPrice();
+        this.orderStatus = 0;
+        this.timeDeliver = bidInfo.getTimeDeliver();
+        this.createBy = userId;
+        this.createDate = new Date(new java.util.Date().getTime());
+    }
+
 
     @Override
     public String toString()
