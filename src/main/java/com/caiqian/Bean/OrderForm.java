@@ -12,7 +12,9 @@ public class OrderForm {
 
     private Integer customerId;
 
-//    private String materialName;
+    private String materialName;
+
+    private Integer quoteQuantity;
 
     private String customerName;
 
@@ -152,6 +154,25 @@ public class OrderForm {
         this.tempTime = tempTime;
     }
 
+    public String getMaterialName()
+    {
+        return materialName;
+    }
+
+    public void setMaterialName(String materialName)
+    {
+        this.materialName = materialName;
+    }
+
+    public Integer getQuoteQuantity()
+    {
+        return quoteQuantity;
+    }
+
+    public void setQuoteQuantity(Integer quoteQuantity)
+    {
+        this.quoteQuantity = quoteQuantity;
+    }
 
     public OrderForm(){
 

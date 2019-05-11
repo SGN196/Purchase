@@ -16,14 +16,6 @@
         #divcss4{
             text-align: center;
         }
-        #divcss5{
-
-            top: 20%;
-
-
-            transform: translate(-50%,-50%);
-            font-size: 50px;
-        }
     </style>
 </head>
 <body class="layui-layout-body">
@@ -83,10 +75,6 @@
                             <button class="layui-btn" lay-submit="" lay-filter="demo1">立即查询</button>
                         </div>
                     </div>
-                    <%--<div class="layui-input-block">--%>
-                        <%--<a class="layui-btn" lay-submit="" lay-filter="demo1" href="${ctx}/material/toAddMaterial">新增物资种类</a>--%>
-                    <%--</div>--%>
-
                 </form>
 
                 <hr>
@@ -94,30 +82,22 @@
                     <thead>
                     <tr>
                         <th>订单编号</th>
-
                         <th>友商名称</th>
                         <th>材料名称</th>
                         <th>采购数量</th>
-
                         <th>预计交货时间</th>
                         <th>报价单状态</th>
                         <th>操作</th>
-
                     </tr>
                     </thead>
                     <tbody>
                     <c:forEach items="${page.list}" var="obj">
                         <tr>
-
                             <td>${obj.bidId}</td>
                             <td>${obj.customerName}</td>
-
-                            <td>${obj.bidId}</td>
-                            <td>${obj.bidId}</td>
-
+                            <td>${obj.materialName}</td>
+                            <td>${obj.quoteQuantity}</td>
                             <td>${obj.timeDeliver}</td>
-
-
                             <td>
                                 <c:if test="${obj.orderStatus eq 1}">订单成功完结 </c:if>
                                 <c:if test="${obj.orderStatus eq 0}">生产/运输</c:if>

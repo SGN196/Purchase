@@ -167,11 +167,7 @@
                         </div>
                     </form>
                     </tbody>
-
                 </table>
-
-
-
             </div>
         </div>
 

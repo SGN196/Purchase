@@ -12,9 +12,13 @@
             o1.time_deliver,
             o1.create_by,
             o1.create_date,
+            q1.quote_quantity,
+            m1.material_name,
             c1.customer_name
             from order_form o1
             left join customer_info c1 on o1.customer_id = c1.id
+            left join quote_info q1 on o1.quote_id = q1.id
+            left join material_info m1 on q1.material_id = m1.id
             <where>
                 <if test="id != null">
                     and o1.id = #{id}
@@ -28,9 +32,6 @@
                 <if test="customerId != null">
                     and o1.customer_id = #{customerId}
                 </if>
-                <!--<if test="materialName != null and materialName != ''">-->
-                    <!--and m1.material_name like concat('%',#{materialName},'%')-->
-                <!--</if>-->
                 <if test="bidTotalPrice != null">
                     and o1.bid_total_price = #{bidTotalPrice}
                 </if>
