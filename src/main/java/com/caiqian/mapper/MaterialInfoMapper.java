@@ -27,4 +27,7 @@ public interface MaterialInfoMapper {
     ArrayList<MaterialInfo> queryByName(MaterialInfo materialInfo);
 
     boolean addMaterialQuantity(@Param("number") Integer number, @Param("id") Integer id, @Param("modifyDate") java.sql.Date modifyDate);
+
+    Boolean approveRecord(@Param("materialId")Integer materialId, @Param("materialNum")Integer materialNum);
+
 }

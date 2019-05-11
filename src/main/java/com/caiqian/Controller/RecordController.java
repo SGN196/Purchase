@@ -48,10 +48,11 @@ public class RecordController
     }
 
     @RequestMapping("/toMyApplyList/{id}")
-    public String toMyApplyList(@PathVariable("id") Integer id, PageDTO pageDTO, Model model){
-//        if(pageDTO.getPageNum() == null){
-//            pageDTO.setPageNum(1);
-//        }
+    public String toMyApplyList(@PathVariable("id") Integer id, HttpSession httpSession, PageDTO pageDTO, Model model){
+        UserInfo userInfo = (UserInfo)httpSession.getAttribute("userInfo");
+        if(userInfo == null){
+            return "emp/login";
+        }
         PageInfo<MaterialRecord> pageInfo = recordService.queryById(id, pageDTO);
         model.addAttribute("page", pageInfo);
 
@@ -69,11 +70,8 @@ public class RecordController
         {
             PageInfo<MaterialRecord> pageInfo = recordService.queryAll(pageDTO);
 
-
             model.addAttribute("page", pageInfo);
-
             return "repo/checkApplyList";
-
         }
         else{
             model.addAttribute("PermissionDenied", "权限不足，无法访问");
@@ -108,11 +106,8 @@ public class RecordController
 
     /**
      *
-     * 审核成功，代表出库
-     * @param id
-     * @param model
-     * @param pageDTO
-     * @return
+     * 审核成功，代表出库，仓库中对应的物资，减少相应的数量
+
      */
     @RequestMapping("/approveRecord/{id}")
     public String approveRecord(@PathVariable("id") Integer id, Model model, PageDTO pageDTO, HttpSession httpSession){
@@ -133,7 +128,7 @@ public class RecordController
             return "repo/checkApplyList";
         }
 
-        boolean flag = recordService.approveRecord(id, userInfo.getId());
+        boolean flag = recordService.approveRecord(id, userInfo.getId(), materialQuantity - requiredQuantity);
 
         if(flag){
             model.addAttribute("successMsg", "操作成功");

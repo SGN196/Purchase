@@ -26,7 +26,7 @@ public interface RecordService
 
     PageInfo<MaterialRecord> queryAll(PageDTO pageDTO);
 
-    boolean approveRecord(Integer id, Integer userId);
+    boolean approveRecord(Integer id, Integer userId, Integer requiredQuantity);
 
     boolean disApproveRecord(Integer id, Integer userId);
 

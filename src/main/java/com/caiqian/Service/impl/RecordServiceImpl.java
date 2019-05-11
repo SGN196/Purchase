@@ -9,11 +9,13 @@ import com.caiqian.Service.MaterialService;
 import com.caiqian.Service.RecordService;
 import com.caiqian.constant.CommonCodeConstant;
 import com.caiqian.mapper.DataDictionaryMapper;
+import com.caiqian.mapper.MaterialInfoMapper;
 import com.caiqian.mapper.MaterialRecordMapper;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Date;
 import java.util.ArrayList;
@@ -31,6 +33,9 @@ public class RecordServiceImpl implements RecordService
 
     @Autowired
     DataDictionaryMapper dataDictionaryMapper;
+
+    @Autowired
+    MaterialInfoMapper materialInfoMapper;
 
     @Override
     public boolean addNewRecord(MaterialRecord materialRecord)
@@ -61,11 +66,14 @@ public class RecordServiceImpl implements RecordService
         return page;
     }
 
+    @Transactional
     @Override
-    public boolean approveRecord(Integer id, Integer userId)
+    public boolean approveRecord(Integer id, Integer userId, Integer remainQuantity)
     {
         Date date = new Date(System.currentTimeMillis());
         Integer status = 1;
+        MaterialRecord materialRecord = materialRecordMapper.queryByRecordId(id);
+        Boolean flag = materialInfoMapper.approveRecord(materialRecord.getMaterialId(), remainQuantity);
         return materialRecordMapper.approveRecord(status, userId, date, id);
     }
 

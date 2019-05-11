@@ -123,6 +123,21 @@
 
 
     </insert>
+    <update id="approveRecord">
+        update material_info
+        <trim prefixOverrides="," prefix="set" suffix="">
+            <if test="materialNum != null">
+                ,material_quantity = #{materialNum}
+            </if>
+
+
+        </trim>
+        <where>
+            <if test="materialId != null">
+                and id = #{materialId}
+            </if>
+        </where>
+    </update>
     <update id="updateMaterialInfoDTO">
         update material_info
         <trim prefixOverrides="," prefix="set" suffix="">
