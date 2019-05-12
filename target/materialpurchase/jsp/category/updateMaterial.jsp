@@ -90,7 +90,7 @@
                 <div class="layui-form-item">
                     <div class="layui-input-block">
                         <button class="layui-btn" lay-submit="" lay-filter="demo1">立即修改</button>
-                        <a href="${ctx}/material/repertoryList"><button class="layui-btn" >返回</button></a>
+                        <button class="layui-btn" ><a href="${ctx}/material/repertoryList">返回</a></button>
                     </div>
 
                 </div>

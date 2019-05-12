@@ -9,20 +9,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>物资查询页面</title>
+    <title>材料信息查询</title>
     <link rel="stylesheet" href="${ctx}/static/plugins/layui/css/layui.css">
     <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
     <style>
         #divcss4{
             text-align: center;
-        }
-        #divcss5{
-            left: 50%;
-            top: 20%;
-            position: absolute;
-
-            transform: translate(-50%,-50%);
-            font-size: 30px;
         }
     </style>
 </head>
@@ -121,8 +113,8 @@
                                         <a href="${ctx}/app/delete/${obj.id}"
                                            class="layui-btn layui-btn-danger layui-btn-xs"><i class="layui-icon"
                                                                                               style="font-size: 20px">&#xe640</i></a>
-                                        <a href="${ctx}/app/queryById/${obj.id}" class="layui-btn layui-btn-xs"><i
-                                                class="layui-icon" style="font-size: 20px">&#xe615</i></a>
+                                        <%--<a href="${ctx}/app/queryById/${obj.id}" class="layui-btn layui-btn-xs"><i--%>
+                                                <%--class="layui-icon" style="font-size: 20px">&#xe615</i></a>--%>
                                     </div>
                                 </td>
 

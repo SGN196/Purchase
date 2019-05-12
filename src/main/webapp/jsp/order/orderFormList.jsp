@@ -40,11 +40,11 @@
                     </label>
                 </div>
                 <div style="padding: 15px;">
-                    <form class="layui-form" action="${ctx}/bid/toCompanyList" method="post">
+                    <form class="layui-form" action="${ctx}/order/toOrderFromList" method="post">
                         <div class="layui-inline">
                             <label class="layui-form-label">订单编号</label>
                             <div class="layui-input-inline">
-                                <input type="text" name="quoteId" value="${orderForm.id}" autocomplete="off"
+                                <input type="text" name="id" value="${orderForm.id}" autocomplete="off"
                                        class="layui-input">
                             </div>
                         </div>
@@ -58,14 +58,14 @@
                         <div class="layui-inline">
                             <label class="layui-form-label">报价单编号</label>
                             <div class="layui-input-inline">
-                                <input type="text" name="id" value="${orderForm.bidId}" autocomplete="off"
+                                <input type="text" name="bidId" value="${orderForm.bidId}" autocomplete="off"
                                        class="layui-input">
                             </div>
                         </div>
                         <div class="layui-inline">
                             <label class="layui-form-label">竞价状态</label>
                             <div class="layui-input-inline">
-                                <input type="text" name="bidStatus" value="${orderForm.orderStatus}" autocomplete="off"
+                                <input type="text" name="orderStatus" value="${orderForm.orderStatus}" autocomplete="off"
                                        class="layui-input">
                             </div>
                         </div><br>
@@ -114,9 +114,9 @@
                                 <td>${obj.timeDeliver}</td>
 
                                 <td>
-                                    <c:if test="${obj.orderStatus eq 1}">交易完毕 </c:if>
+                                    <p style="color:green"><c:if test="${obj.orderStatus eq 1}">交易完毕 </c:if></p>
                                     <c:if test="${obj.orderStatus eq 0}">还在交易中</c:if>
-                                    <c:if test="${obj.orderStatus eq 88}">订单失败</c:if>
+                                    <p style="color:red"><c:if test="${obj.orderStatus eq 88}">订单失败</c:if></p>
                                 </td>
 
                                 <td>

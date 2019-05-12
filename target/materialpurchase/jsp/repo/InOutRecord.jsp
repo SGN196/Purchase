@@ -59,6 +59,7 @@
                                        class="layui-input">
                             </div>
                         </div>
+                        <br>
                         <div class="layui-inline">
                             <label class="layui-form-label">材料名称</label>
                             <div class="layui-input-inline">
@@ -74,7 +75,7 @@
                                 <input type="text" name="userName" value="${recordDTO.userName}" autocomplete="off"
                                        class="layui-input">
                             </div>
-                        </div>
+                        </div>      <br>
                         <div class="layui-inline">
                             <div class="layui-input-inline">
                                 <input type="hidden" name="pageNum" value="1">

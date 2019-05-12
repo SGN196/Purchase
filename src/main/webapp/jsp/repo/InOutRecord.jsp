@@ -59,6 +59,7 @@
                                        class="layui-input">
                             </div>
                         </div>
+                        <br>
                         <div class="layui-inline">
                             <label class="layui-form-label">材料名称</label>
                             <div class="layui-input-inline">
@@ -74,7 +75,7 @@
                                 <input type="text" name="userName" value="${recordDTO.userName}" autocomplete="off"
                                        class="layui-input">
                             </div>
-                        </div>
+                        </div>      <br>
                         <div class="layui-inline">
                             <div class="layui-input-inline">
                                 <input type="hidden" name="pageNum" value="1">
@@ -122,14 +123,6 @@
                             </td>
                             <td>${obj.userName}</td>
                             <td>${obj.modifyDate}</td>
-
-                        <%--<td>--%>
-                                <%--<c:if test="${obj.status eq 1}">待审核 </c:if>--%>
-                                <%--<c:if test="${obj.status eq 2}">审核通过</c:if>--%>
-                                <%--<c:if test="${obj.status eq 3}">审核不通过</c:if>--%>
-                                <%--<c:if test="${obj.status eq 4}">已上架</c:if>--%>
-                                <%--<c:if test="${obj.status eq 5}">已下架</c:if>--%>
-                                <%--</td>--%>
 
                             <td>
                                 <div class="site-demo-button" id="layerDemo" style="margin-bottom: 0;">
@@ -266,77 +259,6 @@
                     }
                 }
             });
-
-
-            //模态框 失败
-            <%--var active = {--%>
-                <%--notice: function(){--%>
-                    <%--//示范一个公告层--%>
-                    <%--layer.open({--%>
-                        <%--type: 1--%>
-                        <%--,title: false //false不显示标题栏--%>
-                        <%--,closeBtn: false--%>
-                        <%--,area: '500px;'--%>
-                        <%--,shade: 0.8--%>
-                        <%--,id: 'LAY_layuipro' //设定一个id，防止重复弹出--%>
-                        <%--,btn: ['确定', '取消']--%>
-                        <%--,btnAlign: 'c'--%>
-                        <%--,moveType: 1 //拖拽模式，0或者1--%>
-                        <%--,content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;">' +--%>
-                        <%--'<div style="text-align: center; font-size: 25px;">修改材料信息<br><br></div>' +--%>
-                        <%--'                <div class="layui-form-item">\n' +--%>
-                        <%--'                    <label class="layui-form-label">计量单位</label>\n' +--%>
-                        <%--'                    <div class="layui-input-inline">\n' +--%>
-                        <%--'                        <input type="text" name="materialUnit" value="${materialInfoDTO.materialUnit}" placeholder="计量单位"  autocomplete="off" class="layui-input">\n' +--%>
-                        <%--'                    </div>\n' +--%>
-                        <%--'                </div>\n' +--%>
-                        <%--'                <!------------------------------------------------->\n' +--%>
-                        <%--'                <div class="layui-inline">\n' +--%>
-                        <%--'                    <label class="layui-form-label">一级分类</label>\n' +--%>
-                        <%--'                    <div class="layui-input-block">\n' +--%>
-                        <%--'                        <select name="categoryLevel1.id" id="levelOne" lay-filter="levelOnex"  >\n' +--%>
-                        <%--'                            <option value="" >-请选择-</option>\n' +--%>
-                        <%--'                            <c:forEach items="${levelOnex}" var="obj">\n' +--%>
-                        <%--'                                <option value="${obj.id}" <c:if test="${obj.id eq materialInfoDTO.categoryLevel1.id}" >selected</c:if>  >${obj.categoryName }</option>\n' +--%>
-                        <%--'                            </c:forEach>\n' +--%>
-                        <%--'                        </select>\n' +--%>
-                        <%--'                    </div>\n' +--%>
-                        <%--'                </div><br>\n' +--%>
-                        <%--'                <div class="layui-inline">\n' +--%>
-                        <%--'                    <label class="layui-form-label">二级分类</label>\n' +--%>
-                        <%--'                    <div class="layui-input-block">\n' +--%>
-                        <%--'                        <select name="categoryLevel2.id" lay-filter="levelTwo" id="levelTwo">\n' +--%>
-                        <%--'                            <option value="">-请选择-</option>\n' +--%>
-                        <%--'                        </select>\n' +--%>
-                        <%--'                    </div>\n' +--%>
-                        <%--'                <div class="layui-form-item">\n' +--%>
-                        <%--'                    <label class="layui-form-label">物资简介</label>\n' +--%>
-                        <%--'                    &lt;%&ndash;<div class="layui-input-inline">&ndash;%&gt;\n' +--%>
-                        <%--'                        &lt;%&ndash;<input type="textarea" name="materialInfo" placeholder="请输入物资简介" autocomplete="off" class="layui-input">&ndash;%&gt;\n' +--%>
-                        <%--'                        &lt;%&ndash;<textarea cols="30" rows="10"&ndash;%&gt;\n' +--%>
-                        <%--'                    &lt;%&ndash;</div>&ndash;%&gt;\n' +--%>
-                        <%--'                    <div class="layui-input-block">\n' +--%>
-                        <%--'                        <textarea name="materialInfo" placeholder="请输入物资简介"   class="layui-textarea">${materialInfoTemp.materialInfo}</textarea>\n' +--%>
-                        <%--'                    </div>\n' +--%>
-                        <%--'                </div>' +--%>
-                        <%--'            </div>' +--%>
-                            <%--// '<div style="position: absolute">计量单位：<input type="text"></input><br></div>' +--%>
-                            <%--// '一级分类：' +--%>
-                            <%--// '二级分类：' +--%>
-                            <%--// '' +--%>
-                            <%--'</div>'--%>
-                        <%--,success: function(layero){--%>
-                            <%--var btn = layero.find('.layui-layer-btn');--%>
-                            <%--btn.find('.layui-layer-btn0').attr({--%>
-                                <%--href: 'http://www.layui.com/'--%>
-                                <%--,target: '_blank'--%>
-                            <%--});--%>
-                        <%--}--%>
-                    <%--});--%>
-                <%--}--%>
-
-            <%--};--%>
-
 
 
             $('#layerDemo .layui-btn').on('click', function(){
