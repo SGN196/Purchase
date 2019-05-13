@@ -6,6 +6,7 @@ import com.caiqian.Bean.UserInfo;
 import com.caiqian.DTO.MaterialInfoDTO;
 import com.caiqian.DTO.UpdateMaterialDTO;
 import com.caiqian.Service.MaterialService;
+import com.caiqian.Service.RecordService;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,9 +31,21 @@ public class MaterialController
     @Autowired
     MaterialService materialService;
 
+    @Autowired
+    RecordService recordService;
+
 
     @RequestMapping("/toUpdateMaterial/{MaterialId}")
-    public String toUpdateMaterial(@PathVariable("MaterialId") Integer id,  Model model){
+    public String toUpdateMaterial(@PathVariable("MaterialId") Integer id, HttpSession session, Model model){
+        UserInfo userInfo = (UserInfo)session.getAttribute("userInfo");
+        if(userInfo == null){
+            return "emp/login";
+        }
+        boolean isAuthority = recordService.isAccessAuthorityRecordOfEmployee(userInfo.getDeptId());
+        if(!isAuthority){
+            return "material/repertoryList";
+        }
+
         UpdateMaterialDTO updateMaterialDTO  = materialService.queryByIdToUpdateDTO(id);
         List<MaterialCategory> levelOneList = materialService.queryLevelOne();
         model.addAttribute("updateMaterialDTO", updateMaterialDTO);

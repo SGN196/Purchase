@@ -24,16 +24,14 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">材料编号</label>
                 <div class="layui-input-inline">
-                    <%--<input type="la" name="materialName" value="${materialInfoDTO.materialName}" autocomplete="off"--%>
-                    <%--class="layui-input">--%>
+
                     <label >${updateMaterialDTO.id}</label>
                 </div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">材料名称</label>
                 <div class="layui-input-inline">
-                    <%--<input type="la" name="materialName" value="${materialInfoDTO.materialName}" autocomplete="off"--%>
-                    <%--class="layui-input">--%>
+
                     <label >${updateMaterialDTO.materialName}</label>
                 </div>
             </div>

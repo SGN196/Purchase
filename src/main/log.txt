@@ -15,7 +15,7 @@
 14. addEmployee增加部门选择
 15. 可以将empAcount页面,插入功能
 16 在companyLIst页面，同意采购时，增加判断用户是否为采购部门
-
+17. 订单管理页面，放大镜，显示详细信息
 
 https://github.com/SGN196/Purchase.git
 

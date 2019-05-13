@@ -20,4 +20,6 @@ public interface OrderFormService
 
 
     PageInfo<OrderForm> queryAll(OrderForm orderForm);
+
+    Boolean cancelById(Integer id);
 }

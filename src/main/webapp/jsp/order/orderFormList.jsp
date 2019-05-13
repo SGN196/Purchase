@@ -12,6 +12,7 @@
     <title>订单管理</title>
     <link rel="stylesheet" href="${ctx}/static/plugins/layui/css/layui.css">
     <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+    <script src="${ctx}/static/plugins/jQuery/jquery-3.3.1.js"></script>
     <style>
         #divcss4{
             text-align: center;
@@ -121,8 +122,8 @@
 
                                 <td>
                                     <div class="site-demo-button" id="layerDemo" style="margin-bottom: 0;">
-                                        <a href="#" onclick="confirmBid(${obj.id})"
-                                           class="layui-btn layui-btn-radius">取消订单</a>
+                                        <c:if test="${obj.orderStatus eq 0}"><a href="#" onclick="closeOrder(${obj.id})"
+                                                                                class="layui-btn layui-btn-radius">取消订单</a></c:if>
                                     </div>
                                 </td>
                             </tr>
@@ -243,6 +244,24 @@
             });
 
         });
+        
+        function closeOrder(id) {
+            if (confirm('确定关闭该订单吗')) {
+                $.ajax({
+                    url: '${ctx}/order/cancelOrderForm/' + id,
+                    type: 'post',
+                    success: function (data) {
+                        if (data == "OK") {
+                            alert("确定成功");
+                            window.location.reload();
+                        } else {
+                            alert("发生错误");
+                            window.location.reload();
+                        }
+                    }
+                });
+            }
+        }
 
 
     </script>

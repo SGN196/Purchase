@@ -113,8 +113,6 @@
                                         <a href="${ctx}/app/delete/${obj.id}"
                                            class="layui-btn layui-btn-danger layui-btn-xs"><i class="layui-icon"
                                                                                               style="font-size: 20px">&#xe640</i></a>
-                                        <%--<a href="${ctx}/app/queryById/${obj.id}" class="layui-btn layui-btn-xs"><i--%>
-                                                <%--class="layui-icon" style="font-size: 20px">&#xe615</i></a>--%>
                                     </div>
                                 </td>
 

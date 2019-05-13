@@ -18,4 +18,6 @@ public interface OrderFormMapper {
     Boolean add(OrderForm orderForm);
 
     List<OrderForm> queryAll();
+
+    Boolean cancelById(@Param("orderId")Integer id);
 }

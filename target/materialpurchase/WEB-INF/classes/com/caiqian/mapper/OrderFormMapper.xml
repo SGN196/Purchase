@@ -56,18 +56,23 @@
 
 
     </select>
+    <update id="cancelById" parameterType="java.lang.Integer">
+        update order_form set order_status=88
+        <where>
+            <if test="orderId != null">
+                and id = #{orderId}
+            </if>
+        </where>
+    </update>
 
     <select id="queryAll" resultType="com.caiqian.Bean.OrderForm">
         select * from order_form
-
-
     </select>
     <select id="queryOrderById" resultType="com.caiqian.Bean.OrderForm">
         select * from order_form
         <where>
             id = #{id}
         </where>
-
     </select>
     <update id="success" parameterType="java.lang.Integer">
         update order_form set order_status=1

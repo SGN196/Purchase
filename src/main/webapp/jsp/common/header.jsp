@@ -46,7 +46,7 @@
                 <a class="" href="javascript:;">物资查询</a>
                 <dl class="layui-nav-child">
                     <dd><a href="${ctx}/material/toAddMaterial">${PermissionDenied}新增物资种类</a></dd>
-                    <dd><a href="${ctx}/material/repertoryList">${PermissionDenied}物资查询</a></dd>
+                    <dd><a href="${ctx}/material/repertoryList">${PermissionDenied}材料信息查询</a></dd>
                 </dl>
             </li>
             <li id="useApply" class="layui-nav-item">

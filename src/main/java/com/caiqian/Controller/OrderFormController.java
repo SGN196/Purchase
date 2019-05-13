@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -43,6 +44,21 @@ public class OrderFormController
         model.addAttribute("page", pageInfo);
         model.addAttribute("orderForm", orderForm);
         return "order/orderFormList";
+    }
+
+    @ResponseBody
+    @RequestMapping("/cancelOrderForm/{id}")
+    public String cancelOrderForm(@PathVariable("id") Integer id, HttpSession httpSession, Model model){
+        UserInfo userInfo = (UserInfo)httpSession.getAttribute("userInfo");
+        if(userInfo == null)
+        {
+            return "emp/login";
+        }
+        Boolean flag = orderFormService.cancelById(id);
+        if(flag){
+            return "OK";
+        }
+        return "false";
     }
 
     @RequestMapping("/toRepoByOrder")

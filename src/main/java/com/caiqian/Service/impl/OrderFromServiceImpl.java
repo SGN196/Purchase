@@ -67,6 +67,12 @@ public class OrderFromServiceImpl implements OrderFormService
     }
 
     @Override
+    public Boolean cancelById(Integer id)
+    {
+        return orderFormMapper.cancelById(id);
+    }
+
+    @Override
     public PageInfo<OrderForm> queryByPOJO(OrderForm orderForm)
     {
         PageHelper.startPage(orderForm.getPageNum(), CommonCodeConstant.PAGE_SIZE);

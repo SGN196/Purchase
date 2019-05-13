@@ -36,7 +36,7 @@
             <!-- 内容主体区域 -->
 
                 <div >
-                    <cite style="font-size: 40px">新增物资种类</cite>
+                    <cite style="font-size: 40px">当前竞价</cite>
                         <p style="color: red">${errorMsg}</p>
                         <p style="color: green">${successMsg}</p>
                     </cite>

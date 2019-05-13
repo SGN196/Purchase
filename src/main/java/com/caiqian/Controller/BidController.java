@@ -105,8 +105,6 @@ public class BidController
         model.addAttribute("page", pageInfo);
         model.addAttribute("bidInfo", bidInfo);
 
-
-
         return "customer/bid/myBidList";
     }
 

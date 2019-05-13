@@ -26,7 +26,7 @@
     <ul class="layui-nav layui-layout-right">
         <li class="layui-nav-item">
             <a href="javascript:;">
-                <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                <img src="${ctx}/static/plugins/img/linus.jpg" class="layui-nav-img">
                 欢迎你：${sessionScope.customerInfo.customerName} <br>
             </a>
             <dl class="layui-nav-child">
@@ -52,8 +52,8 @@
             <li id="orderList" class="layui-nav-item">
                 <a class="" href="javascript:;">订单管理</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="${ctx}/bid/toMyBidList">我的竞价清单</a></dd>
-                    <dd><a href="${ctx}/order/toMyOrderList">成功订单</a></dd>
+                    <dd><a href="${ctx}/bid/toMyBidList">当前竞价清单</a></dd>
+                    <dd><a href="${ctx}/order/toMyOrderList">历史订单</a></dd>
                 </dl>
             </li>
 

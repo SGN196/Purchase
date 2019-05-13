@@ -126,23 +126,15 @@
 
                             <td>
                                 <div class="site-demo-button" id="layerDemo" style="margin-bottom: 0;">
-
                                     <div class="layui-anim layui-anim-up">
-
-                                        <a  	class="layui-btn layui-btn-radius">详情</a>
+                                        <a class="layui-btn layui-btn-radius">详情</a>
                                     </div>
-                                    <%--<div class="layui-anim layui-anim-up">--%>
-
-                                        <%--<a	class="layui-btn layui-btn-radius layui-btn-danger">驳回</a>--%>
-                                    <%--</div>--%>
-                                    <%--<a href="${ctx}/record/deleteById/${obj.id}" class="layui-btn layui-btn-danger layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe640</i></a>--%>
-
                                 </div>
                             </td>
 
                         </tr>
                     </c:forEach>
-                    <form action="${ctx}/record/toMyApplyList/${sessionScope.userInfo.id}" method="post">
+                    <form action="${ctx}/record/InOutRecord" method="post">
                         <tr>
                             <td>
                                 共${page.total} 条记录 第 ${page.pageNum}/ ${page.pages}页
@@ -260,16 +252,12 @@
                 }
             });
 
-
             $('#layerDemo .layui-btn').on('click', function(){
                 var othis = $(this), method = othis.data('method');
                 active[method] ? active[method].call(this, othis) : '';
             });
 
         });
-
-
-
 
 
     </script>
