@@ -49,6 +49,12 @@ public class MaterialServiceImpl implements MaterialService
     }
 
     @Override
+    public Boolean deleteById(Integer id)
+    {
+        return materialInfoMapper.deleteById(id);
+    }
+
+    @Override
     public Integer queryQuantityByMaterialId(Integer materialId)
     {
         return materialInfoMapper.queryQuantityByMaterialId(materialId);

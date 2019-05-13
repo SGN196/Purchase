@@ -110,7 +110,7 @@
                                                                                               style="font-size: 20px">&#xe642</i></a>
 
 
-                                        <a href="${ctx}/app/delete/${obj.id}"
+                                        <a href="${ctx}/material/toDeleteMaterial/${obj.id}"
                                            class="layui-btn layui-btn-danger layui-btn-xs"><i class="layui-icon"
                                                                                               style="font-size: 20px">&#xe640</i></a>
                                     </div>

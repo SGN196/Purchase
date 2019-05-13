@@ -54,6 +54,23 @@ public class MaterialController
         return "category/updateMaterial";
     }
 
+    @RequestMapping("/toDeleteMaterial/{MaterialId}")
+    public String toDeleteMaterial (@PathVariable("MaterialId") Integer id,MaterialInfoDTO materialInfoDTO, HttpSession session, Model model){
+        UserInfo userInfo = (UserInfo)session.getAttribute("userInfo");
+        if(userInfo == null){
+            return "emp/login";
+        }
+        boolean isAuthority = recordService.isAccessAuthorityRecordOfEmployee(userInfo.getDeptId());
+        if(!isAuthority){
+            return "material/repertoryList";
+        }
+        Boolean flag = materialService.deleteById(id);
+        List<MaterialCategory> levelOneList = materialService.queryLevelOne();
+        model.addAttribute("materialInfoDTO", materialInfoDTO);
+        model.addAttribute("levelOneList", levelOneList);
+        return "material/repertoryList";
+    }
+
     @RequestMapping("/updateMaterial")
     public String UpdateMaterial( UpdateMaterialDTO updateMaterialDTO, Model model){
 

@@ -30,4 +30,5 @@ public interface MaterialInfoMapper {
 
     Boolean approveRecord(@Param("materialId")Integer materialId, @Param("materialNum")Integer materialNum);
 
+    Boolean deleteById(@Param("materialId")Integer id);
 }
