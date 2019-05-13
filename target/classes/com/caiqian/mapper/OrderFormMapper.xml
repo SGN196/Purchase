@@ -56,6 +56,12 @@
 
 
     </select>
+
+    <select id="queryAll" resultType="com.caiqian.Bean.OrderForm">
+        select * from order_form
+
+
+    </select>
     <select id="queryOrderById" resultType="com.caiqian.Bean.OrderForm">
         select * from order_form
         <where>

@@ -5,6 +5,7 @@ import com.github.pagehelper.PageInfo;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public interface OrderFormMapper {
 
@@ -15,4 +16,6 @@ public interface OrderFormMapper {
     boolean success(@Param("orderId")Integer orderId);
 
     Boolean add(OrderForm orderForm);
+
+    List<OrderForm> queryAll();
 }

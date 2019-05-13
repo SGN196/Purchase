@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import java.sql.Date;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author SGN196
@@ -70,6 +71,15 @@ public class OrderFromServiceImpl implements OrderFormService
     {
         PageHelper.startPage(orderForm.getPageNum(), CommonCodeConstant.PAGE_SIZE);
         ArrayList<OrderForm> list =  orderFormMapper.queryByPOJO(orderForm);
+        PageInfo<OrderForm> page = new PageInfo<>(list);
+        return page;
+    }
+
+    @Override
+    public PageInfo<OrderForm> queryAll(OrderForm orderForm)
+    {
+        PageHelper.startPage(orderForm.getPageNum(), CommonCodeConstant.PAGE_SIZE);
+        List<OrderForm> list =  orderFormMapper.queryAll();
         PageInfo<OrderForm> page = new PageInfo<>(list);
         return page;
     }

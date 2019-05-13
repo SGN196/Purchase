@@ -2,13 +2,11 @@ package com.caiqian.Controller;
 
 import com.caiqian.Bean.*;
 import com.caiqian.DTO.MaterialInfoDTO;
-import com.caiqian.Service.CustomerService;
-import com.caiqian.Service.DataDictionaryService;
-import com.caiqian.Service.EmployeeService;
-import com.caiqian.Service.MaterialService;
+import com.caiqian.Service.*;
 import com.caiqian.mapper.MaterialInfoMapper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,6 +36,9 @@ public class RootController
 
     @Autowired
     DataDictionaryService dataDictionaryService;
+
+    @Autowired
+    OrderFormService orderFormService;
 
     @RequestMapping("/index")
     public String index(HttpSession httpSession){
@@ -123,7 +124,7 @@ public class RootController
         return "root/customerAcount";
     }
     @RequestMapping("/toCloseOrderForm")
-    public String toCloseOrderForm(HttpSession httpSession, OrderForm orderForm){
+    public String toCloseOrderForm(HttpSession httpSession, Model model, OrderForm orderForm){
         UserInfo userInfo = (UserInfo)httpSession.getAttribute("userInfo");
         if(userInfo == null)
         {
@@ -133,11 +134,9 @@ public class RootController
         if(!isRoot){
             return "emp/index";
         }
-
-
-
-
-
+        PageInfo<OrderForm> pageInfo = orderFormService.queryAll(orderForm);
+        model.addAttribute("page", pageInfo);
+        model.addAttribute("orderForm", orderForm);
         return "root/closeOrderForm";
     }
     @RequestMapping("/toMaterialQuantitySet")

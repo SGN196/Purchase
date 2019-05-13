@@ -7,11 +7,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10bb1a94-9e05-42f7-a76f-cc86cb4fb5c7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/category/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/category/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/category/updateMaterial.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/category/updateMaterial.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/RootController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/RootController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/OrderFormService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/OrderFormService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/OrderFromServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/OrderFromServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/OrderFormMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/OrderFormMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/OrderFormMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/OrderFormMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/order/orderFormList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/order/orderFormList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/repo/InOutRecord.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/repo/InOutRecord.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/root/closeOrderForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/root/closeOrderForm.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/root/headerRoot.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/root/headerRoot.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/Controller/RootController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/Controller/RootController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/Service/OrderFormService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/Service/OrderFormService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/Service/impl/OrderFromServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/Service/impl/OrderFromServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/OrderFormMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/OrderFormMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/OrderFormMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/OrderFormMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Controller/RootController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Controller/RootController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/OrderFormService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/OrderFormService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/impl/OrderFromServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/impl/OrderFromServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/OrderFormMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/OrderFormMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/OrderFormMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/OrderFormMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/jsp/repo/InOutRecord.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/jsp/repo/InOutRecord.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/jsp/root/closeOrderForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/jsp/root/closeOrderForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/jsp/root/headerRoot.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/jsp/root/headerRoot.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,20 +66,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/category/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-283">
-              <caret line="129" column="31" lean-forward="true" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
-            </state>
-          </provider>
+      <file leaf-file-name="useMaterialApply.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/repo/useMaterialApply.jsp">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="orderFormList.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/order/orderFormList.jsp">
+      <file leaf-file-name="closeOrderForm.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/root/closeOrderForm.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="115" column="36" lean-forward="true" selection-start-line="115" selection-start-column="36" selection-end-line="115" selection-end-column="36" />
+            <state relative-caret-position="221">
+              <caret line="105" column="38" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#1;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -71,45 +84,74 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RepoByOrder.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/repo/RepoByOrder.jsp">
+      <file leaf-file-name="companyList.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/order/companyList.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="98" column="51" selection-start-line="98" selection-start-column="51" selection-end-line="98" selection-end-column="51" />
+            <state relative-caret-position="491">
+              <caret line="115" column="121" selection-start-line="114" selection-start-column="75" selection-end-line="115" selection-end-column="121" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InOutRecord.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/repo/InOutRecord.jsp">
+      <file leaf-file-name="orderFormList.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/order/orderFormList.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
+            <state relative-caret-position="319">
+              <caret line="124" column="82" selection-start-line="124" selection-start-column="82" selection-end-line="124" selection-end-column="82" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="customerAcount.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/root/customerAcount.jsp">
+      <file leaf-file-name="headerRoot.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/root/headerRoot.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2703" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="updateMaterial.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/category/updateMaterial.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-391">
-              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="65" />
+            <state relative-caret-position="289">
+              <caret line="50" column="65" selection-start-line="50" selection-start-column="65" selection-end-line="50" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/common/header.jsp">
+      <file leaf-file-name="RootController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Controller/RootController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="64" column="61" selection-start-line="64" selection-start-column="39" selection-end-line="64" selection-end-column="61" />
+            <state relative-caret-position="442">
+              <caret line="138" column="49" selection-start-line="138" selection-start-column="49" selection-end-line="138" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderFormService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Service/OrderFormService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderFromServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/OrderFromServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderFormMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/mapper/OrderFormMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderFormMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/OrderFormMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="42" column="21" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -168,9 +210,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/DataDictionaryMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/DataDictionaryServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Bean/CustomerInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Bean/UserInfo.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/root/addEmployee.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/root/empAcount.jsp" />
@@ -182,7 +221,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/CustomerServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/CustomerInfoMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/CustomerInfoMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/RootController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/root/customerAcount.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/template.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/customer/common/footerCustomer.jsp" />
@@ -196,7 +234,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/common/header.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/BidInfoMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/BidInfoMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/OrderFormMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Service/BidService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/BidController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/BidServiceImpl.java" />
@@ -205,7 +242,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/purchase/purchaseList.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Bean/OrderForm.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/repo/RepoByOrder.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/OrderFormMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/customer/bid/bidList.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/repo/myApplyList.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/repo/checkApplyList.jsp" />
@@ -214,11 +250,17 @@
         <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/RecordServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/MaterialInfoMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/MaterialInfoMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/root/headerRoot.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/category/updateMaterial.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/order/orderFormList.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/category/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/repo/InOutRecord.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/OrderFormMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Service/OrderFormService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/OrderFromServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/RootController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/OrderFormMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/root/headerRoot.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/root/closeOrderForm.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/order/orderFormList.jsp" />
       </list>
     </option>
   </component>
@@ -270,7 +312,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="841" />
     <option name="y" value="6" />
     <option name="width" value="1074" />
@@ -582,6 +624,7 @@
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="materialpurchase:war exploded">
           <settings>
@@ -698,12 +741,12 @@
       <workItem from="1556847252771" duration="8681000" />
       <workItem from="1557041788286" duration="755000" />
       <workItem from="1557042576878" duration="17930000" />
-      <workItem from="1557197910243" duration="33243000" />
+      <workItem from="1557197910243" duration="36436000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="392531000" />
+    <option name="totallyTimeSpent" value="395724000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -715,7 +758,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="841" y="6" width="1074" height="1047" extended-state="1" />
+    <frame x="841" y="6" width="1074" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -741,7 +784,7 @@
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49830794" visible="true" weight="0.24726477" />
       <window_info anchor="bottom" id="Spring" order="9" weight="0.32933652" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32900432" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49053857" visible="true" weight="0.27317554" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49053857" visible="true" weight="0.28303748" />
       <window_info id="Web" order="5" sideWeight="0.5094614" side_tool="true" weight="0.28849408" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Favorites" order="6" sideWeight="0.507764" side_tool="true" weight="0.20990391" />
@@ -822,30 +865,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/emp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-          <folding>
-            <element signature="e#1541#1547#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/customer/login/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="841" column="4" selection-start-line="841" selection-start-column="4" selection-end-line="841" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/mapper/BidInfoMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -857,13 +876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/mapper/OrderFormMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="15" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -922,20 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Service/OrderFormService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/OrderFromServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="71" column="64" selection-start-line="71" selection-start-column="53" selection-end-line="71" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Controller/OrderFormController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -947,13 +945,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1005">
           <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/OrderFormMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="47" column="70" selection-start-line="47" selection-start-column="70" selection-end-line="47" selection-end-column="70" />
         </state>
       </provider>
     </entry>
@@ -1039,16 +1030,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/order/companyList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="106" column="54" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="54" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/customer/bid/bidList.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
@@ -1056,17 +1037,6 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#td#7;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#a#0;n#div#0;n#td#7;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/repo/myApplyList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="141" column="26" lean-forward="true" selection-start-line="141" selection-start-column="26" selection-end-line="141" selection-end-column="26" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1140,24 +1110,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/root/empAcount.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/root/headerRoot.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="55" column="17" lean-forward="true" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/order/orderFormList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="115" column="36" lean-forward="true" selection-start-line="115" selection-start-column="36" selection-end-line="115" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/repo/RepoByOrder.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -1175,13 +1127,8 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/category/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-283">
-          <caret line="129" column="31" lean-forward="true" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
+          <caret line="129" column="31" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/root/customerAcount.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2703" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/common/header.jsp">
@@ -1191,17 +1138,99 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/repo/myApplyList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="141" column="26" lean-forward="true" selection-start-line="141" selection-start-column="26" selection-end-line="141" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/repo/InOutRecord.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/root/customerAcount.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2703" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/category/updateMaterial.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-391">
           <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/OrderFromServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/repo/useMaterialApply.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Service/OrderFormService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Controller/RootController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="138" column="49" selection-start-line="138" selection-start-column="49" selection-end-line="138" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/mapper/OrderFormMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/OrderFormMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="42" column="21" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/root/headerRoot.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="50" column="65" selection-start-line="50" selection-start-column="65" selection-end-line="50" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/root/closeOrderForm.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="105" column="38" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/order/companyList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="115" column="121" selection-start-line="114" selection-start-column="75" selection-end-line="115" selection-end-column="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/order/orderFormList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="124" column="82" selection-start-line="124" selection-start-column="82" selection-end-line="124" selection-end-column="82" />
         </state>
       </provider>
     </entry>

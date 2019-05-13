@@ -121,14 +121,8 @@
 
                                 <td>
                                     <div class="site-demo-button" id="layerDemo" style="margin-bottom: 0;">
-                                        <a href="${ctx}/material/toUpdateMaterial/${obj.id}" data-method="notice"
-                                           class="layui-btn layui-btn-normal layui-btn-xs"><i class="layui-icon"
-                                                                                              style="font-size: 20px">&#xe642</i></a>
-                                        <a href="${ctx}/app/delete/${obj.id}"
-                                           class="layui-btn layui-btn-danger layui-btn-xs"><i class="layui-icon"
-                                                                                              style="font-size: 20px">&#xe640</i></a>
-                                        <a href="${ctx}/app/queryById/${obj.id}" class="layui-btn layui-btn-xs"><i
-                                                class="layui-icon" style="font-size: 20px">&#xe615</i></a>
+                                        <a href="#" onclick="confirmBid(${obj.id})"
+                                           class="layui-btn layui-btn-radius">取消订单</a>
                                     </div>
                                 </td>
                             </tr>
