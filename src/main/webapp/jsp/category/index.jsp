@@ -113,6 +113,7 @@
                                         <a href="${ctx}/material/toDeleteMaterial/${obj.id}"
                                            class="layui-btn layui-btn-danger layui-btn-xs"><i class="layui-icon"
                                                                                               style="font-size: 20px">&#xe640</i></a>
+                                        <a href="${ctx}/material/getPic/${obj.id}" class="layui-btn layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe615</i></a>
                                     </div>
                                 </td>
 

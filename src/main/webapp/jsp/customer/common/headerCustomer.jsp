@@ -66,7 +66,7 @@
             <li class="layui-nav-item">
                 <a class="" href="javascript:;">个人设置</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="${ctx}/app/index/devId/${sessionScope.devUser.id}">APP维护</a></dd>
+                    <dd><a href="${ctx}/app/index/devId/${sessionScope.devUser.id}">个人设置</a></dd>
 
                 </dl>
             </li>
