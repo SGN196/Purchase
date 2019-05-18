@@ -1,14 +1,12 @@
 package com.caiqian.Service.impl;
 
+import com.caiqian.Bean.DataDictionary;
 import com.caiqian.Bean.MaterialInfo;
 import com.caiqian.Bean.OrderForm;
 import com.caiqian.Bean.QuoteInfo;
 import com.caiqian.Service.OrderFormService;
 import com.caiqian.constant.CommonCodeConstant;
-import com.caiqian.mapper.BidInfoMapper;
-import com.caiqian.mapper.MaterialInfoMapper;
-import com.caiqian.mapper.OrderFormMapper;
-import com.caiqian.mapper.QuoteInfoMapper;
+import com.caiqian.mapper.*;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.apache.ibatis.annotations.Param;
@@ -40,6 +38,8 @@ public class OrderFromServiceImpl implements OrderFormService
     @Autowired
     MaterialInfoMapper materialInfoMapper;
 
+    @Autowired
+    DataDictionaryMapper dataDictionaryMapper;
 
     @Override
     public OrderForm queryOrderById(Integer id)
@@ -48,6 +48,15 @@ public class OrderFromServiceImpl implements OrderFormService
 
     }
 
+    @Override
+    public boolean isAccessAuthorityRecordOfEmployee(Integer deptId)
+    {
+        ArrayList<Integer> arrayList = dataDictionaryMapper.isAccessAuthorityRecordOfEmployee();
+        if(arrayList.contains(deptId)){
+            return true;
+        }
+        return false;
+    }
 
     @Override
     public boolean OrderInRepo(Integer id)

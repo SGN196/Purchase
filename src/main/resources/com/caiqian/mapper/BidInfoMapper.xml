@@ -58,6 +58,8 @@
     <select id="queryBidList" resultType="com.caiqian.Bean.BidInfo">
         select * from bid_info b1
         left join customer_info c1 on c1.id = b1.create_by
+        left join quote_info q1 on q1.id = b1.quote_id
+        left join material_info m1 on m1.id = q1.material_id
         <where>
             <if test="quoteId != null">
                 and b1.quote_id = #{quoteId}

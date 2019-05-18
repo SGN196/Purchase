@@ -5,6 +5,7 @@ import com.caiqian.Bean.CustomerInfo;
 import com.caiqian.Bean.QuoteInfo;
 import com.caiqian.Bean.UserInfo;
 import com.caiqian.Service.BidService;
+import com.caiqian.Service.RecordService;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -31,6 +32,9 @@ public class BidController
     @Autowired
     BidService bidService;
 
+
+    @Autowired
+    RecordService recordService;
 
     /**
      * 友商报价驳回功能，应该放在订单取消模块，不能放在这里
@@ -115,6 +119,12 @@ public class BidController
         if(userInfo == null){
             return "emp/login";
         }
+        boolean isAuthority = recordService.isAccessAuthorityRecordOfEmployee(userInfo.getDeptId());
+        if(!isAuthority){
+            model.addAttribute("PermissionDenied", "权限不足，无法访问");
+            return "emp/index";
+        }
+
         PageInfo<BidInfo> pageInfo = bidService.queryBidList(bidInfo);
         model.addAttribute("page", pageInfo);
         model.addAttribute("bidInfo", bidInfo);

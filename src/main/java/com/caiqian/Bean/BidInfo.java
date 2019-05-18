@@ -17,6 +17,10 @@ public class BidInfo {
 
     private Integer createBy;
 
+    private String materialName;
+
+    private Integer quoteQuantity;
+
     private String customerName;
 
     private Date createDate;
@@ -26,6 +30,26 @@ public class BidInfo {
     private Date modifyDate;
 
     private Integer pageNum = 1;
+
+    public String getMaterialName()
+    {
+        return materialName;
+    }
+
+    public void setMaterialName(String materialName)
+    {
+        this.materialName = materialName;
+    }
+
+    public Integer getQuoteQuantity()
+    {
+        return quoteQuantity;
+    }
+
+    public void setQuoteQuantity(Integer quoteQuantity)
+    {
+        this.quoteQuantity = quoteQuantity;
+    }
 
     public Integer getId() {
         return id;
@@ -141,6 +165,8 @@ public class BidInfo {
                 ", timeDeliver=" + timeDeliver +
                 ", tempTime='" + tempTime + '\'' +
                 ", createBy=" + createBy +
+                ", materialName='" + materialName + '\'' +
+                ", quoteQuantity=" + quoteQuantity +
                 ", customerName='" + customerName + '\'' +
                 ", createDate=" + createDate +
                 ", modifyBy=" + modifyBy +

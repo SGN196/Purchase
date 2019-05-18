@@ -255,8 +255,14 @@
                             alert("确定成功");
                             window.location.reload();
                         } else {
-                            alert("发生错误");
-                            window.location.reload();
+                            if (data == "PowerLess") {
+                                alert("确定成功");
+                                window.location.reload();
+                            }
+                            else {
+                                alert("发生错误");
+                                window.location.reload();
+                            }
                         }
                     }
                 });

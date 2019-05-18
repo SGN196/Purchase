@@ -1,10 +1,8 @@
 package com.caiqian.Controller;
 
-import com.caiqian.Bean.CustomerInfo;
-import com.caiqian.Bean.MaterialInfo;
-import com.caiqian.Bean.OrderForm;
-import com.caiqian.Bean.UserInfo;
+import com.caiqian.Bean.*;
 import com.caiqian.Service.OrderFormService;
+import com.caiqian.Service.RecordService;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -31,6 +29,9 @@ public class OrderFormController
     @Autowired
     OrderFormService orderFormService;
 
+    @Autowired
+    RecordService recordService;
+    
 
     @RequestMapping("/toOrderFromList")
     public String toOrderFromList(HttpSession httpSession, Model model, OrderForm orderForm){
@@ -38,6 +39,11 @@ public class OrderFormController
         if(userInfo == null)
         {
             return "emp/login";
+        }
+        boolean isAuthority = recordService.isAccessAuthorityRecordOfEmployee(userInfo.getDeptId());
+        if(!isAuthority){
+            model.addAttribute("PermissionDenied", "权限不足，无法访问");
+            return "emp/index";
         }
 
         PageInfo<OrderForm> pageInfo = orderFormService.queryByPOJO(orderForm);
@@ -54,6 +60,11 @@ public class OrderFormController
         {
             return "emp/login";
         }
+        /*boolean isAuthority = recordService.isAccessAuthorityRecordOfEmployee(userInfo.getDeptId());*/
+        boolean isAuthority = orderFormService.isAccessAuthorityRecordOfEmployee(userInfo.getDeptId());
+        if(!isAuthority){
+            return "PowerLess";
+        }
         Boolean flag = orderFormService.cancelById(id);
         if(flag){
             return "OK";
@@ -68,6 +79,14 @@ public class OrderFormController
         {
             return "emp/login";
         }
+        boolean isAuthority = recordService.isAccessAuthorityRecordOfEmployee(userInfo.getDeptId());
+        if(!isAuthority){
+            model.addAttribute("PermissionDenied", "权限不足，无法访问");
+            return "emp/index";
+        }
+
+
+
         if(orderForm.getOrderStatus() == null)
             orderForm.setOrderStatus(0);
         if(orderForm.getOrderStatus() == 22){

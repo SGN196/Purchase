@@ -128,7 +128,7 @@
                             <td>${obj.materialName}</td>
                             <td>${obj.quoteQuantity}</td>
                             <td>
-                                    <c:if test="${obj.quoteStatus eq 0}"><p style="color: green">采购成功</p>  </c:if>
+                                    <c:if test="${obj.quoteStatus eq 0}"><p style="color: green">采购完毕</p>  </c:if>
                                     <c:if test="${obj.quoteStatus eq 1}">采购中</c:if>
                                     <c:if test="${obj.quoteStatus eq 99}"><p style="color: red">审核失败</p> </c:if>
 

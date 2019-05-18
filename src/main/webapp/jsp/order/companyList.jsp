@@ -88,6 +88,9 @@
                         <th>友商名称</th>
                         <th>友商总报价</th>
 
+                        <th>材料名称</th>
+                        <th>采购数量</th>
+
                         <th>预计交货时间</th>
                         <th>报价单状态</th>
                         <th>操作</th>
@@ -101,6 +104,10 @@
                             <td>${obj.id}</td>
                             <td>${obj.customerName}</td>
                             <td>${obj.bidTotalPrice}</td>
+
+                            <td>${obj.materialName}</td>
+                            <td>${obj.quoteQuantity}</td>
+
                             <td>${obj.timeDeliver}</td>
                             <td>
                                 <c:if test="${obj.bidStatus eq 1}">竞价中 </c:if>
