@@ -83,7 +83,7 @@
                         <th>采购数量</th>
                         <th>状态</th>
                         <th>截止日期</th>
-                        <th>是否参与</th>
+                        <%--<th>是否参与</th>--%>
                         <th>操作</th>
                     </tr>
                     </thead>
@@ -98,7 +98,7 @@
                                     <c:if test="${obj.quoteStatus eq 1}">采购中</c:if>
                             </td>
                             <td>${obj.quoteEndtime}</td>
-                            <td>${obj.userName}</td>
+                            <%--<td>${obj.userName}</td>--%>
                             <td>
                                 <div class="site-demo-button" id="layerDemo" style="margin-bottom: 0;">
                                     <button type="button" onclick="openModak(this)" class="layui-btn layui-btn-radius layui-btn-normal">开始竞价</button>

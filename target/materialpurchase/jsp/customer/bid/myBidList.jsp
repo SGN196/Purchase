@@ -101,14 +101,14 @@
 
 
                                 <td>
-                                <c:if test="${obj.bidStatus eq 1}">竞价中 </c:if>
-                                <c:if test="${obj.bidStatus eq 0}">竞价失败</c:if>
-                                <c:if test="${obj.bidStatus eq 66}">竞价成功</c:if>
+                                    <c:if test="${obj.bidStatus eq 1}">竞价中 </c:if>
+                                    <p style="color:red;"> <c:if test="${obj.bidStatus eq 0}">竞价失败</c:if></p>
+                                    <p style="color:green;">     <c:if test="${obj.bidStatus eq 66}">竞价完成</c:if></p>
                                 </td>
 
                             <td>
                                 <div class="site-demo-button" id="layerDemo" style="margin-bottom: 0;">
-                                    <a href="${ctx}/material/toUpdateMaterial/${obj.id}" data-method="notice" class="layui-btn layui-btn-normal layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe642</i></a>
+                                    <%--<a href="${ctx}/material/toUpdateMaterial/${obj.id}" data-method="notice" class="layui-btn layui-btn-normal layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe642</i></a>--%>
 
 
                                     <a href="${ctx}/app/delete/${obj.id}" class="layui-btn layui-btn-danger layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe640</i></a>

@@ -128,7 +128,7 @@
                             <td>${obj.materialName}</td>
                             <td>${obj.quoteQuantity}</td>
                             <td>
-                                    <c:if test="${obj.quoteStatus eq 0}"><p style="color: green">采购完毕</p>  </c:if>
+                                    <c:if test="${obj.quoteStatus eq 0}"><p style="color: green">采购完成</p>  </c:if>
                                     <c:if test="${obj.quoteStatus eq 1}">采购中</c:if>
                                     <c:if test="${obj.quoteStatus eq 99}"><p style="color: red">审核失败</p> </c:if>
 
@@ -137,17 +137,19 @@
                             <td>${obj.userName}</td>
                             <td>
                                 <div class="site-demo-button" id="layerDemo" style="margin-bottom: 0;">
-                                    <a href="${ctx}" data-method="notice" class="layui-btn layui-btn-normal layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe642</i></a>
-
-
-                                    <a href="${ctx}/bid/deleteById/${obj.id}" class="layui-btn layui-btn-danger layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe640</i></a>
-                                    <a href="" class="layui-btn layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe615</i></a>
+                                    <%--<a href="${ctx}" data-method="notice" class="layui-btn layui-btn-normal layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe642</i></a>--%>
+                                    <%--<a href="${ctx}/bid/deleteById/${obj.id}" class="layui-btn layui-btn-danger layui-btn-xs" ><i class="layui-icon" style="font-size: 20px" >&#xe640</i></a>--%>
+                                    <div class="layui-anim layui-anim-up">
+                                        <c:if test="${obj.quoteStatus eq 1}">
+                                            <a href="${ctx}/bid/closeQuoteById/${obj.id}" 	class="layui-btn layui-btn-radius layui-btn-danger">关闭采购</a>
+                                        </c:if>
+                                    </div>
                                 </div>
                             </td>
 
                         </tr>
                     </c:forEach>
-                    <form action="${ctx}/record/toMyApplyList/${sessionScope.userInfo.id}" method="post">
+                    <form action="${ctx}/purchase/toPurchaseList" method="post">
                         <tr>
                             <td>
                                 共${page.total} 条记录 第 ${page.pageNum}/ ${page.pages}页

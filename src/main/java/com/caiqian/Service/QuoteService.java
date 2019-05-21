@@ -16,4 +16,6 @@ public interface QuoteService
     boolean addQuote(QuoteInfo quoteInfo);
 
     PageInfo<QuoteInfo> queryQuoteByRequire(QuoteInfo quoteInfo);
+
+    boolean closeQuoteById(Integer id);
 }

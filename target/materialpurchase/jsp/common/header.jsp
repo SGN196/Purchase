@@ -7,26 +7,15 @@
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<div class="layui-header">
-    <a href="${ctx}/employee/toIndex"><div class="layui-logo">企业物资管理系统</div></a>
-    <!-- 头部区域（可配合layui已有的水平导航） -->
-    <%--<ul class="layui-nav layui-layout-left">--%>
-    <%--<li class="layui-nav-item"><a href="">控制台</a></li>--%>
-    <%--<li class="layui-nav-item"><a href="">商品管理</a></li>--%>
-    <%--<li class="layui-nav-item"><a href="">用户</a></li>--%>
-    <%--<li class="layui-nav-item">--%>
-    <%--<a href="javascript:;">其它系统</a>--%>
-    <%--<dl class="layui-nav-child">--%>
-    <%--<dd><a href="">邮件管理</a></dd>--%>
-    <%--<dd><a href="">消息管理</a></dd>--%>
-    <%--<dd><a href="">授权管理</a></dd>--%>
-    <%--</dl>--%>
-    <%--</li>--%>
-    <%--</ul>--%>
+<div class="layui-header layui-bg-blue">
+    <div class="layui-logo">
+        <a style="color: white" href="${ctx}/employee/toIndex">企业物资管理系统</a>
+    </div>
+
     <ul class="layui-nav layui-layout-right">
         <li class="layui-nav-item">
             <a href="javascript:;">
-                <%--<img src="http://t.cn/RCzsdCq" class="layui-nav-img">--%>
+                <img src="${ctx}/static/plugins/img/linus.jpg" class="layui-nav-img">
                 欢迎你：${sessionScope.userInfo.userName} <br>
             </a>
             <dl class="layui-nav-child">
@@ -41,7 +30,7 @@
 <div class="layui-side layui-bg-black">
     <div class="layui-side-scroll">
         <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-        <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+        <ul class="layui-nav layui-nav-tree" lay-filter="test">
             <li id="materialList" class="layui-nav-item">
                 <a class="" href="javascript:;">物资查询</a>
                 <dl class="layui-nav-child">
@@ -53,7 +42,8 @@
                 <a class="" href="javascript:;">物资领用</a>
                 <dl class="layui-nav-child">
                     <dd><a href="${ctx}/record/toReceiveApply">领用物资申请</a></dd>
-                    <dd><a href="${ctx}/record/toMyApplyList/${sessionScope.userInfo.id}">${PermissionDenied}本人申请列表</a></dd>
+                    <dd><a href="${ctx}/record/toMyApplyList/${sessionScope.userInfo.id}">${PermissionDenied}本人申请列表</a>
+                    </dd>
                 </dl>
             </li>
             <li id="purchase" class="layui-nav-item">
@@ -75,8 +65,6 @@
 
                 </dl>
             </li>
-
-
 
 
             <li class="layui-nav-item">

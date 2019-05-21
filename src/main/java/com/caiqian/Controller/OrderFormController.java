@@ -31,7 +31,7 @@ public class OrderFormController
 
     @Autowired
     RecordService recordService;
-    
+
 
     @RequestMapping("/toOrderFromList")
     public String toOrderFromList(HttpSession httpSession, Model model, OrderForm orderForm){

@@ -5,6 +5,7 @@ import com.caiqian.Bean.QuoteInfo;
 import com.caiqian.Bean.UserInfo;
 import com.caiqian.Service.MaterialService;
 import com.caiqian.Service.QuoteService;
+import com.caiqian.Service.RecordService;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -32,6 +33,9 @@ public class PurchaseController
 
     @Autowired
     QuoteService quoteService;
+
+    @Autowired
+    RecordService recordService;
 
     @RequestMapping("/toMaterialPurchase")
     public String toMaterialPurchase(HttpSession httpSession, Model model){
@@ -63,6 +67,7 @@ public class PurchaseController
         }
         quoteInfo.setCreateDate(new java.sql.Date(System.currentTimeMillis()));
         quoteInfo.setQuoteStatus(1);
+        model.addAttribute("quoteInfo",quoteInfo);
         if(quoteInfo.isEmptyRequire()){
             model.addAttribute("errorMsg", "参数为空");
             return "purchase/materialPurchase";
@@ -81,6 +86,11 @@ public class PurchaseController
         UserInfo userInfo = (UserInfo)httpSession.getAttribute("userInfo");
         if(userInfo == null){
             return "emp/login";
+        }
+        boolean isAuthority = recordService.isAccessAuthorityRecordOfEmployee(userInfo.getDeptId());
+        if(!isAuthority){
+            model.addAttribute("PermissionDenied", "权限不足，无法访问");
+            return "emp/index";
         }
 
 

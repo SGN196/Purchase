@@ -49,6 +49,7 @@
         </trim>
     </insert>
 
+
     <select id="queryBidInfoById" resultType="com.caiqian.Bean.BidInfo">
         select * from bid_info
         <where> id = #{bidId}
@@ -75,6 +76,7 @@
                 and c1.customer_name like concat('%',#{customerName},'%')
             </if>
         </where>
+        order by b1.create_date desc
     </select>
     <select id="queryBidListByQuoteId"  resultType="com.caiqian.Bean.BidInfo">
         select * from bid_info
@@ -91,6 +93,14 @@
         <where>
             <if test="bidId != null">
                 and id = #{bidId}
+            </if>
+        </where>
+    </update>
+    <update id="refuseBidByQuoteId"  parameterType="java.lang.Integer">
+        update bid_info set bid_status=0
+        <where>
+            <if test="quoteId != null">
+                and quote_id = #{quoteId}
             </if>
         </where>
     </update>

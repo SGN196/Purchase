@@ -42,7 +42,7 @@ public class CustomerController
 
     @RequestMapping("/login")
     public String login(CustomerInfo customerInfo, Model model, HttpSession httpSession){
-        System.out.println(customerInfo);
+
         customerInfo = customerService.login(customerInfo);
         if(customerInfo == null){
             model.addAttribute("errMsg", "用户名或密码错误");

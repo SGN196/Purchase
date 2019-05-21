@@ -242,7 +242,6 @@ public class MaterialController
     public String queryUnitById(@PathVariable("Id") Integer id){
 
         String str = materialService.queryUnitById(id);
-        System.out.println(str);
         return str;
     }
 

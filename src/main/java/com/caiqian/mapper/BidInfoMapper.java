@@ -32,4 +32,6 @@ public interface BidInfoMapper {
     ArrayList<BidInfo> queryBidList(BidInfo bidInfo);
 
     ArrayList<BidInfo> queryBidListByQuoteId(BidInfo bidInfo);
+
+    boolean refuseBidByQuoteId(@Param("quoteId")Integer id);
 }

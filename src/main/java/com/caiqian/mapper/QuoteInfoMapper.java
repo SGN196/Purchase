@@ -16,4 +16,6 @@ public interface QuoteInfoMapper {
     Integer queryQuantityById(@Param("quoteId")Integer quoteId);
 
     QuoteInfo queryQuoteById(@Param("quoteId")Integer quoteId);
+
+    boolean refuseQuote(@Param("quoteId") Integer id);
 }

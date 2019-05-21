@@ -72,6 +72,7 @@
 
 
 
+
     <where>
       <if test="id != null">
         and q1.id = #{id}
@@ -105,11 +106,19 @@
       </if>
 
     </where>
-
+     order by q1.create_date desc
   </select>
 
   <update id="success" parameterType="java.lang.Integer">
     update quote_info set quote_status=0
+    <where>
+      <if test="quoteId != null">
+        and id = #{quoteId}
+      </if>
+    </where>
+  </update>
+  <update id="refuseQuote" parameterType="java.lang.Integer">
+    update quote_info set quote_status=88
     <where>
       <if test="quoteId != null">
         and id = #{quoteId}

@@ -5,6 +5,7 @@ import com.caiqian.Bean.CustomerInfo;
 import com.caiqian.Bean.QuoteInfo;
 import com.caiqian.Bean.UserInfo;
 import com.caiqian.Service.BidService;
+import com.caiqian.Service.QuoteService;
 import com.caiqian.Service.RecordService;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +33,8 @@ public class BidController
     @Autowired
     BidService bidService;
 
+    @Autowired
+    QuoteService quoteService;
 
     @Autowired
     RecordService recordService;
@@ -70,6 +73,31 @@ public class BidController
             return "ERROR";
     }
 
+    /**
+     * 当企业发布需求单后，供应商可能已经报价。
+     * 所以关闭需求单时，需要把所有的报价单关闭
+     */
+    @RequestMapping("/closeQuoteById/{id}")
+    public String closeQuoteById(@PathVariable("id") Integer id,QuoteInfo quoteInfo, HttpSession httpSession, Model model)
+    {
+        UserInfo userInfo = (UserInfo)httpSession.getAttribute("userInfo");
+        if(userInfo == null){
+            return "emp/login";
+        }
+        boolean isAuthority = recordService.isAccessAuthorityRecordOfEmployee(userInfo.getDeptId());
+        if(!isAuthority){
+            model.addAttribute("PermissionDenied", "权限不足，无法访问");
+            return "emp/index";
+        }
+
+        boolean flag = quoteService.closeQuoteById(id);
+
+        PageInfo<QuoteInfo> pageInfo = quoteService.queryQuoteByRequire(quoteInfo);
+        model.addAttribute("page", pageInfo);
+        model.addAttribute("quoteInfo", quoteInfo);
+        return "purchase/toPurchaseList";
+    }
+
 
 
     @RequestMapping("/deleteById/{id}")
@@ -79,11 +107,10 @@ public class BidController
             return "customer/login/login";
         }
         BidInfo bidInfo = bidService.queryBidInfoById(id);
-
         if(bidInfo == null){
 
         }else{
-            if(bidInfo.getBidStatus() == 0){
+            if(bidInfo.getBidStatus() == 0){    ///根据报价单号删除
                 Boolean flag = bidService.deleteById(bidInfo.getId());
             }
         }

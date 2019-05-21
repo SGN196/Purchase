@@ -33,7 +33,7 @@
                     <p style="color: green">${successMsg}</p>
                 </cite>
 
-                <form class="layui-form" action="${ctx}/bid/toMyOrderList" method="post">
+                <form class="layui-form" action="${ctx}/order/toMyOrderList" method="post">
                     <div class="layui-inline">
                         <label class="layui-form-label">订单编号</label>
                         <div class="layui-input-inline">
@@ -119,7 +119,7 @@
 
 
                             <td>
-                                <p style="color: green"><c:if test="${obj.orderStatus eq 1}">交易完毕 </c:if></p>
+                                <p style="color: green"><c:if test="${obj.orderStatus eq 1}">交易完成 </c:if></p>
                                 <c:if test="${obj.orderStatus eq 0}">还在交易中</c:if>
                                 <p style="color: red"><c:if test="${obj.orderStatus eq 88}">订单失败</c:if></p>
                             </td>

@@ -94,7 +94,7 @@
                 <div class="layui-inline">
                     <label class="layui-form-label">采购数量</label>
                     <div class="layui-input-inline">
-                        <input type="text" name="quoteQuantity" value="${materialRecord.materialNum}" autocomplete="off"
+                        <input type="text" name="quoteQuantity" value="${quoteInfo.quoteQuantity}" autocomplete="off"
                                class="layui-input">
                     </div>
                 </div>
@@ -106,7 +106,7 @@
                     <div class="layui-inline">
                         <label class="layui-form-label">采购截止时间</label>
                         <div class="layui-input-inline">
-                            <input name="tempDate" type="text" class="layui-input" id="test11"
+                            <input name="tempDate" type="text" class="layui-input" id="test11" value="${quoteInfo.tempDate}"
                                    placeholder="yyyy年MM月dd日">
                         </div>
                     </div>
@@ -121,7 +121,7 @@
                     <%--</div>--%>
                     <div class="layui-input-block">
                         <textarea name="quoteDesc" placeholder="请输入采购原因"
-                                  class="layui-textarea">${materialRecord.useReason}</textarea>
+                                  class="layui-textarea" value="${quoteInfo.quoteDesc}" >${materialRecord.useReason}</textarea>
                     </div>
                 </div>
 

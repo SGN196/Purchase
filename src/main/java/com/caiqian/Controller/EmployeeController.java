@@ -1,8 +1,11 @@
 package com.caiqian.Controller;
 
 import com.alibaba.fastjson.JSON;
+import com.caiqian.Bean.MaterialRecord;
 import com.caiqian.Bean.UserInfo;
+import com.caiqian.DTO.PageDTO;
 import com.caiqian.Service.EmployeeService;
+import com.caiqian.Service.RecordService;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,6 +33,9 @@ public class EmployeeController
     @Autowired
     private EmployeeService employeeService;
 
+
+    @Autowired
+    private RecordService recordService;
 
 
     @RequestMapping("/AcountStart/{id}")
@@ -99,7 +105,11 @@ public class EmployeeController
         httpSession.setAttribute("userInfo", userInfo);
         String str = JSON.toJSONString(userInfo);
         httpSession.setAttribute("str", str);
-        return "emp/index";
+
+        PageInfo<MaterialRecord> pageInfo = recordService.queryById(userInfo.getId(), new PageDTO());
+        model.addAttribute("page", pageInfo);
+
+        return "repo/myApplyList";
     }
 
     @RequestMapping("/logout")
