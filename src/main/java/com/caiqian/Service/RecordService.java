@@ -1,10 +1,11 @@
 package com.caiqian.Service;
 
-import com.caiqian.Bean.MaterialInfo;
 import com.caiqian.Bean.MaterialRecord;
 import com.caiqian.DTO.PageDTO;
 import com.caiqian.DTO.RecordDTO;
 import com.github.pagehelper.PageInfo;
+
+import java.util.List;
 
 /**
  * @author SGN196
@@ -35,4 +36,7 @@ public interface RecordService
     PageInfo<RecordDTO> queryAllIORecord();
 
     PageInfo<RecordDTO> queryIORecord(RecordDTO recordDTO);
+
+    //查询材料ID，最近day天的进出库记录与库存
+    int[][] queryByMaterialId(Integer id, Integer day);
 }

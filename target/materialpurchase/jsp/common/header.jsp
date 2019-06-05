@@ -61,7 +61,7 @@
                 <dl class="layui-nav-child">
                     <dd><a href="${ctx}/record/toCheckApplyList">领用物资审批</a></dd>
                     <dd><a href="${ctx}/order/toRepoByOrder">订单入库</a></dd>
-                    <dd><a href="${ctx}/record/toInOutRecord">进出库记录查询</a></dd>
+                    <dd><a href="${ctx}/record/InOutRecord">进出库记录查询</a></dd>
 
                 </dl>
             </li>

@@ -35,7 +35,7 @@
             <table class="layui-table">
                 <thead>
                 <tr>
-                    <th>订单编号</th>
+                    <th>申请单编号</th>
                     <th>材料标号</th>
                     <th>材料名称</th>
                     <th>数量</th>

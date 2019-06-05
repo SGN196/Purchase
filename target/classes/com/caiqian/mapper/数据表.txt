@@ -125,7 +125,7 @@ create table material_record(
     material_num int,         -- 数量
     user_id int,              -- 对应员工表id
     use_reason varchar(200),  -- 备注
-    record_status int,        -- 审批状态 0:待审核 1：审核通过 2：审核失败。66：进库记录
+    record_status int,        -- 审批状态 0:待审核 1：审核通过(出库) 2：审核失败。66：进库记录
     manager_id int,           -- 审批人ID
     create_by int,            --
     create_date datetime,     -- 时间

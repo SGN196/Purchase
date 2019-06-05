@@ -7,65 +7,157 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10bb1a94-9e05-42f7-a76f-cc86cb4fb5c7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/echarts3/echarts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/xxx/echarts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/ss.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/main/aaa/sss/bbb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/BidController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/BidController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dump20190521/materialinfodb_bid_info.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Dump20190521/materialinfodb_bid_info.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dump20190521/materialinfodb_material_record.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Dump20190521/materialinfodb_material_record.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dump20190521/materialinfodb_order_form.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Dump20190521/materialinfodb_order_form.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dump20190521/materialinfodb_quote_info.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Dump20190521/materialinfodb_quote_info.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Bean/MaterialRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Bean/MaterialRecord.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/MaterialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/MaterialController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/OrderFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/OrderFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/PurchaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/PurchaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/QuoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/QuoteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/QuoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/QuoteServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/BidInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/BidInfoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/QuoteInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/QuoteInfoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/BidInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/BidInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/OrderFormMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/OrderFormMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/QuoteInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/QuoteInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/RecordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/RecordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/DTO/RecordDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/DTO/RecordDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/MaterialService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/MaterialService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/RecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/RecordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/MaterialServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/MaterialServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/OrderFromServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/OrderFromServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/RecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/RecordServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/MaterialInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/MaterialInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/MaterialRecordMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/MaterialRecordMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caiqian/util/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caiqian/util/MD5Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/MaterialInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/MaterialInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/MaterialRecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/MaterialRecordMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/数据表.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/数据表.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/act/flowChart.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/act/histoicFlow.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/sys/checkbox.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/sys/fileUpload.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/sys/gridselect.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/sys/iconselect.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/sys/message.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/sys/treeselect.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/sys/userselect.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/sys/validateCode.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/table/delRow.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/table/page.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/table/sortColumn.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tlds/fns.tld" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tlds/menu.tld" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tlds/shiros.tld" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/category/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/category/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/echarts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/echarts.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/customer/bid/bidList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/customer/bid/bidList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/customer/bid/customerOrderFormList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/customer/bid/customerOrderFormList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/customer/bid/myBidList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/customer/bid/myBidList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/customer/common/headerCustomer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/customer/common/headerCustomer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/purchase/materialPurchase.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/purchase/materialPurchase.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/purchase/purchaseList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/purchase/purchaseList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/repo/InOutRecord.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/repo/InOutRecord.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/repo/RepoByOrder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/repo/RepoByOrder.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/repo/myApplyList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/repo/myApplyList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/root/empAcount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/root/empAcount.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/root/headerRoot.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/root/headerRoot.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/Controller/BidController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/Controller/BidController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/Controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/Controller/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui/sockjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui/sockjs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/plugins/echarts3/echarts.common.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/echarts3/echarts.common.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/plugins/echarts3/echarts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/echarts3/echarts.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/plugins/jQuery/jquery-1.8.3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/jQuery/jquery-1.8.3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/plugins/jQuery/jquery-3.3.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/jQuery/jquery-3.3.1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/plugins/jeeplus/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/jeeplus/vendor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/xxx/echarts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/xxx/echarts.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/webpage/error/400.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/webpage/error/403.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/webpage/error/404.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/webpage/error/500.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/webpage/error/error_fileupload.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/webpage/include/anihead.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/webpage/include/bootstraptable.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/webpage/include/citypicker.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/webpage/include/echarts.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/webpage/include/layIM-init.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/webpage/include/summernote.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/webpage/include/systemInfoSocket-init.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/webpage/include/taglib.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/webpage/include/treeview.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/webpage/layouts/ani.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/webpage/layouts/blank.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/webpage/layouts/default.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/webpage/modules/oa/notify/oaNotifyList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/Bean/MaterialRecord.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/Bean/MaterialRecord.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/Controller/MaterialController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/Controller/MaterialController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/Controller/PurchaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/Controller/PurchaseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/Service/QuoteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/Service/QuoteService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/Service/impl/QuoteServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/Service/impl/QuoteServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/BidInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/BidInfoMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/BidInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/BidInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/OrderFormMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/OrderFormMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/QuoteInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/QuoteInfoMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/QuoteInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/QuoteInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Controller/BidController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Controller/BidController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Controller/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/DTO/RecordDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/DTO/RecordDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/Service/MaterialService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/Service/MaterialService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/Service/RecordService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/Service/RecordService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/Service/impl/MaterialServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/Service/impl/MaterialServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/Service/impl/OrderFromServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/Service/impl/OrderFromServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/Service/impl/RecordServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/Service/impl/RecordServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/MaterialInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/MaterialInfoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/MaterialInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/MaterialInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/MaterialRecordMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/MaterialRecordMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/MaterialRecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/MaterialRecordMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/数据表.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/mapper/数据表.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/caiqian/util/MD5Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/caiqian/util/MD5Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring/spring-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/spring-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Bean/MaterialRecord.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Bean/MaterialRecord.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Controller/MaterialController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Controller/MaterialController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Controller/PurchaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Controller/PurchaseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/QuoteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/QuoteService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/impl/QuoteServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/impl/QuoteServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/BidInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/BidInfoMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/BidInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/BidInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/OrderFormMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/OrderFormMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/QuoteInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/QuoteInfoMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/QuoteInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/QuoteInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/DTO/RecordDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/DTO/RecordDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/MaterialService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/MaterialService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/RecordService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/RecordService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/impl/MaterialServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/impl/MaterialServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/impl/OrderFromServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/impl/OrderFromServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/impl/RecordServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/Service/impl/RecordServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/MaterialInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/MaterialInfoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/MaterialInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/MaterialInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/MaterialRecordMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/MaterialRecordMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/MaterialRecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/MaterialRecordMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/数据表.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/mapper/数据表.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/util/MD5Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/com/caiqian/util/MD5Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/spring/spring-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/classes/spring/spring-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/tags/act/flowChart.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/tags/act/histoicFlow.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/tags/sys/checkbox.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/tags/sys/fileUpload.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/tags/sys/gridselect.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/tags/sys/iconselect.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/tags/sys/message.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/tags/sys/treeselect.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/tags/sys/userselect.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/tags/sys/validateCode.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/tags/table/delRow.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/tags/table/page.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/tags/table/sortColumn.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/tlds/fns.tld" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/tlds/menu.tld" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/WEB-INF/tlds/shiros.tld" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/jsp/category/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/jsp/category/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/materialpurchase/jsp/common/echarts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/jsp/common/echarts.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/materialpurchase/jsp/common/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/jsp/common/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/materialpurchase/jsp/customer/bid/bidList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/jsp/customer/bid/bidList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/jsp/customer/bid/customerOrderFormList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/jsp/customer/bid/customerOrderFormList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/jsp/customer/bid/myBidList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/jsp/customer/bid/myBidList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/jsp/customer/common/headerCustomer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/jsp/customer/common/headerCustomer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/jsp/purchase/materialPurchase.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/jsp/purchase/materialPurchase.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/jsp/purchase/purchaseList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/jsp/purchase/purchaseList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/jsp/root/empAcount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/jsp/root/empAcount.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/materialpurchase/jsp/root/headerRoot.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/jsp/root/headerRoot.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/jsp/repo/InOutRecord.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/jsp/repo/InOutRecord.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/jsp/repo/RepoByOrder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/jsp/repo/RepoByOrder.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/jsp/repo/myApplyList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/jsp/repo/myApplyList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/static/layui/sockjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/static/layui/sockjs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/static/plugins/echarts3/echarts.common.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/static/plugins/echarts3/echarts.common.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/static/plugins/echarts3/echarts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/static/plugins/echarts3/echarts.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/static/plugins/jQuery/jquery-1.8.3.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/static/plugins/jQuery/jquery-1.8.3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/static/plugins/jQuery/jquery-3.3.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/static/plugins/jQuery/jquery-3.3.1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/static/plugins/jeeplus/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/static/plugins/jeeplus/vendor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/static/xxx/echarts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/materialpurchase/static/xxx/echarts.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/webpage/error/400.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/webpage/error/403.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/webpage/error/404.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/webpage/error/500.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/webpage/error/error_fileupload.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/webpage/include/anihead.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/webpage/include/bootstraptable.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/webpage/include/citypicker.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/webpage/include/echarts.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/webpage/include/layIM-init.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/webpage/include/summernote.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/webpage/include/systemInfoSocket-init.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/webpage/include/taglib.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/webpage/include/treeview.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/webpage/layouts/ani.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/webpage/layouts/blank.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/webpage/layouts/default.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/materialpurchase/webpage/modules/oa/notify/oaNotifyList.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -99,14 +191,43 @@
     <select />
   </component>
   <component name="DockManager">
-    <window id="1">
+    <window id="3">
       <content type="file-editors">
         <state>
-          <leaf>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
             <file leaf-file-name="数据表.txt" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/数据表.txt">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="-867" />
+                  <state relative-caret-position="79">
+                    <caret line="105" column="35" selection-start-line="105" selection-start-column="35" selection-end-line="105" selection-end-column="35" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="MaterialRecord.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Bean/MaterialRecord.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="36">
+                    <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="MaterialInfoMapper.xml" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/MaterialInfoMapper.xml">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="612">
+                    <caret line="34" selection-start-line="34" selection-end-line="34" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="ss.txt" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/ss.txt">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state>
+                    <caret selection-end-line="6" selection-end-column="11" />
+                  </state>
                 </provider>
               </entry>
             </file>
@@ -120,29 +241,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EmployeeController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MaterialController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Controller/MaterialController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="196" column="29" lean-forward="true" selection-start-line="196" selection-start-column="29" selection-end-line="196" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="materialPurchase.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/purchase/materialPurchase.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="42" column="62" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PurchaseController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Controller/PurchaseController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="63" column="36" lean-forward="true" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BidServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/BidServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-24">
+              <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Controller/EmployeeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+            <state relative-caret-position="569">
+              <caret line="109" selection-start-line="109" selection-end-line="109" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RecordController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Controller/RecordController.java">
+      <file leaf-file-name="myApplyList.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/repo/myApplyList.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="55" column="62" selection-start-line="55" selection-start-column="5" selection-end-line="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RecordService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Service/RecordService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+            <state relative-caret-position="1260">
+              <caret line="70" column="52" selection-start-line="70" selection-start-column="52" selection-end-line="70" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -150,8 +304,35 @@
       <file leaf-file-name="RecordServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/RecordServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
+            <state relative-caret-position="1998">
+              <caret line="137" column="75" selection-start-line="137" selection-start-column="62" selection-end-line="137" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MaterialRecordMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/MaterialRecordMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2736">
+              <caret line="152" column="35" selection-start-line="152" selection-start-column="35" selection-end-line="152" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecordController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Controller/RecordController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="666">
+              <caret line="55" column="67" selection-start-line="55" selection-start-column="58" selection-end-line="55" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecordService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Service/RecordService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
@@ -161,24 +342,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Interface" />
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>addMaterial</find>
-      <find>hidden</find>
-      <find>addMaterialQuantity</find>
-      <find>Factory</find>
-      <find>queryQuantityByMaterialId</find>
-      <find>queryByNamePwd</find>
-      <find>left</find>
-      <find>userCode</find>
-      <find>emp</find>
-      <find>queryAll</find>
       <find>toEmpAcount</find>
       <find>css5</find>
       <find>queryBidListByQuoteId</find>
@@ -199,6 +370,16 @@
       <find>deleteById</find>
       <find>System.out.print</find>
       <find>myApplyList</find>
+      <find>echart</find>
+      <find>queryMaterialById</find>
+      <find>OrderInRepo</find>
+      <find>queryIORecord</find>
+      <find>addNewRecord</find>
+      <find>queryRecordByMaterialIdAndWeeK</find>
+      <find>RecordDTO</find>
+      <find>pageNum</find>
+      <find>queryByUserId</find>
+      <find>queryById</find>
     </findStrings>
     <replaceStrings>
       <replace>o1</replace>
@@ -210,37 +391,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Service/BidService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/BidServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Bean/OrderForm.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/repo/checkApplyList.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Service/RecordService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/RecordController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/RecordServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/RootController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/root/closeOrderForm.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/root/materialQuantitySet.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/OrderFormMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/repo/InOutRecord.jsp" />
-        <option value="$PROJECT_DIR$/src/main/log.txt" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/category/updateMaterial.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Service/MaterialService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/MaterialServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/MaterialInfoMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/MaterialInfoMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/category/index.jsp" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/plugins/jeeplus.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/plugins/echarts3/echarts.min.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/repo/RepoByOrder.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/order/companyList.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Bean/BidInfo.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/order/orderFormList.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Service/OrderFormService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/OrderFromServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/OrderFormController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/customer/common/headerCustomer.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/common/header.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/root/headerRoot.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/root/empAcount.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Service/QuoteService.java" />
@@ -256,11 +415,33 @@
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/customer/bid/myBidList.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/purchase/purchaseList.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/customer/bid/customerOrderFormList.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/customer/bid/bidList.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/MaterialController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/common/echarts.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/repo/myApplyList.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/EmployeeController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Service/MaterialService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/MaterialServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/MaterialInfoMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/mapper/MaterialRecordMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/repo/myApplyList.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/category/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/MaterialInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/test/main/Test01.java" />
+        <option value="$PROJECT_DIR$/src/test/main/aaa/sss/bbb.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Service/RecordService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/OrderFromServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/ss.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Bean/MaterialRecord.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/DTO/RecordDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/common/header.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/RecordServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/repo/RepoByOrder.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/数据表.txt" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/common/echarts.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/Controller/MaterialController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/customer/bid/bidList.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/repo/InOutRecord.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/caiqian/util/MD5Util.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/MaterialRecordMapper.xml" />
       </list>
     </option>
   </component>
@@ -317,11 +498,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="838" />
-    <option name="y" value="4" />
-    <option name="width" value="1087" />
-    <option name="height" value="1050" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
+    <option name="y" value="-7" />
+    <option name="width" value="1550" />
+    <option name="height" value="878" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -330,6 +511,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -447,6 +629,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="jsp" type="462c0819:PsiDirectoryNode" />
+              <item name="category" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -465,7 +656,28 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="emp" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
+              <item name="bid" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
@@ -505,62 +717,12 @@
             </path>
             <path>
               <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-              <item name="echarts3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="xxx" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="materialpurchase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="materialpurchase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="tlds" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -569,31 +731,31 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/jeeplus" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.17023346" />
     <property name="project.structure.side.proportion" value="0.20515826" />
-    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\materialpurchase\src\main\webapp\static\xxx" />
-      <recent name="D:\materialpurchase\src\main\webapp\static\plugins\jeeplus" />
-      <recent name="D:\materialpurchase\src\main\webapp\static\plugins\toastr" />
-      <recent name="D:\materialpurchase\src\main\webapp\static\plugins\layui\images" />
-      <recent name="D:\materialpurchase\src\main\webapp\jsp\customer\login" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.caiqian.constant" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\materialpurchase\src\main\webapp\static\plugins\echarts3" />
       <recent name="D:\materialpurchase\src\main\webapp" />
       <recent name="D:\materialpurchase\src\main\webapp\WEB-INF" />
       <recent name="D:\materialpurchase\src\main\webapp\static" />
       <recent name="D:\materialpurchase\src\main\webapp\static\plugins\jeeplus" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.caiqian.constant" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\materialpurchase\src\main\webapp\jsp\common" />
+      <recent name="D:\materialpurchase\src\main\webapp\static\xxx" />
+      <recent name="D:\materialpurchase\src\main\webapp\static\plugins\jeeplus" />
+      <recent name="D:\materialpurchase\src\main\webapp\static\plugins\toastr" />
+      <recent name="D:\materialpurchase\src\main\webapp\static\plugins\layui\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -608,7 +770,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.index.jsp">
+    <configuration name="MD5Util" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.caiqian.util.MD5Util" />
+      <module name="materialpurchase" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.caiqian.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -725,9 +898,14 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Tomcat Server.index.jsp" />
+      <item itemvalue="Application.MD5Util" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Tomcat Server.index.jsp" />
+        <item itemvalue="Application.MD5Util" />
       </list>
     </recent_temporary>
   </component>
@@ -776,11 +954,31 @@
       <workItem from="1557751695624" duration="7009000" />
       <workItem from="1558098806812" duration="5973000" />
       <workItem from="1558105042810" duration="30953000" />
+      <workItem from="1558523675514" duration="33994000" />
+      <workItem from="1558682138864" duration="14268000" />
+      <workItem from="1558744790090" duration="2571000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="bbb_test01 - 2019.05.24 at 11h 22m 01s.xml">
+      <configuration name="bbb.test01" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="bbb_test02 - 2019.05.24 at 11h 24m 43s.xml">
+      <configuration name="bbb.test02" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="bbb_test02 - 2019.05.24 at 11h 25m 07s.xml">
+      <configuration name="bbb.test02" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="bbb_test02 - 2019.05.24 at 11h 27m 31s.xml">
+      <configuration name="bbb.test02" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="bbb_test01 - 2019.05.24 at 11h 28m 52s.xml">
+      <configuration name="bbb.test01" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="443646000" />
+    <option name="totallyTimeSpent" value="494479000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -792,52 +990,53 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="838" y="4" width="1087" height="1050" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50169206" side_tool="true" weight="0.2475356" />
-      <window_info anchor="bottom" id="Application Servers" order="8" weight="0.32829374" />
+      <window_info anchor="bottom" id="Application Servers" order="8" weight="0.3278867" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.16038433" />
-      <window_info anchor="right" id="CDI" order="5" weight="0.32994923" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
+      <window_info anchor="right" id="CDI" order="5" weight="0.32994923" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="1" />
       <window_info anchor="right" id="Database" order="7" weight="0.13367175" />
-      <window_info id="Structure" order="4" sideWeight="0.5085537" side_tool="true" weight="0.28774062" />
+      <window_info id="Structure" order="4" sideWeight="0.110456556" side_tool="true" weight="0.26649076" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24964838" />
       <window_info id="UI Designer" order="3" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.0" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.32829374" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.24734607" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.3093682" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.3278867" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.24618736" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49830794" visible="true" weight="0.23009814" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49830794" weight="0.25080386" />
       <window_info anchor="bottom" id="Version Control" order="15" weight="0.32932165" />
-      <window_info anchor="bottom" id="Spring" order="9" weight="0.32933652" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32900432" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48735955" visible="true" weight="0.26192793" />
+      <window_info anchor="bottom" id="Spring" order="9" weight="0.32897604" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32897604" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8895435" visible="true" weight="0.1924307" />
       <window_info id="Web" order="5" sideWeight="0.5126405" side_tool="true" weight="0.27908805" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32932165" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Favorites" order="6" sideWeight="0.507764" side_tool="true" weight="0.20990391" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.3291032" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32772437" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.3291032" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.3278867" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="Application Servers" order="8" weight="0.32932693" />
+      <window_info anchor="bottom" id="Application Servers" order="8" weight="0.32829374" />
       <window_info id="Designer" order="1" />
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49830794" visible="true" weight="0.2603486" />
       <window_info anchor="bottom" id="Spring" order="9" weight="0.32933652" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32772437" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49830794" visible="true" weight="0.24726477" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.3278867" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24964838" />
       <window_info id="UI Designer" order="3" />
@@ -847,26 +1046,25 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50169206" side_tool="true" weight="0.2475356" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.24918033" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.32932165" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.24618736" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32829374" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="15" weight="0.32932165" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.16038433" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49053857" visible="true" weight="0.28303748" />
+      <window_info id="Structure" order="4" sideWeight="0.110456556" side_tool="true" visible="true" weight="0.26649076" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8895435" visible="true" weight="0.26649076" />
       <window_info anchor="right" id="Database" order="7" weight="0.13367175" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info id="Web" order="5" sideWeight="0.5094614" side_tool="true" weight="0.28849408" />
+      <window_info id="Web" order="5" sideWeight="0.5126405" side_tool="true" weight="0.27908805" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info id="Structure" order="4" sideWeight="0.5085537" side_tool="true" weight="0.28774062" />
       <window_info anchor="right" id="CDI" order="5" weight="0.32994923" />
+      <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.3291032" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32932165" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.3625541" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.3093682" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -877,7 +1075,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="34" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/caiqian/Controller/EmployeeController.java</url>
+          <line>66</line>
+          <properties />
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="68" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -885,373 +1091,345 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/act/flowChart.tag">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/mapper/MaterialInfoMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        <state relative-caret-position="476">
+          <caret line="34" column="53" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/repo/RepoByOrder.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Service/MaterialService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="29" column="22" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="595">
+          <caret line="44" column="34" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/common/footer.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/order/companyList.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/mapper/MaterialRecordMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="108" column="51" selection-start-line="108" selection-start-column="38" selection-end-line="108" selection-end-column="51" />
+        <state relative-caret-position="510">
+          <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Service/BidService.java">
+    <entry file="file://$PROJECT_DIR$/src/test/main/Test01.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/main/aaa/sss/bbb.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        <state relative-caret-position="249">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Bean/BidInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/log.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="157" column="18" selection-start-line="157" selection-start-column="18" selection-end-line="157" selection-end-column="18" />
-          <folding>
-            <element signature="e#564#565#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-            <element signature="e#659#660#0" expanded="true" />
-            <element signature="e#707#708#0" expanded="true" />
-            <element signature="e#752#753#0" expanded="true" />
-            <element signature="e#788#789#0" expanded="true" />
-            <element signature="e#851#852#0" expanded="true" />
-            <element signature="e#901#902#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-609" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/BidServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/MaterialServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="110" column="55" lean-forward="true" selection-start-line="110" selection-start-column="55" selection-end-line="110" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/OrderFromServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="442">
+          <caret line="44" column="56" lean-forward="true" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Service/OrderFormService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+        <state>
+          <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Controller/OrderFormController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Bean/UserInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="194">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/customer/common/footerCustomer.jsp">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.1.0.RELEASE/spring-core-5.1.0.RELEASE.jar!/org/springframework/util/ReflectionUtils.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        <state relative-caret-position="347">
+          <caret line="222" selection-start-line="222" selection-end-line="222" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/root/headerRoot.jsp">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.1.0.RELEASE/spring-aop-5.1.0.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="380">
+          <caret line="115" selection-start-line="115" selection-end-line="115" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/root/customerAcount.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/root/empAcount.jsp">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.1.0.RELEASE/spring-aop-5.1.0.RELEASE.jar!/org/springframework/aop/framework/AdvisedSupport.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+        <state relative-caret-position="193">
+          <caret line="348" selection-start-line="348" selection-end-line="348" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/repo/checkApplyList.jsp">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.56/fastjson-1.2.56.jar!/com/alibaba/fastjson/serializer/SerializeWriter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="62" column="35" lean-forward="true" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+        <state relative-caret-position="295">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/order/orderFormList.jsp">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.56/fastjson-1.2.56.jar!/com/alibaba/fastjson/JSON.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="124" column="77" selection-start-line="124" selection-start-column="37" selection-end-line="124" selection-end-column="77" />
+        <state relative-caret-position="176">
+          <caret line="440" selection-start-line="440" selection-end-line="440" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/mapper/BidInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="35" column="46" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/mapper/QuoteInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Service/QuoteService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Controller/BidController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="98" column="5" lean-forward="true" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/QuoteInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="108" column="4" selection-start-line="108" selection-start-column="4" selection-end-line="108" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/OrderFormMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/BidInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="120" column="17" lean-forward="true" selection-start-line="120" selection-start-column="17" selection-end-line="120" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/purchase/materialPurchase.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1976">
-          <caret line="58" column="16" lean-forward="true" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Controller/PurchaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="69" column="37" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/purchase/purchaseList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="157" column="76" lean-forward="true" selection-start-line="157" selection-start-column="76" selection-end-line="157" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/customer/common/headerCustomer.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="44" column="59" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/customer/bid/customerOrderFormList.jsp">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.1.0.RELEASE/spring-aop-5.1.0.RELEASE.jar!/org/springframework/aop/target/SingletonTargetSource.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/customer/bid/bidList.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/repo/index.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/OrderFromServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="100" column="56" lean-forward="true" selection-start-line="100" selection-start-column="27" selection-end-line="100" selection-end-column="56" />
+        <state relative-caret-position="450">
+          <caret line="83" column="9" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Bean/QuoteInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/MaterialInfoMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/customer/bid/myBidList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/xxx/echarts.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="515" column="11" selection-start-line="515" selection-start-column="11" selection-end-line="515" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/plugins/echarts3/echarts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="262" column="4" selection-start-line="262" selection-start-column="4" selection-end-line="262" selection-end-column="4" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/plugins/echarts3/echarts.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/plugins/jeeplus/jeeplus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="115" column="10" lean-forward="true" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/common/echarts.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/root/closeOrderForm.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="84" selection-start-line="84" selection-end-line="138" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Bean/MaterialCategory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Bean/CustomerInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="31" column="27" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/MaterialServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="97" selection-start-line="97" selection-end-line="103" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Controller/MaterialController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="49" column="32" lean-forward="true" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/QuoteServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/CustomerInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Controller/CustomerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/repo/myApplyList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
+        <state relative-caret-position="612">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/common/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="44" column="60" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="60" />
+        <state relative-caret-position="204">
+          <caret line="63" column="58" selection-start-line="63" selection-start-column="58" selection-end-line="63" selection-end-column="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/数据表.txt">
+    <entry file="jar://C:/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/Date.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-867" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Controller/RecordController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="55" column="62" selection-start-line="55" selection-start-column="5" selection-end-line="57" />
+        <state relative-caret-position="347">
+          <caret line="976" column="24" selection-start-line="976" selection-start-column="15" selection-end-line="976" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Service/RecordService.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.1.0.RELEASE/spring-aop-5.1.0.RELEASE.jar!/org/springframework/aop/support/AopUtils.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        <state relative-caret-position="298">
+          <caret line="193" selection-start-line="193" selection-end-line="193" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.1.0.RELEASE/spring-aop-5.1.0.RELEASE.jar!/org/springframework/aop/framework/ReflectiveMethodInvocation.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/5.1.0.RELEASE/spring-tx-5.1.0.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionAspectSupport.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="181" column="44" selection-start-line="181" selection-start-column="44" selection-end-line="181" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/repo/RepoByOrder.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="131" column="28" lean-forward="true" selection-start-line="131" selection-start-column="28" selection-end-line="131" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/repo/checkApplyList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2431">
+          <caret line="158" column="52" selection-start-line="158" selection-start-column="45" selection-end-line="158" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Controller/OrderFormController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1445">
+          <caret line="108" column="44" lean-forward="true" selection-start-line="108" selection-start-column="44" selection-end-line="108" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/common/echarts.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/purchase/purchaseList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="193" column="27" selection-start-line="193" selection-start-column="27" selection-end-line="193" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/QuoteInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/customer/login/indexCustomer.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/customer/bid/customerOrderFormList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Controller/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/customer/bid/myBidList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2091" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/DTO/RecordDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/customer/bid/bidList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="47" column="7" selection-start-line="47" selection-start-column="7" selection-end-line="51" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Bean/MaterialRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/ss.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/util/MD5Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/repo/InOutRecord.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="150" selection-start-line="150" selection-end-line="150" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/category/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="31" column="71" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/MaterialRecordMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2736">
+          <caret line="152" column="35" selection-start-line="152" selection-start-column="35" selection-end-line="152" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/RecordServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
+        <state relative-caret-position="1998">
+          <caret line="137" column="75" selection-start-line="137" selection-start-column="62" selection-end-line="137" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Controller/RecordController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="55" column="67" selection-start-line="55" selection-start-column="58" selection-end-line="55" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Service/RecordService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/repo/myApplyList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="70" column="52" selection-start-line="70" selection-start-column="52" selection-end-line="70" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Service/impl/BidServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-24">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Controller/EmployeeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+        <state relative-caret-position="569">
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Controller/MaterialController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="196" column="29" lean-forward="true" selection-start-line="196" selection-start-column="29" selection-end-line="196" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/purchase/materialPurchase.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="42" column="62" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/caiqian/mapper/数据表.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="105" column="35" selection-start-line="105" selection-start-column="35" selection-end-line="105" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caiqian/Controller/PurchaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="63" column="36" lean-forward="true" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
         </state>
       </provider>
     </entry>

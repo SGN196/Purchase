@@ -89,6 +89,20 @@
     </where>
   </update>
 
+  <select id="queryRecordByMaterialIdAndWeeK" resultType="com.caiqian.Bean.MaterialRecord">
+    SELECT * FROM materialinfodb.material_record
+    <where>
+      material_id = #{MaterialId}
+      and create_date > date_sub(now(), interval #{day} day );
+    </where>
+  </select>
+  <select id="queryByMaterialId" resultType="com.caiqian.Bean.MaterialRecord">
+    select * from material_record
+    <where>
+      material_id = #{MaterialId}
+    </where>
+  </select>
+
   <select id="queryAllIORecord" resultType="com.caiqian.DTO.RecordDTO">
      select r1.*, u1.user_name, i1.material_name from material_record r1, user_info u1, material_info i1
      <where>
@@ -97,9 +111,11 @@
   </select>
 
   <select id="queryIORecord" resultType="com.caiqian.DTO.RecordDTO">
-    select r1.*, u1.user_name, i1.material_name from material_record r1, user_info u1, material_info i1
+    select r1.*, u1.user_name, i1.material_name
+    from material_record r1
+    left join user_info u1 on r1.manager_id=u1.id
+    left join material_info i1 on r1.material_id=i1.id
     <where>
-      r1.manager_id=u1.id and r1.record_status=1 and r1.material_id=i1.id
       <if test="id != null">
         and r1.id = #{id}
       </if>
@@ -123,6 +139,7 @@
       <where>
         user_id = #{id} and  m1.material_id = m2.id
       </where>
+    order by m1.id DESC
   </select>
 
   <select id="queryAll" resultType="com.caiqian.Bean.MaterialRecord">

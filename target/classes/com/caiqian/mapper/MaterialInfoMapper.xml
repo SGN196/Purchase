@@ -56,6 +56,10 @@
         select material_quantity from material_info
         where id = #{materialId}
     </select>
+    <select id="queryMaterialById" resultType="com.caiqian.Bean.MaterialInfo">
+        select * from material_info
+        where id = #{materialId}
+    </select>
 
     <select id="queryByIdToUpdateDTO" resultType="com.caiqian.DTO.UpdateMaterialDTO">
         select id, material_name, material_unit, material_info,category_level1,category_level2
@@ -64,6 +68,7 @@
             id = #{id}
         </where>
     </select>
+
     <insert id="addMaterial" keyProperty="id" useGeneratedKeys="true">
         insert into material_info
         <trim prefix="(" suffix=")" prefixOverrides=",">

@@ -37,6 +37,11 @@ public class RecordDTO
 
     private Integer pageNum = 1;
 
+    public Integer getManagerId()
+    {
+        return managerId;
+    }
+
     private String userName;
 
     public void setManagerId(Integer managerId)
@@ -185,6 +190,20 @@ public class RecordDTO
         this.modifyDate = modifyDate;
     }
 
+    public RecordDTO()
+    {
+    }
+
+    public RecordDTO(Integer materialId, Integer materialNum, Integer userId, Integer recordStatus, Integer managerId, Integer createBy, java.sql.Date createDate)
+    {
+        this.materialId = materialId;
+        this.materialNum = materialNum;
+        this.userId = userId;
+        this.recordStatus = recordStatus;
+        this.managerId = managerId;
+        this.createBy = createBy;
+        this.createDate = createDate;
+    }
     @Override
     public String toString()
     {

@@ -41,4 +41,6 @@ public interface MaterialService
     boolean isExistByName(MaterialInfo materialInfoObj);
 
     Boolean deleteById(Integer id);
+
+    MaterialInfo queryMaterialById(Integer id);
 }

@@ -38,6 +38,13 @@ public class MaterialServiceImpl implements MaterialService
     @Autowired
     MaterialCategoryMapper materialCategoryMapper;
 
+
+    @Override
+    public MaterialInfo queryMaterialById(Integer id)
+    {
+        return materialInfoMapper.queryMaterialById(id);
+    }
+
     @Override
     public boolean isAccessAuthorityRepertoryOfEmployee(Integer id)
     {

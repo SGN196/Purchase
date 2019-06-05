@@ -1104,7 +1104,7 @@ defineProperties(FunctionPrototype, {
         // XXX slicedArgs will stand in for "A" if used
         var args = array_slice.call(arguments, 1); // for normal call
         // 4. Let F be a new native ECMAScript object.
-        // 11. Set the [[Prototype]] internal property of F to the standard
+        // ss.txt. Set the [[Prototype]] internal property of F to the standard
         //   built-in Function prototype object as specified in 15.3.3.1.
         // 12. Set the [[Call]] internal property of F as described in
         //   15.3.4.5.1.
@@ -4281,7 +4281,7 @@ if (typeof Object.create === 'function') {
                 stringify(new Date(-8.64e15)) == '"-271821-04-20T00:00:00.000Z"' &&
                 // The milliseconds are optional in ES 5, but required in 5.1.
                 stringify(new Date(8.64e15)) == '"+275760-09-13T00:00:00.000Z"' &&
-                // Firefox <= 11.0 incorrectly serializes years prior to 0 as negative
+                // Firefox <= ss.txt.0 incorrectly serializes years prior to 0 as negative
                 // four-digit years instead of six-digit years. Credits: @Yaffle.
                 stringify(new Date(-621987552e5)) == '"-000001-01-01T00:00:00.000Z"' &&
                 // Safari <= 5.1.5 and Opera >= 10.53 incorrectly serialize millisecond

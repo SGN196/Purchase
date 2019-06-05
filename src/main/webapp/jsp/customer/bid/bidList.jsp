@@ -77,7 +77,7 @@
                 <table class="layui-table">
                     <thead>
                     <tr>
-                        <th>订单编号</th>
+                        <th>采购需求单编号</th>
                         <th>材料标号</th>
                         <th>材料名称</th>
                         <th>采购数量</th>
@@ -139,7 +139,8 @@
     <script>
         function openModak(obj){
 
-            var quoteId = $(obj).parent().parent().prev().prev().prev().prev().prev().prev().prev().html().trim();
+            var quoteId = $(obj).parent().parent().prev().prev().prev().prev().prev().prev().html().trim();
+
             $("[name='quoteId']").val(quoteId); //向模态框中赋值(与name属性值相关）
 
             layui.use(['layer'],function () {

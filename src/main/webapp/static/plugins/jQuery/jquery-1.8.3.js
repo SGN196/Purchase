@@ -5185,7 +5185,7 @@ if ( document.querySelectorAll ) {
 			// A support test would require too much code (would include document ready)
 			rbuggyQSA = [ ":focus" ],
 
-			// matchesSelector(:active) reports false when true (IE9/Opera 11.5)
+			// matchesSelector(:active) reports false when true (IE9/Opera ss.txt.5)
 			// A support test would require too much code (would include document ready)
 			// just skip matchesSelector for :active
 			rbuggyMatches = [ ":active" ],

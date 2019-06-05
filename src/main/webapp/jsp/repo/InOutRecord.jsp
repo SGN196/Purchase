@@ -16,14 +16,7 @@
         #divcss4{
             text-align: center;
         }
-        #divcss5{
 
-            top: 20%;
-
-
-            transform: translate(-50%,-50%);
-            font-size: 50px;
-        }
     </style>
 </head>
 <body class="layui-layout-body">
@@ -44,7 +37,7 @@
                 </div>
 
                 <div style="padding: 15px;">
-                    <form class="layui-form" action="${ctx}/record/InOutRecord" method="post">
+                    <form class="layui-form" action="${ctx}/record/InOutRecord" method="get">
                         <div class="layui-inline">
                             <label class="layui-form-label">进出库记录编号</label>
                             <div class="layui-input-inline">
@@ -59,6 +52,7 @@
                                        class="layui-input">
                             </div>
                         </div>
+
                         <br>
                         <div class="layui-inline">
                             <label class="layui-form-label">材料名称</label>
@@ -76,18 +70,18 @@
                                        class="layui-input">
                             </div>
                         </div>      <br>
-                        <div class="layui-inline">
-                            <div class="layui-input-inline">
-                                <input type="hidden" name="pageNum" value="1">
-                            </div>
-                        </div>
+
 
                         <div class="layui-inline">
                             <div class="layui-input-block">
                                 <button class="layui-btn" lay-submit="" lay-filter="demo1">立即查询</button>
                             </div>
                         </div>
-
+                        <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <input type="hidden" name="pageNum" value="1">
+                            </div>
+                        </div>
 
                     </form>
                 </div>
@@ -134,7 +128,7 @@
 
                         </tr>
                     </c:forEach>
-                    <form action="${ctx}/record/InOutRecord" method="post">
+
                         <tr>
                             <td>
                                 共${page.total} 条记录 第 ${page.pageNum}/ ${page.pages}页
@@ -147,12 +141,8 @@
 
                             </td>
                         </tr>
-                        <div class="layui-inline">
-                            <div class="layui-input-inline">
-                                <input type="hidden" name="pageNum">
-                            </div>
-                        </div>
-                    </form>
+
+
                     </tbody>
 
                 </table>
@@ -175,27 +165,7 @@
 
             document.getElementById("recordList").className="layui-nav-item layui-nav-itemed";
 
-            form.on('select(levelOnex)', function () {
-                var levelOneId = $('#levelOne').val();
-                if(levelOneId == ''){
-                    return;
-                }else{
-                    $.ajax({
-                        url:'${ctx}/material/category/queryLevelTwoByLevelOne/' + levelOneId,
-                        type:'get',
-                        success:function (data) {
-                            var html = '<option value""> -请选择- </option>';
-                            var len = data.length;
 
-                            for(var i = 0; i < len; i++){
-                                html += '<option value="' + data[i].id + '">' + data[i].categoryName + '</option>';
-                            }
-                            $('#levelTwo').html(html);
-                            form.render();
-                        }
-                    })
-                }
-            });
             $('a[page]').click(function () {
 
                 var pageNum = 1;
@@ -223,34 +193,6 @@
                 $('input[name=pageNum]').val(pageNum);
                 $('form').submit();
             })
-
-            $(function () {
-                var levelOne = $('#levelOne').val();
-                if(levelOne != '' && levelOne != null){
-                    var levelTwo = '${materialInfoDTO.levelTwo}';
-                    if(levelTwo != '' && levelTwo != null && levelTwo != undefined){
-                        $.ajax({
-                            url:'${ctx}/material/category/queryLevelTwoByLevelOne/' + levelOne,
-                            type:'get',
-                            success:function(data) {
-                                var html = '<option value="" >-请选择-</option>';
-                                var len = data.length;
-
-                                for(var i = 0; i < len; i++){
-                                    html += '<option value="' + data[i].id + '"';
-                                    if(levelTwo == data[i].id){
-                                        html += ' selected ';
-                                    }
-                                    html += '>' + data[i].categoryName + '</option>';
-                                }
-                                $('#levelTwo').html(html);
-                                form.render();
-
-                            }
-                        });
-                    }
-                }
-            });
 
             $('#layerDemo .layui-btn').on('click', function(){
                 var othis = $(this), method = othis.data('method');

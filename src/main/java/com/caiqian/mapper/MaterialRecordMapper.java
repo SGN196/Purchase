@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.ArrayList;
 import java.sql.Date;
+import java.util.List;
 
 public interface MaterialRecordMapper {
 
@@ -29,4 +30,8 @@ public interface MaterialRecordMapper {
     ArrayList<RecordDTO> queryAllIORecord();
 
     ArrayList<RecordDTO> queryIORecord(RecordDTO recordDTO);
+
+    List<MaterialRecord> queryByMaterialId(@Param("MaterialId") Integer MaterialId);
+
+    List<MaterialRecord> queryRecordByMaterialIdAndWeeK(@Param("MaterialId")Integer id, @Param("day")Integer day);
 }

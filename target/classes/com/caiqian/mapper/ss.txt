@@ -1,0 +1,31 @@
+  <select id="queryRecordByMaterialIdAndWeeK" resultType="com.caiqian.Bean.MaterialRecord">
+    SELECT * FROM materialinfodb.material_record
+     <where>
+      material_id = #{MaterialId}
+       and create_date > date_sub(now(), interval #{day} day );
+     </where>
+  </select>
+
+   <select id="queryIORecord" resultType="com.caiqian.DTO.RecordDTO">
+      select r1.*, u1.user_name, i1.material_name
+      from material_record r1
+      left join user_info u1 on r1.manager_id=u1.id
+      left join material_info i1 on r1.material_id=i1.id
+      <where>
+        <if test="id != null">
+          and r1.id = #{id}
+        </if>
+        <if test="materialId != null">
+          and r1.material_id = #{materialId}
+        </if>
+        <if test="materialName != null and materialName != ''">
+          and i1.material_name like concat('%',#{materialName},'%')
+        </if>
+        <if test="userName != null and userName != ''">
+          and u1.user_name like concat('%',#{userName},'%')
+        </if>
+
+      </where>
+
+
+    </select>

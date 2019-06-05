@@ -31,6 +31,7 @@ public class MaterialRecord {
 
     private Integer pageNum = 1;
 
+
     public Integer getPageNum()
     {
         return pageNum;
@@ -157,6 +158,21 @@ public class MaterialRecord {
         else
             return false;
 
+    }
+
+    public MaterialRecord()
+    {
+    }
+
+    public MaterialRecord(Integer materialId, Integer materialNum, Integer userId, Integer recordStatus, Integer managerId, Integer createBy, Date createDate)
+    {
+        this.materialId = materialId;
+        this.materialNum = materialNum;
+        this.userId = userId;
+        this.recordStatus = recordStatus;
+        this.managerId = managerId;
+        this.createBy = createBy;
+        this.createDate = createDate;
     }
 
     @Override
